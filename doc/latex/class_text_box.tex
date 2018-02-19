@@ -1,0 +1,117 @@
+\hypertarget{class_text_box}{}\section{Text\+Box Class Reference}
+\label{class_text_box}\index{Text\+Box@{Text\+Box}}
+
+
+Inheritance diagram for Text\+Box\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{class_text_box__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Text\+Box\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{class_text_box__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_text_box_a2af00dafe8bb6bb4622bc86b603a4232}\label{class_text_box_a2af00dafe8bb6bb4622bc86b603a4232}} 
+{\bfseries Text\+Box} (int x, int y, int widht, int height, std\+::string name, \hyperlink{class_tab}{Tab} $\ast$parent)
+\item 
+\mbox{\Hypertarget{class_text_box_abe4adac39342599efed1c338ba41deba}\label{class_text_box_abe4adac39342599efed1c338ba41deba}} 
+void {\bfseries Add\+Line} (std\+::string value, \hyperlink{structcolor4}{color4} col, int font\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_text_box_a501ae53e5c95b83ef4f613a98ed43b1a}\label{class_text_box_a501ae53e5c95b83ef4f613a98ed43b1a}} 
+void {\bfseries set\+\_\+text} (std\+::string value)
+\item 
+\mbox{\Hypertarget{class_text_box_a9d710a27f795e07deffcde1a0e700d0c}\label{class_text_box_a9d710a27f795e07deffcde1a0e700d0c}} 
+void {\bfseries set\+\_\+color} (std\+::string value)
+\item 
+void \hyperlink{class_text_box_ad0d6ca66198e14fec70ff2f891034f0c}{Draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the widget. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_box_afa0bba711f542abe6c4d304fe2773cd9}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_box_a25d2da575467ef88b9266341eeb0362d}\label{class_text_box_a25d2da575467ef88b9266341eeb0362d}} 
+void {\bfseries procces\+Input} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 40 of file textbox.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_text_box_ad0d6ca66198e14fec70ff2f891034f0c}\label{class_text_box_ad0d6ca66198e14fec70ff2f891034f0c}} 
+\index{Text\+Box@{Text\+Box}!Draw@{Draw}}
+\index{Draw@{Draw}!Text\+Box@{Text\+Box}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Text\+Box\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws the widget. 
+
+Draws the widget called by \hyperlink{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}{Tab\+::\+Draw} 
+
+Implements \hyperlink{class_widget_ac4c2063cd671468ad05d84cfe963c032}{Widget}.
+
+
+
+Definition at line 37 of file textbox.\+cpp.
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordtype}{int} uiround=uiGetRoundBox();
+40     uiSetRoundBox(\textcolor{stringliteral}{"0000"});
+41     \textcolor{keywordflow}{if} (text.content.length()*4>Get\_widht())
+42         SetSize(Get\_widht()+5,Get\_height());
+43     \textcolor{keywordflow}{if} (Get\_Active())
+44         gl\_round\_box\_Hshade(GL\_POLYGON, Get\_x(), Get\_y(), Get\_x()+Get\_widht(), Get\_y()+Get\_height(),10, \textcolor{stringliteral}{"
+      FFFFFF"},  \textcolor{stringliteral}{"FFFFFF"});
+45     drawText(Get\_x(),Get\_y()+8, GetName(), \textcolor{stringliteral}{"330000"},0 );
+46     drawText(Get\_x(),Get\_y()+17,text.content, \textcolor{stringliteral}{"FF0000"}, 0);
+47         
+48 
+49     uiSetRoundBox(uiround);
+50 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_text_box_afa0bba711f542abe6c4d304fe2773cd9}\label{class_text_box_afa0bba711f542abe6c4d304fe2773cd9}} 
+\index{Text\+Box@{Text\+Box}!update@{update}}
+\index{update@{update}!Text\+Box@{Text\+Box}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Text\+Box\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the widget. 
+
+Updates the widget called by Tab\+::update 
+
+Implements \hyperlink{class_widget_a726dc97add2c6eb82967144207280ace}{Widget}.
+
+
+
+Definition at line 52 of file textbox.\+cpp.
+
+
+\begin{DoxyCode}
+53 \{
+54     
+55 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/textbox.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/textbox.\+cpp\end{DoxyCompactItemize}

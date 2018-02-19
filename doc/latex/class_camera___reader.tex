@@ -1,0 +1,323 @@
+\hypertarget{class_camera___reader}{}\section{Camera\+\_\+\+Reader Class Reference}
+\label{class_camera___reader}\index{Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}}
+
+
+\hyperlink{class_camera___reader}{Camera\+\_\+\+Reader} plugin.  
+
+
+
+
+{\ttfamily \#include $<$Camera\+\_\+\+Reader.\+h$>$}
+
+
+
+Inheritance diagram for Camera\+\_\+\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_camera___reader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Camera\+\_\+\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_camera___reader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_camera___reader_af3fabc94e27e6ce1702d26829126b9dc}{Main} ()
+\begin{DoxyCompactList}\small\item\em Main funcction of the plugin. \end{DoxyCompactList}\item 
+bool \hyperlink{class_camera___reader_a63163ba2ecf2ff470ca7e6a31dcabfb6}{load\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Load configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_camera___reader_a3e7d14b675846c5094311985a0c1e735}{save\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Save configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_camera___reader_a752286c32bea93608d0d23d1d4b3f0ed}{Initialize\+\_\+\+Output} ()
+\begin{DoxyCompactList}\small\item\em Initialize Output variables for the plugin to publish. \end{DoxyCompactList}\item 
+bool \hyperlink{class_camera___reader_aa4870916d311618a5b6513f12c3e125b}{Initialize\+\_\+\+Input} ()
+\begin{DoxyCompactList}\small\item\em Initialize Input variables for the plugin to publish. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera___reader_afac6f0a4e2c0df76cad8f1d0d20cdc59}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop plugin. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera___reader_a3192d04dc33c238d6f779a72ffc08a5e}{run} ()
+\begin{DoxyCompactList}\small\item\em Execute plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_camera___reader}{Camera\+\_\+\+Reader} plugin. 
+
+This plugin reads the input from the webcam (index 0 unless secefied in config) and publishes it as a cv\+::\+Mat under the name \char`\"{}\+Video\+\_\+\+From\+\_\+\+Camera\char`\"{}
+
+\begin{DoxyAuthor}{Author}
+Patrick Heyer, \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+jul 13, 2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 15 of file Camera\+\_\+\+Reader.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera___reader_aa4870916d311618a5b6513f12c3e125b}\label{class_camera___reader_aa4870916d311618a5b6513f12c3e125b}} 
+\index{Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}!Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}}
+\index{Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}!Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Input()}{Initialize\_Input()}}
+{\footnotesize\ttfamily bool Camera\+\_\+\+Reader\+::\+Initialize\+\_\+\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Input variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}{I\+Plugin}.
+
+
+
+Definition at line 100 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+101 \{
+102     Plugin\_ERROR = Shared\_Memory::getInstance().Register\_String\_Input(\textcolor{stringliteral}{"Plugin\_ERROR"});
+103     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+104 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_camera___reader_a752286c32bea93608d0d23d1d4b3f0ed}\label{class_camera___reader_a752286c32bea93608d0d23d1d4b3f0ed}} 
+\index{Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}!Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}}
+\index{Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}!Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Output()}{Initialize\_Output()}}
+{\footnotesize\ttfamily bool Camera\+\_\+\+Reader\+::\+Initialize\+\_\+\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Output variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}{I\+Plugin}.
+
+
+
+Definition at line 93 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+94 \{   
+95 
+96     Shared\_Memory::getInstance().Register\_Output(\textcolor{stringliteral}{"Video\_From\_Camera"}, &frame);
+97     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+98 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_camera___reader_a63163ba2ecf2ff470ca7e6a31dcabfb6}\label{class_camera___reader_a63163ba2ecf2ff470ca7e6a31dcabfb6}} 
+\index{Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}
+{\footnotesize\ttfamily bool Camera\+\_\+\+Reader\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load configuration. 
+
+The configuration can be loaded from file, or be hard coded into the plugin (not recomended), initialization of public and private variables should occur here
+
+By default load\+Configuration is called during \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Plugin\+Manager\+::\+Initialize()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}{I\+Plugin}.
+
+
+
+Definition at line 70 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+71 \{
+72     std::stringstream path;
+73     path <<\textcolor{stringliteral}{"../conf/"} << PLUGIN\_NAME;
+74     \hyperlink{class_config_file}{ConfigFile} config( path.str() );
+75     config.readInto(Camera\_index, \textcolor{stringliteral}{"Camera\_index"});
+76     config.readInto(Visible, \textcolor{stringliteral}{"Visible"});
+77     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+78 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_camera___reader_af3fabc94e27e6ce1702d26829126b9dc}\label{class_camera___reader_af3fabc94e27e6ce1702d26829126b9dc}} 
+\index{Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}!Main@{Main}}
+\index{Main@{Main}!Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily void Camera\+\_\+\+Reader\+::\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main funcction of the plugin. 
+
+Started in a new thread by the Run() funcction is the most importatn funcction of the plugin. Infinite loop (generaly a while(running) function that runs undefenitly in a read/process/write cicle). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}{I\+Plugin}.
+
+
+
+Definition at line 37 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+38 \{
+39 
+40 
+41     cap.open(Camera\_index); 
+42     \textcolor{keywordflow}{if} (!cap.isOpened())  \textcolor{comment}{// if not success, exit program}
+43     \{
+44         LOG(ERROR) << \textcolor{stringliteral}{"Can not open the web cam"};
+45         *Plugin\_ERROR = \textcolor{stringliteral}{"NO\_CAMERA"};
+46         \textcolor{keywordflow}{return};
+47     \}
+48     LOG(TRACE) << \textcolor{stringliteral}{"Web cam connected"};
+49         
+50     \textcolor{keywordflow}{while} (running)
+51     \{
+52         \textcolor{keywordtype}{double} tic = (double)cvGetTickCount();
+53         \textcolor{keywordtype}{bool} bSuccess = cap.read(frame\_from\_cam); \textcolor{comment}{// read a new frame from video}
+54 
+55         \textcolor{keywordflow}{if} (!bSuccess) \textcolor{comment}{//if not success, break loop}
+56         \{
+57             LOG(WARNING) << \textcolor{stringliteral}{"Cannot read a frame from video stream"};
+58         \}
+59         \textcolor{keywordflow}{else} 
+60         \{
+61             \textcolor{keywordflow}{if}(Visible==1)
+62             imshow(\textcolor{stringliteral}{"Cam"}, frame\_from\_cam);          
+63         \}
+64     \}
+65     cap.release();
+66     stoped = \textcolor{keyword}{true};
+67     \textcolor{keywordflow}{return};
+68 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_camera___reader_a3192d04dc33c238d6f779a72ffc08a5e}\label{class_camera___reader_a3192d04dc33c238d6f779a72ffc08a5e}} 
+\index{Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}!run@{run}}
+\index{run@{run}!Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Camera\+\_\+\+Reader\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Execute plugin. 
+
+Starts a new thread and executes the plugins main() funcction. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}{I\+Plugin}.
+
+
+
+Definition at line 106 of file Main.\+cpp.
+
+
+
+References I\+Plugin\+::\+Inc\+Wrapper().
+
+
+\begin{DoxyCode}
+107 \{
+108     pthread\_create(&thread\_id, NULL, &\hyperlink{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}{IPlugin::IncWrapper}, \textcolor{keyword}{this});
+109     running = \textcolor{keyword}{true};
+110     stoped = \textcolor{keyword}{false};
+111 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_camera___reader_a3e7d14b675846c5094311985a0c1e735}\label{class_camera___reader_a3e7d14b675846c5094311985a0c1e735}} 
+\index{Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}!save\+Configuration@{save\+Configuration}}
+\index{save\+Configuration@{save\+Configuration}!Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{save\+Configuration()}{saveConfiguration()}}
+{\footnotesize\ttfamily bool Camera\+\_\+\+Reader\+::save\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save configuration. 
+
+The configuration should be saved to file, public and private variables that should be configured at startup should be saved.
+
+By default save\+Configuration is called during \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Plugin\+Manager\+::\+Unload()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}{I\+Plugin}.
+
+
+
+Definition at line 80 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+81 \{
+82     std::stringstream path;
+83     path <<\textcolor{stringliteral}{"../conf/"} << PLUGIN\_NAME;
+84     \hyperlink{class_config_file}{ConfigFile} config( path.str() );
+85     config.add(\textcolor{stringliteral}{"Camera\_index"}, Camera\_index);
+86     config.add(\textcolor{stringliteral}{"Visible"}, Visible);
+87     std::ofstream file(path.str());
+88     file << config;
+89     file.close();
+90     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+91 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_camera___reader_afac6f0a4e2c0df76cad8f1d0d20cdc59}\label{class_camera___reader_afac6f0a4e2c0df76cad8f1d0d20cdc59}} 
+\index{Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}!stop@{stop}}
+\index{stop@{stop}!Camera\+\_\+\+Reader@{Camera\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Camera\+\_\+\+Reader\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop plugin. 
+
+Stops the plugin \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}{I\+Plugin}.
+
+
+
+Definition at line 113 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+114 \{
+115     running = \textcolor{keyword}{false};
+116 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Camera\+\_\+\+Reader/Camera\+\_\+\+Reader.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Camera\+\_\+\+Reader/Main.\+cpp\end{DoxyCompactItemize}

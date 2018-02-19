@@ -1,0 +1,69 @@
+\hypertarget{classel_1_1base_1_1_v_registry}{}\section{el\+:\+:base\+:\+:V\+Registry Class Reference}
+\label{classel_1_1base_1_1_v_registry}\index{el\+::base\+::\+V\+Registry@{el\+::base\+::\+V\+Registry}}
+
+
+Represents registries for verbose logging.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+
+
+Inheritance diagram for el\+:\+:base\+:\+:V\+Registry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classel_1_1base_1_1_v_registry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for el\+:\+:base\+:\+:V\+Registry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classel_1_1base_1_1_v_registry__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_v_registry_ac4b36d32d3722238024480ce66c52ad0}\label{classel_1_1base_1_1_v_registry_ac4b36d32d3722238024480ce66c52ad0}} 
+{\bfseries V\+Registry} (base\+::type\+::\+Verbose\+Level level, base\+::type\+::\+Enum\+Type $\ast$p\+Flags)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_v_registry_aea4fb84a03363080ee2501193084f71f}\label{classel_1_1base_1_1_v_registry_aea4fb84a03363080ee2501193084f71f}} 
+void \hyperlink{classel_1_1base_1_1_v_registry_aea4fb84a03363080ee2501193084f71f}{set\+Level} (base\+::type\+::\+Verbose\+Level level)
+\begin{DoxyCompactList}\small\item\em Sets verbose level. Accepted range is 0-\/9. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_v_registry_aa39f3774ffc25a2ad18bb86c8c4b8b7c}\label{classel_1_1base_1_1_v_registry_aa39f3774ffc25a2ad18bb86c8c4b8b7c}} 
+base\+::type\+::\+Verbose\+Level {\bfseries level} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_v_registry_a52de90db82e57827ac3d3994f70c17cf}\label{classel_1_1base_1_1_v_registry_a52de90db82e57827ac3d3994f70c17cf}} 
+void {\bfseries clear\+Modules} (void)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_v_registry_a65e202cc547cd11231d3ea0fb70765d0}\label{classel_1_1base_1_1_v_registry_a65e202cc547cd11231d3ea0fb70765d0}} 
+void {\bfseries set\+Modules} (const char $\ast$modules)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_v_registry_a13b725e3da8935fce5cf3c16fd3a2ff9}\label{classel_1_1base_1_1_v_registry_a13b725e3da8935fce5cf3c16fd3a2ff9}} 
+bool {\bfseries allowed} (base\+::type\+::\+Verbose\+Level vlevel, const char $\ast$file)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_v_registry_a72ed42bb862bb45880b9f7ffc4c2bc90}\label{classel_1_1base_1_1_v_registry_a72ed42bb862bb45880b9f7ffc4c2bc90}} 
+const std\+::map$<$ std\+::string, base\+::type\+::\+Verbose\+Level $>$ \& {\bfseries modules} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_v_registry_a811e62d7d016a0714b4363f47216a9da}\label{classel_1_1base_1_1_v_registry_a811e62d7d016a0714b4363f47216a9da}} 
+void {\bfseries set\+From\+Args} (const \hyperlink{classel_1_1base_1_1utils_1_1_command_line_args}{base\+::utils\+::\+Command\+Line\+Args} $\ast$command\+Line\+Args)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_v_registry_ad7a8e939daf6b3d6b949def0a9f65a1f}\label{classel_1_1base_1_1_v_registry_ad7a8e939daf6b3d6b949def0a9f65a1f}} 
+bool \hyperlink{classel_1_1base_1_1_v_registry_ad7a8e939daf6b3d6b949def0a9f65a1f}{v\+Modules\+Enabled} (void)
+\begin{DoxyCompactList}\small\item\em Whether or not v\+Modules enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents registries for verbose logging. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/easylogging++.\+h\end{DoxyCompactItemize}

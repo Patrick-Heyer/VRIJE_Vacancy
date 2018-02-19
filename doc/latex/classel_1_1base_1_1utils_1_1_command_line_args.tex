@@ -1,0 +1,70 @@
+\hypertarget{classel_1_1base_1_1utils_1_1_command_line_args}{}\section{el\+:\+:base\+:\+:utils\+:\+:Command\+Line\+Args Class Reference}
+\label{classel_1_1base_1_1utils_1_1_command_line_args}\index{el\+::base\+::utils\+::\+Command\+Line\+Args@{el\+::base\+::utils\+::\+Command\+Line\+Args}}
+
+
+Command line arguments for application if specified using \hyperlink{classel_1_1_helpers_a68748f618a0c2840b96dc12532b09bf0}{el\+::\+Helpers\+::set\+Args}(..) or S\+T\+A\+R\+T\+\_\+\+E\+A\+S\+Y\+L\+O\+G\+G\+I\+N\+G\+PP(..)  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_a9872b14450e9cd1c1bd96227743c083b}\label{classel_1_1base_1_1utils_1_1_command_line_args_a9872b14450e9cd1c1bd96227743c083b}} 
+{\bfseries Command\+Line\+Args} (int argc, const char $\ast$$\ast$argv)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_a297b31b31829d9545d6e808f4be9195c}\label{classel_1_1base_1_1utils_1_1_command_line_args_a297b31b31829d9545d6e808f4be9195c}} 
+{\bfseries Command\+Line\+Args} (int argc, char $\ast$$\ast$argv)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_a2d59b4184e0a6a314ef1c9a4c6d946e6}\label{classel_1_1base_1_1utils_1_1_command_line_args_a2d59b4184e0a6a314ef1c9a4c6d946e6}} 
+void \hyperlink{classel_1_1base_1_1utils_1_1_command_line_args_a2d59b4184e0a6a314ef1c9a4c6d946e6}{set\+Args} (int argc, const char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Sets arguments and parses them. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_af88a16e6ce7b5d48f9679f304367b27a}\label{classel_1_1base_1_1utils_1_1_command_line_args_af88a16e6ce7b5d48f9679f304367b27a}} 
+void \hyperlink{classel_1_1base_1_1utils_1_1_command_line_args_af88a16e6ce7b5d48f9679f304367b27a}{set\+Args} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Sets arguments and parses them. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_a4028414c53fbd2ebffbc2b88c6d13b09}\label{classel_1_1base_1_1utils_1_1_command_line_args_a4028414c53fbd2ebffbc2b88c6d13b09}} 
+bool \hyperlink{classel_1_1base_1_1utils_1_1_command_line_args_a4028414c53fbd2ebffbc2b88c6d13b09}{has\+Param\+With\+Value} (const char $\ast$param\+Key) const
+\begin{DoxyCompactList}\small\item\em Returns true if arguments contain param\+Key with a value (seperated by \textquotesingle{}=\textquotesingle{}) \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classel_1_1base_1_1utils_1_1_command_line_args_ae73303db2f3001842ac094ebd0b28d3f}{get\+Param\+Value} (const char $\ast$param\+Key) const
+\begin{DoxyCompactList}\small\item\em Returns value of arguments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_a77ceaf1c151c30f6362cfbac5ddbdaa6}\label{classel_1_1base_1_1utils_1_1_command_line_args_a77ceaf1c151c30f6362cfbac5ddbdaa6}} 
+bool \hyperlink{classel_1_1base_1_1utils_1_1_command_line_args_a77ceaf1c151c30f6362cfbac5ddbdaa6}{has\+Param} (const char $\ast$param\+Key) const
+\begin{DoxyCompactList}\small\item\em Return true if arguments has a param (not having a value) i,e without \textquotesingle{}=\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_ae00284742272d75321a2e8ebe232b963}\label{classel_1_1base_1_1utils_1_1_command_line_args_ae00284742272d75321a2e8ebe232b963}} 
+bool \hyperlink{classel_1_1base_1_1utils_1_1_command_line_args_ae00284742272d75321a2e8ebe232b963}{empty} (void) const
+\begin{DoxyCompactList}\small\item\em Returns true if no params available. This exclude argv\mbox{[}0\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_a1f7125d74bf8e88d0e51dd6d12af0000}\label{classel_1_1base_1_1utils_1_1_command_line_args_a1f7125d74bf8e88d0e51dd6d12af0000}} 
+std\+::size\+\_\+t \hyperlink{classel_1_1base_1_1utils_1_1_command_line_args_a1f7125d74bf8e88d0e51dd6d12af0000}{size} (void) const
+\begin{DoxyCompactList}\small\item\em Returns total number of arguments. This exclude argv\mbox{[}0\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_aee5ba4c037136cd1d54026dd75927b10}\label{classel_1_1base_1_1utils_1_1_command_line_args_aee5ba4c037136cd1d54026dd75927b10}} 
+base\+::type\+::ostream\+\_\+t \& {\bfseries operator$<$$<$} (base\+::type\+::ostream\+\_\+t \&os, const \hyperlink{classel_1_1base_1_1utils_1_1_command_line_args}{Command\+Line\+Args} \&c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Command line arguments for application if specified using \hyperlink{classel_1_1_helpers_a68748f618a0c2840b96dc12532b09bf0}{el\+::\+Helpers\+::set\+Args}(..) or S\+T\+A\+R\+T\+\_\+\+E\+A\+S\+Y\+L\+O\+G\+G\+I\+N\+G\+PP(..) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classel_1_1base_1_1utils_1_1_command_line_args_ae73303db2f3001842ac094ebd0b28d3f}\label{classel_1_1base_1_1utils_1_1_command_line_args_ae73303db2f3001842ac094ebd0b28d3f}} 
+\index{el\+::base\+::utils\+::\+Command\+Line\+Args@{el\+::base\+::utils\+::\+Command\+Line\+Args}!get\+Param\+Value@{get\+Param\+Value}}
+\index{get\+Param\+Value@{get\+Param\+Value}!el\+::base\+::utils\+::\+Command\+Line\+Args@{el\+::base\+::utils\+::\+Command\+Line\+Args}}
+\subsubsection{\texorpdfstring{get\+Param\+Value()}{getParamValue()}}
+{\footnotesize\ttfamily const char$\ast$ el\+::base\+::utils\+::\+Command\+Line\+Args\+::get\+Param\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{param\+Key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns value of arguments. 
+
+\begin{DoxySeeAlso}{See also}
+has\+Param\+With\+Value(const char$\ast$) 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/easylogging++.\+h\end{DoxyCompactItemize}

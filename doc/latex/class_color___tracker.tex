@@ -1,0 +1,339 @@
+\hypertarget{class_color___tracker}{}\section{Color\+\_\+\+Tracker Class Reference}
+\label{class_color___tracker}\index{Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}}
+
+
+\hyperlink{class_color___tracker}{Color\+\_\+\+Tracker} plugin.  
+
+
+
+
+{\ttfamily \#include $<$Color\+\_\+\+Tracker.\+h$>$}
+
+
+
+Inheritance diagram for Color\+\_\+\+Tracker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{class_color___tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Color\+\_\+\+Tracker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{class_color___tracker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_color___tracker_a6d533ef7ecaea3ea1b2ae149f9336cec}{Main} ()
+\begin{DoxyCompactList}\small\item\em Main funcction of the plugin. \end{DoxyCompactList}\item 
+bool \hyperlink{class_color___tracker_a37bf24d89aac609cb6a773b86d4edcb6}{load\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Load configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_color___tracker_a6382a354d9fa79f76c9586a195ea8674}{save\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Save configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_color___tracker_a289707cab18e4af7f1353ee859da2fb5}{Initialize\+\_\+\+Output} ()
+\begin{DoxyCompactList}\small\item\em Initialize Output variables for the plugin to publish. \end{DoxyCompactList}\item 
+bool \hyperlink{class_color___tracker_afc447223ab3c357e66530b08acd8daea}{Initialize\+\_\+\+Input} ()
+\begin{DoxyCompactList}\small\item\em Initialize Input variables for the plugin to publish. \end{DoxyCompactList}\item 
+void \hyperlink{class_color___tracker_acc726eb03c58c22460c4f0440cfbc4cc}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop plugin. \end{DoxyCompactList}\item 
+void \hyperlink{class_color___tracker_a77d5ddbb266c0a13963fae15285ccc37}{run} ()
+\begin{DoxyCompactList}\small\item\em Execute plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_color___tracker}{Color\+\_\+\+Tracker} plugin. 
+
+This plugin is an adaptation of Elias Ruiz color tracker for Gesture Therapy \begin{DoxyAuthor}{Author}
+Patrick Heyer, \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+jul 13, 2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 13 of file Color\+\_\+\+Tracker.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_color___tracker_afc447223ab3c357e66530b08acd8daea}\label{class_color___tracker_afc447223ab3c357e66530b08acd8daea}} 
+\index{Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}!Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}}
+\index{Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}!Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Input()}{Initialize\_Input()}}
+{\footnotesize\ttfamily bool Color\+\_\+\+Tracker\+::\+Initialize\+\_\+\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Input variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}{I\+Plugin}.
+
+
+
+Definition at line 156 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+157 \{
+158     frame\_input = \textcolor{keyword}{static\_cast<}cv::Mat*\textcolor{keyword}{>}(Shared\_Memory::getInstance().Register\_Void\_Input(\textcolor{stringliteral}{"Video\_From\_Camera
+      "}));
+159     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+160 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_color___tracker_a289707cab18e4af7f1353ee859da2fb5}\label{class_color___tracker_a289707cab18e4af7f1353ee859da2fb5}} 
+\index{Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}!Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}}
+\index{Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}!Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Output()}{Initialize\_Output()}}
+{\footnotesize\ttfamily bool Color\+\_\+\+Tracker\+::\+Initialize\+\_\+\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Output variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}{I\+Plugin}.
+
+
+
+Definition at line 151 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+152 \{
+153     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+154 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_color___tracker_a37bf24d89aac609cb6a773b86d4edcb6}\label{class_color___tracker_a37bf24d89aac609cb6a773b86d4edcb6}} 
+\index{Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}}
+\subsubsection{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}
+{\footnotesize\ttfamily bool Color\+\_\+\+Tracker\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load configuration. 
+
+The configuration can be loaded from file, or be hard coded into the plugin (not recomended), initialization of public and private variables should occur here
+
+By default load\+Configuration is called during \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Plugin\+Manager\+::\+Initialize()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}{I\+Plugin}.
+
+
+
+Definition at line 141 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+142 \{
+143     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+144 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_color___tracker_a6d533ef7ecaea3ea1b2ae149f9336cec}\label{class_color___tracker_a6d533ef7ecaea3ea1b2ae149f9336cec}} 
+\index{Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}!Main@{Main}}
+\index{Main@{Main}!Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}}
+\subsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily void Color\+\_\+\+Tracker\+::\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main funcction of the plugin. 
+
+Started in a new thread by the Run() funcction is the most importatn funcction of the plugin. Infinite loop (generaly a while(running) function that runs undefenitly in a read/process/write cicle). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}{I\+Plugin}.
+
+
+
+Definition at line 60 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+61 \{
+62     IplImage imgThresh;
+63     \textcolor{keywordtype}{int} posX;
+64     \textcolor{keywordtype}{int} posY;
+65 
+66     \textcolor{keywordflow}{while} (running)
+67     \{
+68         \textcolor{keywordflow}{if} (frame\_input->data != NULL)
+69         \{
+70             frame\_input->copyTo(frame);
+71 
+72 
+73             cv::flip(frame, frame, 1);
+74 
+75 
+76             cv::cvtColor(frame, HSV\_image, cv::COLOR\_BGR2HSV); \textcolor{comment}{//Convert the captured frame from BGR to HSV}
+77             cv::inRange(HSV\_image, hsvlow, hsvhigh, HSV\_image); \textcolor{comment}{//Threshold the image}
+78 
+79             \textcolor{comment}{//morphological opening (removes small objects from the foreground)}
+80             cv::erode(HSV\_image, HSV\_image, cv::getStructuringElement(cv::MORPH\_ELLIPSE, cv::Size(5, 5)));
+81             cv::dilate(HSV\_image, HSV\_image, cv::getStructuringElement(cv::MORPH\_ELLIPSE, cv::Size(5, 5)));
+82 
+83             \textcolor{comment}{//morphological closing (removes small holes from the foreground)}
+84             cv::dilate(HSV\_image, HSV\_image, cv::getStructuringElement(cv::MORPH\_ELLIPSE, cv::Size(5, 5)));
+85             cv::erode(HSV\_image, HSV\_image, cv::getStructuringElement(cv::MORPH\_ELLIPSE, cv::Size(5, 5)));
+86 
+87             imgThresh = HSV\_image;
+88             CvMoments *moments = (CvMoments*)malloc(\textcolor{keyword}{sizeof}(CvMoments));
+89             cvMoments(&imgThresh, moments, 1);
+90             \textcolor{keywordtype}{double} moment10 = cvGetSpatialMoment(moments, 1, 0);
+91             \textcolor{keywordtype}{double} moment01 = cvGetSpatialMoment(moments, 0, 1);
+92             \textcolor{keywordtype}{double} area = cvGetCentralMoment(moments, 0, 0);
+93             cv::RNG rng(12345);
+94             cv::Scalar color = cv::Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
+95             \textcolor{comment}{// if the area<1000, I consider that the there are no object in the image and it's because of
+       the noise, the area is not zero}
+96 
+97 
+98             cv::Point center;
+99             center.x = posX;
+100             center.y = posY;
+101 
+102             cv::circle(frame,center, sqrt(area*.5), color, 2, 8, 0);
+103 
+104 
+105             free(moments);
+106 
+107             \textcolor{comment}{//cv::imshow("Thresholded Image", HSV\_image); //show the thresholded image}
+108             cv::imshow(\textcolor{stringliteral}{"edges"}, frame);
+109 
+110             cv::setMouseCallback(\textcolor{stringliteral}{"edges"}, getHSV, 0);
+111             
+112 
+113         \}
+114         cv::waitKey(10);
+115         
+116     \}
+117    
+118 
+119     stoped = \textcolor{keyword}{true};
+120     \textcolor{keywordflow}{return};
+121 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_color___tracker_a77d5ddbb266c0a13963fae15285ccc37}\label{class_color___tracker_a77d5ddbb266c0a13963fae15285ccc37}} 
+\index{Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}!run@{run}}
+\index{run@{run}!Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Color\+\_\+\+Tracker\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Execute plugin. 
+
+Starts a new thread and executes the plugins main() funcction. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}{I\+Plugin}.
+
+
+
+Definition at line 161 of file Main.\+cpp.
+
+
+
+References I\+Plugin\+::\+Inc\+Wrapper().
+
+
+\begin{DoxyCode}
+162 \{
+163     pthread\_create(&thread\_id, NULL, &\hyperlink{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}{IPlugin::IncWrapper}, \textcolor{keyword}{this});
+164     running = \textcolor{keyword}{true};
+165     stoped = \textcolor{keyword}{false};
+166 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_color___tracker_a6382a354d9fa79f76c9586a195ea8674}\label{class_color___tracker_a6382a354d9fa79f76c9586a195ea8674}} 
+\index{Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}!save\+Configuration@{save\+Configuration}}
+\index{save\+Configuration@{save\+Configuration}!Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}}
+\subsubsection{\texorpdfstring{save\+Configuration()}{saveConfiguration()}}
+{\footnotesize\ttfamily bool Color\+\_\+\+Tracker\+::save\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save configuration. 
+
+The configuration should be saved to file, public and private variables that should be configured at startup should be saved.
+
+By default save\+Configuration is called during \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Plugin\+Manager\+::\+Unload()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}{I\+Plugin}.
+
+
+
+Definition at line 146 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+147 \{
+148     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+149 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_color___tracker_acc726eb03c58c22460c4f0440cfbc4cc}\label{class_color___tracker_acc726eb03c58c22460c4f0440cfbc4cc}} 
+\index{Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}!stop@{stop}}
+\index{stop@{stop}!Color\+\_\+\+Tracker@{Color\+\_\+\+Tracker}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Color\+\_\+\+Tracker\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop plugin. 
+
+Stops the plugin \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}{I\+Plugin}.
+
+
+
+Definition at line 168 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+169 \{
+170     running = \textcolor{keyword}{false};
+171 
+172 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Color\+\_\+\+Tracker/Color\+\_\+\+Tracker.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Color\+\_\+\+Tracker/Main.\+cpp\end{DoxyCompactItemize}

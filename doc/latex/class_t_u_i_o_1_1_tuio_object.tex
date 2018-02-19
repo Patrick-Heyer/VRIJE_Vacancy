@@ -1,0 +1,629 @@
+\hypertarget{class_t_u_i_o_1_1_tuio_object}{}\section{T\+U\+IO\+:\+:Tuio\+Object Class Reference}
+\label{class_t_u_i_o_1_1_tuio_object}\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+
+
+{\ttfamily \#include $<$Tuio\+Object.\+h$>$}
+
+
+
+Inheritance diagram for T\+U\+IO\+:\+:Tuio\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_t_u_i_o_1_1_tuio_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for T\+U\+IO\+:\+:Tuio\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{class_t_u_i_o_1_1_tuio_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_object_a25b1ce53c045514fcef6c99afc23ca26}{Tuio\+Object} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime, long si, int sym, float xp, float yp, float a)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_object_a4d37dea1366bcf6c049a3bb5fca89826}{Tuio\+Object} (long si, int sym, float xp, float yp, float a)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_object_a0fda9e276bf5585227c1eb5df35749cf}{Tuio\+Object} (\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$tobj)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_object_aa9cde21ddda361193c556dbeb8433de0}{$\sim$\+Tuio\+Object} ()
+\item 
+void \hyperlink{class_t_u_i_o_1_1_tuio_object_a8aff2aa3004d1558f0db6e95889df6e8}{update} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime, float xp, float yp, float a, float xs, float ys, float rs, float ma, float ra)
+\item 
+void \hyperlink{class_t_u_i_o_1_1_tuio_object_a74ddebcce83c2a19908082ca3514d599}{update} (float xp, float yp, float a, float xs, float ys, float rs, float ma, float ra)
+\item 
+void \hyperlink{class_t_u_i_o_1_1_tuio_object_aaa516e0bc2c7bf5ed9ed3f94f0cb86df}{update} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime, float xp, float yp, float a)
+\item 
+void \hyperlink{class_t_u_i_o_1_1_tuio_object_a4b30f602dc66829d9c23a7a19a8ae9fa}{stop} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime)
+\item 
+void \hyperlink{class_t_u_i_o_1_1_tuio_object_adcab9222c081ac997c11a2e7e50a965c}{update} (\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$tobj)
+\item 
+int \hyperlink{class_t_u_i_o_1_1_tuio_object_a0d0b9b6e48c657350559acded6a1e53b}{get\+Symbol\+ID} ()
+\item 
+float \hyperlink{class_t_u_i_o_1_1_tuio_object_a7757d3c07bb7014f50bc645016d58933}{get\+Angle} ()
+\item 
+float \hyperlink{class_t_u_i_o_1_1_tuio_object_a57986baeb2c669106cafb8c66a7a3cce}{get\+Angle\+Degrees} ()
+\item 
+float \hyperlink{class_t_u_i_o_1_1_tuio_object_af2257dc8331077f50a618cc61474bf81}{get\+Rotation\+Speed} ()
+\item 
+float \hyperlink{class_t_u_i_o_1_1_tuio_object_a228d923c770dd1fe767ea5899c1258b6}{get\+Rotation\+Accel} ()
+\item 
+virtual bool \hyperlink{class_t_u_i_o_1_1_tuio_object_a9239541cb79607ed7a08b2c924655a7b}{is\+Moving} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_t_u_i_o_1_1_tuio_object_a05c245f10efaa7bf97b6c383004d6b7f}{symbol\+\_\+id}
+\item 
+float \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle}
+\item 
+float \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\+\_\+speed}
+\item 
+float \hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\+\_\+accel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} class encapsulates /tuio/2\+Dobj T\+U\+IO objects.
+
+\begin{DoxyAuthor}{Author}
+Martin Kaltenbrunner 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+4 
+\end{DoxyVersion}
+
+
+Definition at line 38 of file Tuio\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a25b1ce53c045514fcef6c99afc23ca26}\label{class_t_u_i_o_1_1_tuio_object_a25b1ce53c045514fcef6c99afc23ca26}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!Tuio\+Object@{Tuio\+Object}}
+\index{Tuio\+Object@{Tuio\+Object}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{Tuio\+Object()}{TuioObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Object\+::\+Tuio\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime,  }\item[{long}]{si,  }\item[{int}]{sym,  }\item[{float}]{xp,  }\item[{float}]{yp,  }\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor takes a \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} argument and assigns it along with the provided Session ID, Symbol ID, X and Y coordinate and angle to the newly created \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to assign \\
+\hline
+{\em si} & the Session ID to assign \\
+\hline
+{\em sym} & the Symbol ID to assign \\
+\hline
+{\em xp} & the X coordinate to assign \\
+\hline
+{\em yp} & the Y coordinate to assign \\
+\hline
+{\em a} & the angle to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file Tuio\+Object.\+h.
+
+
+\begin{DoxyCode}
+70                                                                                   :
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a970e6fa8eefc231dccf75d11b68c289d}{TuioContainer}(ttime, si, xp, yp) \{
+71             \hyperlink{class_t_u_i_o_1_1_tuio_object_a05c245f10efaa7bf97b6c383004d6b7f}{symbol\_id} = sym;
+72             \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle} = a;
+73             \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed} = 0.0f;
+74             \hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel} = 0.0f;
+75         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a4d37dea1366bcf6c049a3bb5fca89826}\label{class_t_u_i_o_1_1_tuio_object_a4d37dea1366bcf6c049a3bb5fca89826}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!Tuio\+Object@{Tuio\+Object}}
+\index{Tuio\+Object@{Tuio\+Object}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{Tuio\+Object()}{TuioObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Object\+::\+Tuio\+Object (\begin{DoxyParamCaption}\item[{long}]{si,  }\item[{int}]{sym,  }\item[{float}]{xp,  }\item[{float}]{yp,  }\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor takes the provided Session ID, Symbol ID, X and Y coordinate and angle, and assigs these values to the newly created \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & the Session ID to assign \\
+\hline
+{\em sym} & the Symbol ID to assign \\
+\hline
+{\em xp} & the X coordinate to assign \\
+\hline
+{\em yp} & the Y coordinate to assign \\
+\hline
+{\em a} & the angle to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 87 of file Tuio\+Object.\+h.
+
+
+\begin{DoxyCode}
+87                                                                   :\hyperlink{class_t_u_i_o_1_1_tuio_container_a970e6fa8eefc231dccf75d11b68c289d}{TuioContainer}(si, xp, yp) \{
+88             \hyperlink{class_t_u_i_o_1_1_tuio_object_a05c245f10efaa7bf97b6c383004d6b7f}{symbol\_id} = sym;
+89             \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle} = a;
+90             \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed} = 0.0f;
+91             \hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel} = 0.0f;
+92         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a0fda9e276bf5585227c1eb5df35749cf}\label{class_t_u_i_o_1_1_tuio_object_a0fda9e276bf5585227c1eb5df35749cf}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!Tuio\+Object@{Tuio\+Object}}
+\index{Tuio\+Object@{Tuio\+Object}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{Tuio\+Object()}{TuioObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Object\+::\+Tuio\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$}]{tobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor takes the atttibutes of the provided \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} and assigs these values to the newly created \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tobj} & the \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file Tuio\+Object.\+h.
+
+
+
+References get\+Angle(), and get\+Symbol\+I\+D().
+
+
+\begin{DoxyCode}
+100                                      :\hyperlink{class_t_u_i_o_1_1_tuio_container_a970e6fa8eefc231dccf75d11b68c289d}{TuioContainer}(tobj) \{
+101             \hyperlink{class_t_u_i_o_1_1_tuio_object_a05c245f10efaa7bf97b6c383004d6b7f}{symbol\_id} = tobj->getSymbolID();
+102             \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle} = tobj->getAngle();
+103             \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed} = 0.0f;
+104             \hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel} = 0.0f;
+105         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_aa9cde21ddda361193c556dbeb8433de0}\label{class_t_u_i_o_1_1_tuio_object_aa9cde21ddda361193c556dbeb8433de0}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!````~Tuio\+Object@{$\sim$\+Tuio\+Object}}
+\index{````~Tuio\+Object@{$\sim$\+Tuio\+Object}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{$\sim$\+Tuio\+Object()}{~TuioObject()}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Object\+::$\sim$\+Tuio\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The destructor is doing nothing in particular. 
+
+Definition at line 110 of file Tuio\+Object.\+h.
+
+
+\begin{DoxyCode}
+110 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a7757d3c07bb7014f50bc645016d58933}\label{class_t_u_i_o_1_1_tuio_object_a7757d3c07bb7014f50bc645016d58933}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!get\+Angle@{get\+Angle}}
+\index{get\+Angle@{get\+Angle}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{get\+Angle()}{getAngle()}}
+{\footnotesize\ttfamily float T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the rotation angle of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}. \begin{DoxyReturn}{Returns}
+the rotation angle of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} 
+\end{DoxyReturn}
+
+
+Definition at line 222 of file Tuio\+Object.\+h.
+
+
+
+References angle.
+
+
+
+Referenced by Tuio\+Dump\+::add\+Tuio\+Object(), Tuio\+Object(), update(), and Tuio\+Dump\+::update\+Tuio\+Object().
+
+
+\begin{DoxyCode}
+222                          \{
+223             \textcolor{keywordflow}{return} \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle};
+224         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a57986baeb2c669106cafb8c66a7a3cce}\label{class_t_u_i_o_1_1_tuio_object_a57986baeb2c669106cafb8c66a7a3cce}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!get\+Angle\+Degrees@{get\+Angle\+Degrees}}
+\index{get\+Angle\+Degrees@{get\+Angle\+Degrees}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{get\+Angle\+Degrees()}{getAngleDegrees()}}
+{\footnotesize\ttfamily float T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Angle\+Degrees (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the rotation angle in degrees of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}. \begin{DoxyReturn}{Returns}
+the rotation angle in degrees of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} 
+\end{DoxyReturn}
+
+
+Definition at line 230 of file Tuio\+Object.\+h.
+
+
+\begin{DoxyCode}
+230                                 \{ 
+231             \textcolor{keywordflow}{return} (\textcolor{keywordtype}{float})(\hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle}/M\_PI*180);
+232         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a228d923c770dd1fe767ea5899c1258b6}\label{class_t_u_i_o_1_1_tuio_object_a228d923c770dd1fe767ea5899c1258b6}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!get\+Rotation\+Accel@{get\+Rotation\+Accel}}
+\index{get\+Rotation\+Accel@{get\+Rotation\+Accel}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{get\+Rotation\+Accel()}{getRotationAccel()}}
+{\footnotesize\ttfamily float T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Rotation\+Accel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the rotation acceleration of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}. \begin{DoxyReturn}{Returns}
+the rotation acceleration of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} 
+\end{DoxyReturn}
+
+
+Definition at line 246 of file Tuio\+Object.\+h.
+
+
+
+References rotation\+\_\+accel.
+
+
+
+Referenced by update(), and Tuio\+Dump\+::update\+Tuio\+Object().
+
+
+\begin{DoxyCode}
+246                                  \{
+247             \textcolor{keywordflow}{return} \hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel};
+248         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_af2257dc8331077f50a618cc61474bf81}\label{class_t_u_i_o_1_1_tuio_object_af2257dc8331077f50a618cc61474bf81}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!get\+Rotation\+Speed@{get\+Rotation\+Speed}}
+\index{get\+Rotation\+Speed@{get\+Rotation\+Speed}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{get\+Rotation\+Speed()}{getRotationSpeed()}}
+{\footnotesize\ttfamily float T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Rotation\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the rotation speed of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}. \begin{DoxyReturn}{Returns}
+the rotation speed of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} 
+\end{DoxyReturn}
+
+
+Definition at line 238 of file Tuio\+Object.\+h.
+
+
+
+References rotation\+\_\+speed.
+
+
+
+Referenced by update(), and Tuio\+Dump\+::update\+Tuio\+Object().
+
+
+\begin{DoxyCode}
+238                                  \{ 
+239             \textcolor{keywordflow}{return} \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed};
+240         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a0d0b9b6e48c657350559acded6a1e53b}\label{class_t_u_i_o_1_1_tuio_object_a0d0b9b6e48c657350559acded6a1e53b}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!get\+Symbol\+ID@{get\+Symbol\+ID}}
+\index{get\+Symbol\+ID@{get\+Symbol\+ID}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{get\+Symbol\+I\+D()}{getSymbolID()}}
+{\footnotesize\ttfamily int T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Symbol\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the symbol ID of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}. \begin{DoxyReturn}{Returns}
+the symbol ID of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} 
+\end{DoxyReturn}
+
+
+Definition at line 214 of file Tuio\+Object.\+h.
+
+
+
+References symbol\+\_\+id.
+
+
+
+Referenced by Tuio\+Dump\+::add\+Tuio\+Object(), Tuio\+Dump\+::remove\+Tuio\+Object(), Tuio\+Object(), and Tuio\+Dump\+::update\+Tuio\+Object().
+
+
+\begin{DoxyCode}
+214                           \{ 
+215             \textcolor{keywordflow}{return} \hyperlink{class_t_u_i_o_1_1_tuio_object_a05c245f10efaa7bf97b6c383004d6b7f}{symbol\_id};
+216         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a9239541cb79607ed7a08b2c924655a7b}\label{class_t_u_i_o_1_1_tuio_object_a9239541cb79607ed7a08b2c924655a7b}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!is\+Moving@{is\+Moving}}
+\index{is\+Moving@{is\+Moving}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{is\+Moving()}{isMoving()}}
+{\footnotesize\ttfamily virtual bool T\+U\+I\+O\+::\+Tuio\+Object\+::is\+Moving (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns true of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} is moving. \begin{DoxyReturn}{Returns}
+true of this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} is moving 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_t_u_i_o_1_1_tuio_container_aa82c3733bc23cebe685ba73c7dc91df3}{T\+U\+I\+O\+::\+Tuio\+Container}.
+
+
+
+Definition at line 254 of file Tuio\+Object.\+h.
+
+
+
+References T\+U\+I\+O\+::\+Tuio\+Container\+::state.
+
+
+\begin{DoxyCode}
+254                                 \{ 
+255             \textcolor{keywordflow}{if} ((\hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state}==TUIO\_ACCELERATING) || (\hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state}==TUIO\_DECELERATING) || (
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state}==TUIO\_ROTATING)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+256             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+257         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a4b30f602dc66829d9c23a7a19a8ae9fa}\label{class_t_u_i_o_1_1_tuio_object_a4b30f602dc66829d9c23a7a19a8ae9fa}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!stop@{stop}}
+\index{stop@{stop}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void T\+U\+I\+O\+::\+Tuio\+Object\+::stop (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This method is used to calculate the speed and acceleration values of a \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} with unchanged position and angle. 
+
+Reimplemented from \hyperlink{class_t_u_i_o_1_1_tuio_container_a250b4a7c140178c3585aa5b957b34d73}{T\+U\+I\+O\+::\+Tuio\+Container}.
+
+
+
+Definition at line 191 of file Tuio\+Object.\+h.
+
+
+
+References update(), T\+U\+I\+O\+::\+Tuio\+Point\+::xpos, and T\+U\+I\+O\+::\+Tuio\+Point\+::ypos.
+
+
+\begin{DoxyCode}
+191                                    \{
+192             \hyperlink{class_t_u_i_o_1_1_tuio_object_a8aff2aa3004d1558f0db6e95889df6e8}{update}(ttime,\hyperlink{class_t_u_i_o_1_1_tuio_point_a0021f8dfddd05f2a17e713a94f5457e6}{xpos},\hyperlink{class_t_u_i_o_1_1_tuio_point_a89a038775a681166168735dbc95c7779}{ypos},\hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle});
+193         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a8aff2aa3004d1558f0db6e95889df6e8}\label{class_t_u_i_o_1_1_tuio_object_a8aff2aa3004d1558f0db6e95889df6e8}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!update@{update}}
+\index{update@{update}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void T\+U\+I\+O\+::\+Tuio\+Object\+::update (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime,  }\item[{float}]{xp,  }\item[{float}]{yp,  }\item[{float}]{a,  }\item[{float}]{xs,  }\item[{float}]{ys,  }\item[{float}]{rs,  }\item[{float}]{ma,  }\item[{float}]{ra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes a \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} argument and assigns it along with the provided X and Y coordinate, angle, X and Y velocity, motion acceleration, rotation speed and rotation acceleration to the private \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to assign \\
+\hline
+{\em xp} & the X coordinate to assign \\
+\hline
+{\em yp} & the Y coordinate to assign \\
+\hline
+{\em a} & the angle coordinate to assign \\
+\hline
+{\em xs} & the X velocity to assign \\
+\hline
+{\em ys} & the Y velocity to assign \\
+\hline
+{\em rs} & the rotation velocity to assign \\
+\hline
+{\em ma} & the motion acceleration to assign \\
+\hline
+{\em ra} & the rotation acceleration to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 127 of file Tuio\+Object.\+h.
+
+
+
+References T\+U\+I\+O\+::\+Tuio\+Container\+::state, and T\+U\+I\+O\+::\+Tuio\+Container\+::update().
+
+
+
+Referenced by stop().
+
+
+\begin{DoxyCode}
+127                                                                                                            
+               \{
+128             \hyperlink{class_t_u_i_o_1_1_tuio_container_a20d5b3bd52eb41a58c313cc8ceda68c0}{TuioContainer::update}(ttime,xp,yp,xs,ys,ma);
+129             \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle} = a;
+130             \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed} = rs;
+131             \hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel} = ra;
+132             \textcolor{keywordflow}{if} ((\hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel}!=0) && (\hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state}==TUIO\_STOPPED)) 
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state} = TUIO\_ROTATING;
+133         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a74ddebcce83c2a19908082ca3514d599}\label{class_t_u_i_o_1_1_tuio_object_a74ddebcce83c2a19908082ca3514d599}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!update@{update}}
+\index{update@{update}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void T\+U\+I\+O\+::\+Tuio\+Object\+::update (\begin{DoxyParamCaption}\item[{float}]{xp,  }\item[{float}]{yp,  }\item[{float}]{a,  }\item[{float}]{xs,  }\item[{float}]{ys,  }\item[{float}]{rs,  }\item[{float}]{ma,  }\item[{float}]{ra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assigns the provided X and Y coordinate, angle, X and Y velocity, motion acceleration rotation velocity and rotation acceleration to the private \hyperlink{class_t_u_i_o_1_1_tuio_container}{Tuio\+Container} attributes. The \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} time stamp remains unchanged.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xp} & the X coordinate to assign \\
+\hline
+{\em yp} & the Y coordinate to assign \\
+\hline
+{\em a} & the angle coordinate to assign \\
+\hline
+{\em xs} & the X velocity to assign \\
+\hline
+{\em ys} & the Y velocity to assign \\
+\hline
+{\em rs} & the rotation velocity to assign \\
+\hline
+{\em ma} & the motion acceleration to assign \\
+\hline
+{\em ra} & the rotation acceleration to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 149 of file Tuio\+Object.\+h.
+
+
+
+References T\+U\+I\+O\+::\+Tuio\+Container\+::state, and T\+U\+I\+O\+::\+Tuio\+Container\+::update().
+
+
+\begin{DoxyCode}
+149                                                                                                     \{
+150             \hyperlink{class_t_u_i_o_1_1_tuio_container_a20d5b3bd52eb41a58c313cc8ceda68c0}{TuioContainer::update}(xp,yp,xs,ys,ma);
+151             \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle} = a;
+152             \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed} = rs;
+153             \hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel} = ra;
+154             \textcolor{keywordflow}{if} ((\hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel}!=0) && (\hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state}==TUIO\_STOPPED)) 
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state} = TUIO\_ROTATING;
+155         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_aaa516e0bc2c7bf5ed9ed3f94f0cb86df}\label{class_t_u_i_o_1_1_tuio_object_aaa516e0bc2c7bf5ed9ed3f94f0cb86df}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!update@{update}}
+\index{update@{update}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void T\+U\+I\+O\+::\+Tuio\+Object\+::update (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime,  }\item[{float}]{xp,  }\item[{float}]{yp,  }\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes a \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} argument and assigns it along with the provided X and Y coordinate and angle to the private \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} attributes. The speed and accleration values are calculated accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to assign \\
+\hline
+{\em xp} & the X coordinate to assign \\
+\hline
+{\em yp} & the Y coordinate to assign \\
+\hline
+{\em a} & the angle coordinate to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 167 of file Tuio\+Object.\+h.
+
+
+
+References angle, T\+U\+I\+O\+::\+Tuio\+Point\+::current\+Time, T\+U\+I\+O\+::\+Tuio\+Time\+::get\+Total\+Milliseconds(), T\+U\+I\+O\+::\+Tuio\+Point\+::get\+Tuio\+Time(), T\+U\+I\+O\+::\+Tuio\+Container\+::path, rotation\+\_\+speed, T\+U\+I\+O\+::\+Tuio\+Container\+::state, and T\+U\+I\+O\+::\+Tuio\+Container\+::update().
+
+
+\begin{DoxyCode}
+167                                                                   \{
+168             \hyperlink{class_t_u_i_o_1_1_tuio_point_a8611528cf41b797c51d6a9bf324157a5}{TuioPoint} lastPoint = \hyperlink{class_t_u_i_o_1_1_tuio_container_a4bdb8935091e0736b6c19ce9fd676b9a}{path}.back();
+169             \hyperlink{class_t_u_i_o_1_1_tuio_container_a20d5b3bd52eb41a58c313cc8ceda68c0}{TuioContainer::update}(ttime,xp,yp);
+170             
+171             TuioTime diffTime = \hyperlink{class_t_u_i_o_1_1_tuio_point_ad04658d52ab78e3e0ddc21584ceaa2ff}{currentTime} - lastPoint.getTuioTime();
+172             \textcolor{keywordtype}{float} dt = diffTime.\hyperlink{class_t_u_i_o_1_1_tuio_time_a7e861c278e95080b6f087c8c32ed2561}{getTotalMilliseconds}()/1000.0f;
+173             \textcolor{keywordtype}{float} last\_angle = \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle};
+174             \textcolor{keywordtype}{float} last\_rotation\_speed = \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed};
+175             \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle} = a;
+176             
+177             \textcolor{keywordtype}{double} da = (\hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle}-last\_angle)/(2*M\_PI);
+178             \textcolor{keywordflow}{if} (da>M\_PI*1.5) da-=(2*M\_PI);
+179             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (da<M\_PI*1.5) da+=(2*M\_PI);
+180             
+181             \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed} = (float)da/dt;
+182             \hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel} =  (\hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed} - last\_rotation\_speed)/dt;
+183             
+184             \textcolor{keywordflow}{if} ((\hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel}!=0) && (\hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state}==TUIO\_STOPPED)) 
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state} = TUIO\_ROTATING;
+185         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_adcab9222c081ac997c11a2e7e50a965c}\label{class_t_u_i_o_1_1_tuio_object_adcab9222c081ac997c11a2e7e50a965c}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!update@{update}}
+\index{update@{update}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void T\+U\+I\+O\+::\+Tuio\+Object\+::update (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$}]{tobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes the atttibutes of the provided \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} and assigs these values to this \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}. The \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} time stamp of this \hyperlink{class_t_u_i_o_1_1_tuio_container}{Tuio\+Container} remains unchanged.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tobj} & the \hyperlink{class_t_u_i_o_1_1_tuio_container}{Tuio\+Container} to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 202 of file Tuio\+Object.\+h.
+
+
+
+References get\+Angle(), get\+Rotation\+Accel(), get\+Rotation\+Speed(), T\+U\+I\+O\+::\+Tuio\+Container\+::state, and T\+U\+I\+O\+::\+Tuio\+Container\+::update().
+
+
+\begin{DoxyCode}
+202                                        \{
+203             \hyperlink{class_t_u_i_o_1_1_tuio_container_a20d5b3bd52eb41a58c313cc8ceda68c0}{TuioContainer::update}(tobj);
+204             \hyperlink{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}{angle} = tobj->getAngle();
+205             \hyperlink{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}{rotation\_speed} = tobj->getRotationSpeed();
+206             \hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel} = tobj->getRotationAccel();
+207             \textcolor{keywordflow}{if} ((\hyperlink{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}{rotation\_accel}!=0) && (\hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state}==TUIO\_STOPPED)) 
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a61cfc66997d3d2f2a503e20bd29ddbf1}{state} = TUIO\_ROTATING;
+208         \};
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}\label{class_t_u_i_o_1_1_tuio_object_a1c5652a3ee1175156f13777f0d8068ee}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!angle@{angle}}
+\index{angle@{angle}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily float T\+U\+I\+O\+::\+Tuio\+Object\+::angle\hspace{0.3cm}{\ttfamily [protected]}}
+
+The rotation angle value. 
+
+Definition at line 48 of file Tuio\+Object.\+h.
+
+
+
+Referenced by get\+Angle(), and update().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}\label{class_t_u_i_o_1_1_tuio_object_a793a29a0bf9fd2f1becdb9d2d45fc463}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!rotation\+\_\+accel@{rotation\+\_\+accel}}
+\index{rotation\+\_\+accel@{rotation\+\_\+accel}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{rotation\+\_\+accel}{rotation\_accel}}
+{\footnotesize\ttfamily float T\+U\+I\+O\+::\+Tuio\+Object\+::rotation\+\_\+accel\hspace{0.3cm}{\ttfamily [protected]}}
+
+The rotation acceleration value. 
+
+Definition at line 56 of file Tuio\+Object.\+h.
+
+
+
+Referenced by get\+Rotation\+Accel().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}\label{class_t_u_i_o_1_1_tuio_object_aee8d80d314a66646b834b2d74e0073d1}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!rotation\+\_\+speed@{rotation\+\_\+speed}}
+\index{rotation\+\_\+speed@{rotation\+\_\+speed}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{rotation\+\_\+speed}{rotation\_speed}}
+{\footnotesize\ttfamily float T\+U\+I\+O\+::\+Tuio\+Object\+::rotation\+\_\+speed\hspace{0.3cm}{\ttfamily [protected]}}
+
+The rotation speed value. 
+
+Definition at line 52 of file Tuio\+Object.\+h.
+
+
+
+Referenced by get\+Rotation\+Speed(), and update().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_object_a05c245f10efaa7bf97b6c383004d6b7f}\label{class_t_u_i_o_1_1_tuio_object_a05c245f10efaa7bf97b6c383004d6b7f}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}!symbol\+\_\+id@{symbol\+\_\+id}}
+\index{symbol\+\_\+id@{symbol\+\_\+id}!T\+U\+I\+O\+::\+Tuio\+Object@{T\+U\+I\+O\+::\+Tuio\+Object}}
+\subsubsection{\texorpdfstring{symbol\+\_\+id}{symbol\_id}}
+{\footnotesize\ttfamily int T\+U\+I\+O\+::\+Tuio\+Object\+::symbol\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+The individual symbol ID number that is assigned to each \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object}. 
+
+Definition at line 44 of file Tuio\+Object.\+h.
+
+
+
+Referenced by get\+Symbol\+I\+D().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Tuio\+\_\+\+Client/Tuio\+Object.\+h\end{DoxyCompactItemize}

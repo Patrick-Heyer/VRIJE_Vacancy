@@ -1,0 +1,70 @@
+\hypertarget{class_plugin_manager}{}\section{Plugin\+Manager Class Reference}
+\label{class_plugin_manager}\index{Plugin\+Manager@{Plugin\+Manager}}
+
+
+C\+O\+R\+E\+\_\+\+A\+PI \hyperlink{class_plugin_manager}{Plugin\+Manager}.  
+
+
+
+
+{\ttfamily \#include $<$pluginmanager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plugin_manager_a9cfa0cf37c1f03371d83f56d48b26884}\label{class_plugin_manager_a9cfa0cf37c1f03371d83f56d48b26884}} 
+bool \hyperlink{class_plugin_manager_a9cfa0cf37c1f03371d83f56d48b26884}{Load} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Load a single plugin by name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plugin_manager_acf215381606a14747a8a0766bef9e1f1}\label{class_plugin_manager_acf215381606a14747a8a0766bef9e1f1}} 
+bool \hyperlink{class_plugin_manager_acf215381606a14747a8a0766bef9e1f1}{Load\+From\+File} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em load a list of plugins by name from file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}\label{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}} 
+bool \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Initialize} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Initialize a single plugin by name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plugin_manager_a66bbd81ad0771e495af91718c0c58859}\label{class_plugin_manager_a66bbd81ad0771e495af91718c0c58859}} 
+bool \hyperlink{class_plugin_manager_a66bbd81ad0771e495af91718c0c58859}{Initialize\+All} ()
+\begin{DoxyCompactList}\small\item\em Initialize all plugins in m\+Plugins. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plugin_manager_ab7ac61ad5e567af6ed38574cb89e80e6}\label{class_plugin_manager_ab7ac61ad5e567af6ed38574cb89e80e6}} 
+bool \hyperlink{class_plugin_manager_ab7ac61ad5e567af6ed38574cb89e80e6}{Execute} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Execute a single plugin by name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plugin_manager_ad2c750b62404561213e397066b852abb}\label{class_plugin_manager_ad2c750b62404561213e397066b852abb}} 
+bool \hyperlink{class_plugin_manager_ad2c750b62404561213e397066b852abb}{Execute\+All} ()
+\begin{DoxyCompactList}\small\item\em Execute all plugins in m\+Plugins. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}\label{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}} 
+bool \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Unload} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Unload a single plugin by name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plugin_manager_ac771065cfdf4032cfb254d2ae2cb0c0f}\label{class_plugin_manager_ac771065cfdf4032cfb254d2ae2cb0c0f}} 
+bool \hyperlink{class_plugin_manager_ac771065cfdf4032cfb254d2ae2cb0c0f}{Unload\+All} ()
+\begin{DoxyCompactList}\small\item\em Unload all plugins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plugin_manager_acc7641f5801a2df305dc71e1e87fc25b}\label{class_plugin_manager_acc7641f5801a2df305dc71e1e87fc25b}} 
+static \hyperlink{class_plugin_manager}{Plugin\+Manager} \& \hyperlink{class_plugin_manager_acc7641f5801a2df305dc71e1e87fc25b}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Return the single instance of the plugin manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+O\+R\+E\+\_\+\+A\+PI \hyperlink{class_plugin_manager}{Plugin\+Manager}. 
+
+A manger for all plugins in the Core A\+PI using singleton pattern to avoid multiple instances
+
+\begin{DoxyAuthor}{Author}
+Patrick Heyer, \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+jul 13, 2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 67 of file pluginmanager.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Plugin\+\_\+\+A\+P\+I/\hyperlink{pluginmanager_8h}{pluginmanager.\+h}\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Plugin\+\_\+\+A\+P\+I/pluginmanager.\+cpp\end{DoxyCompactItemize}

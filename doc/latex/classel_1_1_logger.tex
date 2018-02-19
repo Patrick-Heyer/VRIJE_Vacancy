@@ -1,0 +1,140 @@
+\hypertarget{classel_1_1_logger}{}\section{el\+:\+:Logger Class Reference}
+\label{classel_1_1_logger}\index{el\+::\+Logger@{el\+::\+Logger}}
+
+
+Represents a logger holding ID and configurations we need to write logs.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+
+
+Inheritance diagram for el\+:\+:Logger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classel_1_1_logger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for el\+:\+:Logger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classel_1_1_logger__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a59b1c5a0f8c5c670e59d2f69f9e39fbb}\label{classel_1_1_logger_a59b1c5a0f8c5c670e59d2f69f9e39fbb}} 
+{\bfseries Logger} (const std\+::string \&id, base\+::\+Log\+Streams\+Reference\+Map $\ast$log\+Streams\+Reference)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a43abea8865d7316f05c8a676a8c04896}\label{classel_1_1_logger_a43abea8865d7316f05c8a676a8c04896}} 
+{\bfseries Logger} (const std\+::string \&id, const \hyperlink{classel_1_1_configurations}{Configurations} \&configurations, base\+::\+Log\+Streams\+Reference\+Map $\ast$log\+Streams\+Reference)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a984de07936a8c783e91496dfa6df69ea}\label{classel_1_1_logger_a984de07936a8c783e91496dfa6df69ea}} 
+{\bfseries Logger} (const \hyperlink{classel_1_1_logger}{Logger} \&logger)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a2bfb4ed37f3281a701f20fb21a4cac62}\label{classel_1_1_logger_a2bfb4ed37f3281a701f20fb21a4cac62}} 
+\hyperlink{classel_1_1_logger}{Logger} \& {\bfseries operator=} (const \hyperlink{classel_1_1_logger}{Logger} \&logger)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_aadc2ebf63de0e578d37d3cc02ecccaf7}\label{classel_1_1_logger_aadc2ebf63de0e578d37d3cc02ecccaf7}} 
+virtual void {\bfseries log} (el\+::base\+::type\+::ostream\+\_\+t \&os) const
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_ad9db621dbf8977bf814dc7baea8dcee4}\label{classel_1_1_logger_ad9db621dbf8977bf814dc7baea8dcee4}} 
+void \hyperlink{classel_1_1_logger_ad9db621dbf8977bf814dc7baea8dcee4}{configure} (const \hyperlink{classel_1_1_configurations}{Configurations} \&configurations)
+\begin{DoxyCompactList}\small\item\em Configures the logger using specified configurations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1_logger_adfd57ab27fb398cc980a3edfab92927e}\label{classel_1_1_logger_adfd57ab27fb398cc980a3edfab92927e}} 
+void \hyperlink{classel_1_1_logger_adfd57ab27fb398cc980a3edfab92927e}{reconfigure} (void)
+\begin{DoxyCompactList}\small\item\em Reconfigures logger using existing configurations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1_logger_a8583bfdeea4cb781396fd635addd64e9}\label{classel_1_1_logger_a8583bfdeea4cb781396fd635addd64e9}} 
+const std\+::string \& {\bfseries id} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a7e736c63c196cfed54a40ad7abc79155}\label{classel_1_1_logger_a7e736c63c196cfed54a40ad7abc79155}} 
+const std\+::string \& {\bfseries parent\+Application\+Name} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a6890af8910adba26b01ef029429c4f15}\label{classel_1_1_logger_a6890af8910adba26b01ef029429c4f15}} 
+void {\bfseries set\+Parent\+Application\+Name} (const std\+::string \&parent\+Application\+Name)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_aeb57aeaddbb3dcd0cb96114019817142}\label{classel_1_1_logger_aeb57aeaddbb3dcd0cb96114019817142}} 
+\hyperlink{classel_1_1_configurations}{Configurations} $\ast$ {\bfseries configurations} (void)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_ac1d34e77892ea506b011d5279b6b139d}\label{classel_1_1_logger_ac1d34e77892ea506b011d5279b6b139d}} 
+\hyperlink{classel_1_1base_1_1_typed_configurations}{base\+::\+Typed\+Configurations} $\ast$ {\bfseries typed\+Configurations} (void)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a9a89d454008b1ee1a197eec4b92ce22a}\label{classel_1_1_logger_a9a89d454008b1ee1a197eec4b92ce22a}} 
+void \hyperlink{classel_1_1_logger_a9a89d454008b1ee1a197eec4b92ce22a}{flush} (void)
+\begin{DoxyCompactList}\small\item\em Flushes logger to sync all log files for all levels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1_logger_a83c85278ebeeef6a24cc112e56c344dd}\label{classel_1_1_logger_a83c85278ebeeef6a24cc112e56c344dd}} 
+void {\bfseries flush} (\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level} level, base\+::type\+::fstream\+\_\+t $\ast$fs)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_abdf56c00388c71d1cbaa7e2df4449202}\label{classel_1_1_logger_abdf56c00388c71d1cbaa7e2df4449202}} 
+bool {\bfseries is\+Flush\+Needed} (\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level} level)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_ac7d79707cdbcb0851913d1e07338bc13}\label{classel_1_1_logger_ac7d79707cdbcb0851913d1e07338bc13}} 
+\hyperlink{classel_1_1_log_builder}{Log\+Builder} $\ast$ {\bfseries log\+Builder} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a737340322cc9d9d20febd7131c1e262f}\label{classel_1_1_logger_a737340322cc9d9d20febd7131c1e262f}} 
+void {\bfseries set\+Log\+Builder} (const Log\+Builder\+Ptr \&log\+Builder)
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_aa577392f6bd9f3a48b447fc0c7e5f8dc}\label{classel_1_1_logger_aa577392f6bd9f3a48b447fc0c7e5f8dc}} 
+bool {\bfseries enabled} (\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level} level) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_af6cf4f266ceb65da9563afd3706f26d6}\label{classel_1_1_logger_af6cf4f266ceb65da9563afd3706f26d6}} 
+static bool {\bfseries is\+Valid\+Id} (const std\+::string \&id)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a22965b691242a9f61d443ba03fce3e35}\label{classel_1_1_logger_a22965b691242a9f61d443ba03fce3e35}} 
+class {\bfseries el\+::\+Log\+Message}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a6efe246b312d02731fb0e1d120c0331d}\label{classel_1_1_logger_a6efe246b312d02731fb0e1d120c0331d}} 
+class {\bfseries el\+::\+Loggers}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a2fb8a2c02cbf86247f093c118bed877a}\label{classel_1_1_logger_a2fb8a2c02cbf86247f093c118bed877a}} 
+class {\bfseries el\+::\+Helpers}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a574ecee25e8d578f76060a95a2fe7c9e}\label{classel_1_1_logger_a574ecee25e8d578f76060a95a2fe7c9e}} 
+class {\bfseries el\+::base\+::\+Registered\+Loggers}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a42b1de96d584ae4fecbfc2b9aff95052}\label{classel_1_1_logger_a42b1de96d584ae4fecbfc2b9aff95052}} 
+class {\bfseries el\+::base\+::\+Default\+Log\+Dispatch\+Callback}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a81bbf6fe31fab133d182efa8367304f1}\label{classel_1_1_logger_a81bbf6fe31fab133d182efa8367304f1}} 
+class {\bfseries el\+::base\+::\+Message\+Builder}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a7a728edbb2761d151832daa74d5b2736}\label{classel_1_1_logger_a7a728edbb2761d151832daa74d5b2736}} 
+class {\bfseries el\+::base\+::\+Writer}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a2a368b9be1b8d6a29d4bb92a11807f39}\label{classel_1_1_logger_a2a368b9be1b8d6a29d4bb92a11807f39}} 
+class {\bfseries el\+::base\+::\+P\+Error\+Writer}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_acc1efd1b8a3fc5e0028dab98b02e550a}\label{classel_1_1_logger_acc1efd1b8a3fc5e0028dab98b02e550a}} 
+class {\bfseries el\+::base\+::\+Storage}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a6a4d7851e1984800be3c230f06a79528}\label{classel_1_1_logger_a6a4d7851e1984800be3c230f06a79528}} 
+class {\bfseries el\+::base\+::\+Performance\+Tracker}
+\item 
+\mbox{\Hypertarget{classel_1_1_logger_a9b37b28ea1c5f8f862cc89f135711d92}\label{classel_1_1_logger_a9b37b28ea1c5f8f862cc89f135711d92}} 
+class {\bfseries el\+::base\+::\+Log\+Dispatcher}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a logger holding ID and configurations we need to write logs. 
+
+This class does not write logs itself instead its used by writer to read configuations from. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/easylogging++.\+h\end{DoxyCompactItemize}

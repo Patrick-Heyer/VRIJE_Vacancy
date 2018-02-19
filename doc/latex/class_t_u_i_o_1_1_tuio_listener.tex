@@ -1,0 +1,236 @@
+\hypertarget{class_t_u_i_o_1_1_tuio_listener}{}\section{T\+U\+IO\+:\+:Tuio\+Listener Class Reference}
+\label{class_t_u_i_o_1_1_tuio_listener}\index{T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}}
+
+
+{\ttfamily \#include $<$Tuio\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for T\+U\+IO\+:\+:Tuio\+Listener\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_t_u_i_o_1_1_tuio_listener__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_t_u_i_o_1_1_tuio_listener_ad26ffa48dd45e148e6582724da49b283}{$\sim$\+Tuio\+Listener} ()
+\item 
+virtual void \hyperlink{class_t_u_i_o_1_1_tuio_listener_a7180002e5898259cecdb8b614a0f67ff}{add\+Tuio\+Object} (\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$tobj)=0
+\item 
+virtual void \hyperlink{class_t_u_i_o_1_1_tuio_listener_a27a13b031781a609c08bc40548d2e42d}{update\+Tuio\+Object} (\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$tobj)=0
+\item 
+virtual void \hyperlink{class_t_u_i_o_1_1_tuio_listener_acf6d81485aaad7747cb399c325b831ee}{remove\+Tuio\+Object} (\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$tobj)=0
+\item 
+virtual void \hyperlink{class_t_u_i_o_1_1_tuio_listener_a431a957994470c3767e94379debeb875}{add\+Tuio\+Cursor} (\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$tcur)=0
+\item 
+virtual void \hyperlink{class_t_u_i_o_1_1_tuio_listener_a1d60e2d80b0e09d74ded8713362c43c4}{update\+Tuio\+Cursor} (\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$tcur)=0
+\item 
+virtual void \hyperlink{class_t_u_i_o_1_1_tuio_listener_ade7712d189c28c82c447a815022254d9}{remove\+Tuio\+Cursor} (\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$tcur)=0
+\item 
+virtual void \hyperlink{class_t_u_i_o_1_1_tuio_listener_a14d16f24c27bb22fe2e24419e447dd63}{refresh} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ftime)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_t_u_i_o_1_1_tuio_listener}{Tuio\+Listener} interface provides a simple callback infrastructure which is used by the \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} class to dispatch T\+U\+IO events to all registered instances of classes that implement the \hyperlink{class_t_u_i_o_1_1_tuio_listener}{Tuio\+Listener} interface defined here.
+
+Any class that implements the \hyperlink{class_t_u_i_o_1_1_tuio_listener}{Tuio\+Listener} interface is required to implement all of the callback methods defined here. The \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} makes use of these interface methods in order to dispatch T\+U\+IO events to all registered \hyperlink{class_t_u_i_o_1_1_tuio_listener}{Tuio\+Listener} implementations.
+
+{\ttfamily  public class My\+Tuio\+Listener implements \hyperlink{class_t_u_i_o_1_1_tuio_listener}{Tuio\+Listener}~\newline
+ ...}
+
+{\ttfamily  My\+Tuio\+Listener listener = new My\+Tuio\+Listener();~\newline
+ \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} client = new Tuio\+Client();~\newline
+ client.\+add\+Tuio\+Listener(listener);~\newline
+ client.\+start();~\newline
+ }
+
+\begin{DoxyAuthor}{Author}
+Martin Kaltenbrunner 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+4 
+\end{DoxyVersion}
+
+
+Definition at line 47 of file Tuio\+Listener.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_listener_ad26ffa48dd45e148e6582724da49b283}\label{class_t_u_i_o_1_1_tuio_listener_ad26ffa48dd45e148e6582724da49b283}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}!````~Tuio\+Listener@{$\sim$\+Tuio\+Listener}}
+\index{````~Tuio\+Listener@{$\sim$\+Tuio\+Listener}!T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}}
+\subsubsection{\texorpdfstring{$\sim$\+Tuio\+Listener()}{~TuioListener()}}
+{\footnotesize\ttfamily virtual T\+U\+I\+O\+::\+Tuio\+Listener\+::$\sim$\+Tuio\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+The destructor is doing nothing in particular. 
+
+Definition at line 53 of file Tuio\+Listener.\+h.
+
+
+
+References add\+Tuio\+Cursor(), add\+Tuio\+Object(), refresh(), remove\+Tuio\+Cursor(), remove\+Tuio\+Object(), update\+Tuio\+Cursor(), and update\+Tuio\+Object().
+
+
+\begin{DoxyCode}
+53 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_listener_a431a957994470c3767e94379debeb875}\label{class_t_u_i_o_1_1_tuio_listener_a431a957994470c3767e94379debeb875}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}!add\+Tuio\+Cursor@{add\+Tuio\+Cursor}}
+\index{add\+Tuio\+Cursor@{add\+Tuio\+Cursor}!T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}}
+\subsubsection{\texorpdfstring{add\+Tuio\+Cursor()}{addTuioCursor()}}
+{\footnotesize\ttfamily virtual void T\+U\+I\+O\+::\+Tuio\+Listener\+::add\+Tuio\+Cursor (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$}]{tcur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This callback method is invoked by the \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} when a new \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} is added to the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcur} & the \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} reference associated to the add\+Tuio\+Cursor event \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_tuio_dump_ab633ec2cbd9472a8c128fac33fca183f}{Tuio\+Dump}.
+
+
+
+Referenced by $\sim$\+Tuio\+Listener().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_listener_a7180002e5898259cecdb8b614a0f67ff}\label{class_t_u_i_o_1_1_tuio_listener_a7180002e5898259cecdb8b614a0f67ff}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}!add\+Tuio\+Object@{add\+Tuio\+Object}}
+\index{add\+Tuio\+Object@{add\+Tuio\+Object}!T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}}
+\subsubsection{\texorpdfstring{add\+Tuio\+Object()}{addTuioObject()}}
+{\footnotesize\ttfamily virtual void T\+U\+I\+O\+::\+Tuio\+Listener\+::add\+Tuio\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$}]{tobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This callback method is invoked by the \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} when a new \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} is added to the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tobj} & the \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} reference associated to the add\+Tuio\+Object event \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_tuio_dump_a978520453aaf17d3409ae13573b7334f}{Tuio\+Dump}.
+
+
+
+Referenced by $\sim$\+Tuio\+Listener().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_listener_a14d16f24c27bb22fe2e24419e447dd63}\label{class_t_u_i_o_1_1_tuio_listener_a14d16f24c27bb22fe2e24419e447dd63}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}!refresh@{refresh}}
+\index{refresh@{refresh}!T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual void T\+U\+I\+O\+::\+Tuio\+Listener\+::refresh (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ftime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This callback method is invoked by the \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} to mark the end of a received T\+U\+IO message bundle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ftime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} associated to the current T\+U\+IO message bundle \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_tuio_dump_a8a664f2e278fac90065c57e366d4277e}{Tuio\+Dump}.
+
+
+
+Referenced by $\sim$\+Tuio\+Listener().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_listener_ade7712d189c28c82c447a815022254d9}\label{class_t_u_i_o_1_1_tuio_listener_ade7712d189c28c82c447a815022254d9}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}!remove\+Tuio\+Cursor@{remove\+Tuio\+Cursor}}
+\index{remove\+Tuio\+Cursor@{remove\+Tuio\+Cursor}!T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}}
+\subsubsection{\texorpdfstring{remove\+Tuio\+Cursor()}{removeTuioCursor()}}
+{\footnotesize\ttfamily virtual void T\+U\+I\+O\+::\+Tuio\+Listener\+::remove\+Tuio\+Cursor (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$}]{tcur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This callback method is invoked by the \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} when an existing \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} is removed from the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcur} & the \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} reference associated to the remove\+Tuio\+Cursor event \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_tuio_dump_a29bea77556080ef3a2efea2d20b17b54}{Tuio\+Dump}.
+
+
+
+Referenced by $\sim$\+Tuio\+Listener().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_listener_acf6d81485aaad7747cb399c325b831ee}\label{class_t_u_i_o_1_1_tuio_listener_acf6d81485aaad7747cb399c325b831ee}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}!remove\+Tuio\+Object@{remove\+Tuio\+Object}}
+\index{remove\+Tuio\+Object@{remove\+Tuio\+Object}!T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}}
+\subsubsection{\texorpdfstring{remove\+Tuio\+Object()}{removeTuioObject()}}
+{\footnotesize\ttfamily virtual void T\+U\+I\+O\+::\+Tuio\+Listener\+::remove\+Tuio\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$}]{tobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This callback method is invoked by the \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} when an existing \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} is removed from the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tobj} & the \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} reference associated to the remove\+Tuio\+Object event \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_tuio_dump_a5ed9e2ea7858b885bf52558c1c6e7e69}{Tuio\+Dump}.
+
+
+
+Referenced by $\sim$\+Tuio\+Listener().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_listener_a1d60e2d80b0e09d74ded8713362c43c4}\label{class_t_u_i_o_1_1_tuio_listener_a1d60e2d80b0e09d74ded8713362c43c4}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}!update\+Tuio\+Cursor@{update\+Tuio\+Cursor}}
+\index{update\+Tuio\+Cursor@{update\+Tuio\+Cursor}!T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}}
+\subsubsection{\texorpdfstring{update\+Tuio\+Cursor()}{updateTuioCursor()}}
+{\footnotesize\ttfamily virtual void T\+U\+I\+O\+::\+Tuio\+Listener\+::update\+Tuio\+Cursor (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$}]{tcur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This callback method is invoked by the \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} when an existing \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} is updated during the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcur} & the \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} reference associated to the update\+Tuio\+Cursor event \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_tuio_dump_a6b54d0d57d714c5b51f5cf76a9b8b62a}{Tuio\+Dump}.
+
+
+
+Referenced by $\sim$\+Tuio\+Listener().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_listener_a27a13b031781a609c08bc40548d2e42d}\label{class_t_u_i_o_1_1_tuio_listener_a27a13b031781a609c08bc40548d2e42d}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}!update\+Tuio\+Object@{update\+Tuio\+Object}}
+\index{update\+Tuio\+Object@{update\+Tuio\+Object}!T\+U\+I\+O\+::\+Tuio\+Listener@{T\+U\+I\+O\+::\+Tuio\+Listener}}
+\subsubsection{\texorpdfstring{update\+Tuio\+Object()}{updateTuioObject()}}
+{\footnotesize\ttfamily virtual void T\+U\+I\+O\+::\+Tuio\+Listener\+::update\+Tuio\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$}]{tobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This callback method is invoked by the \hyperlink{class_t_u_i_o_1_1_tuio_client}{Tuio\+Client} when an existing \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} is updated during the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tobj} & the \hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} reference associated to the update\+Tuio\+Object event \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_tuio_dump_a0bade2cba83fe3dcdb11ca475e2f4862}{Tuio\+Dump}.
+
+
+
+Referenced by $\sim$\+Tuio\+Listener().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Tuio\+\_\+\+Client/Tuio\+Listener.\+h\end{DoxyCompactItemize}

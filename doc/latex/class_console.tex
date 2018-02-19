@@ -1,0 +1,235 @@
+\hypertarget{class_console}{}\section{Console Class Reference}
+\label{class_console}\index{Console@{Console}}
+
+
+...  
+
+
+
+
+{\ttfamily \#include $<$console.\+h$>$}
+
+
+
+Inheritance diagram for Console\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{class_console__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Console\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{class_console__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_console_ac3c8107e78fe0a576627dfd49a057525}{Console} (int x, int y, int widht, int height, std\+::string name, \hyperlink{class_tab}{Tab} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{class_console}{Console}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_console_a8331885826f3df1f421622396b77545a}\label{class_console_a8331885826f3df1f421622396b77545a}} 
+void {\bfseries add\+Line} (std\+::string value, \hyperlink{structcolor4}{color4} col, int font\+\_\+type)
+\item 
+void \hyperlink{class_console_a083e9f4f93ae7261dba07c8559db4443}{Draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the widget. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_af1d3a54bd8649b46574ad35998563fea}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_console_a9c69ceb75eba499a429833d818a62c73}\label{class_console_a9c69ceb75eba499a429833d818a62c73}} 
+void {\bfseries procces\+Input} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+... 
+
+Definition at line 45 of file console.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_console_ac3c8107e78fe0a576627dfd49a057525}\label{class_console_ac3c8107e78fe0a576627dfd49a057525}} 
+\index{Console@{Console}!Console@{Console}}
+\index{Console@{Console}!Console@{Console}}
+\subsubsection{\texorpdfstring{Console()}{Console()}}
+{\footnotesize\ttfamily Console\+::\+Console (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{widht,  }\item[{int}]{height,  }\item[{std\+::string}]{name,  }\item[{\hyperlink{class_tab}{Tab} $\ast$}]{parent }\end{DoxyParamCaption})}
+
+
+
+Creates a new \hyperlink{class_console}{Console}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The upper left corner x cordinate of the console \\
+\hline
+{\em y} & The upper left corner y cordinate of the console \\
+\hline
+{\em widht} & Widht of the console \\
+\hline
+{\em height} & Height of the console \\
+\hline
+{\em name} & The name that will identify this \hyperlink{class_widget}{Widget} in the list of its parent \hyperlink{class_tab}{Tab} \\
+\hline
+{\em paretn} & Pointer to the \hyperlink{class_tab}{Tab} that will contain the widget \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file console.\+cpp.
+
+
+\begin{DoxyCode}
+24 \{
+25     this->SetName(name);
+26     this->SetPosition(x, y);
+27     this->SetSize(widht, height);
+28     this->SetActive(\textcolor{keyword}{true});
+29     parent->InsertWidget(\textcolor{keyword}{this});
+30 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_console_a083e9f4f93ae7261dba07c8559db4443}\label{class_console_a083e9f4f93ae7261dba07c8559db4443}} 
+\index{Console@{Console}!Draw@{Draw}}
+\index{Draw@{Draw}!Console@{Console}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Console\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws the widget. 
+
+Draws the widget called by \hyperlink{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}{Tab\+::\+Draw} 
+
+Implements \hyperlink{class_widget_ac4c2063cd671468ad05d84cfe963c032}{Widget}.
+
+
+
+Definition at line 45 of file console.\+cpp.
+
+
+\begin{DoxyCode}
+46 \{
+47     \textcolor{keywordtype}{int} uiround=uiGetRoundBox();
+48     uiSetRoundBox(\textcolor{stringliteral}{"0000"});
+49     \textcolor{keywordflow}{if} (Get\_Active())
+50     gl\_round\_box\_Hshade(GL\_POLYGON, Get\_x(), Get\_y(), Get\_x()+Get\_widht(), Get\_y()+Get\_height(),10, \textcolor{stringliteral}{"FFFFFF
+      "},  \textcolor{stringliteral}{"FFFFFF"});
+51     \textcolor{keywordtype}{int} line=Get\_y()+10;
+52     \textcolor{keywordtype}{int} posx=Get\_x();
+53     \textcolor{keywordtype}{int} found;
+54     \textcolor{keywordtype}{int} i=0;
+55     \textcolor{keywordflow}{while}( m\_text.size()>(int)(Get\_height()/11))
+56     \{
+57         m\_text.pop\_front();
+58     \}
+59     \textcolor{keywordflow}{for}( listItor itor = m\_text.begin(); itor != m\_text.end(); ++itor )
+60     \{
+61         i++;
+62 
+63         found = (*itor).content.find\_first\_of (\textcolor{charliteral}{'\(\backslash\)n'});
+64         \textcolor{keywordflow}{if}( found <=0)\{
+65         \textcolor{keywordflow}{switch} ((*itor).font)
+66         \{
+67             \textcolor{keywordflow}{case} 1:
+68                 drawText(posx,line+15,(*itor).content, (*itor).color, (*itor).font);
+69                 \textcolor{keywordflow}{break};
+70             \textcolor{keywordflow}{case} 2:
+71                 drawText(posx,line+13,(*itor).content, (*itor).color, (*itor).font);
+72                 \textcolor{keywordflow}{break};
+73             \textcolor{keywordflow}{case} 3:
+74                 drawText(posx,line+10,(*itor).content, (*itor).color, (*itor).font);
+75                 \textcolor{keywordflow}{break};
+76             \textcolor{keywordflow}{case} 4:
+77                 drawText(posx,line+24,(*itor).content, (*itor).color, (*itor).font);
+78                 \textcolor{keywordflow}{break};
+79             \textcolor{keywordflow}{case} 5:
+80                 drawText(posx,line+12,(*itor).content, (*itor).color, (*itor).font);
+81                 \textcolor{keywordflow}{break};
+82             \textcolor{keywordflow}{case} 6:
+83                 drawText(posx,line+18,(*itor).content, (*itor).color, (*itor).font);
+84                 \textcolor{keywordflow}{break};
+85             \textcolor{keywordflow}{default}:
+86                 drawText(posx,line+10,(*itor).content, (*itor).color, (*itor).font);
+87                 \textcolor{keywordflow}{break};
+88                 
+89         \}
+90         posx=posx+((*itor).content.size()*6);
+91         \}
+92         \textcolor{keywordflow}{else}
+93         \{
+94             \textcolor{keywordflow}{switch} ((*itor).font)
+95             \{
+96             \textcolor{keywordflow}{case} 1:
+97                 drawText(posx,line+15,(*itor).content, (*itor).color, (*itor).font);
+98                 line=line+15;
+99                 \textcolor{keywordflow}{break};
+100             \textcolor{keywordflow}{case} 2:
+101                 drawText(posx,line+13,(*itor).content, (*itor).color, (*itor).font);
+102                 line=line+13;
+103                 \textcolor{keywordflow}{break};
+104             \textcolor{keywordflow}{case} 3:
+105                 drawText(posx,line+10,(*itor).content, (*itor).color, (*itor).font);
+106                 line=line+10;
+107                 \textcolor{keywordflow}{break};
+108             \textcolor{keywordflow}{case} 4:
+109                 drawText(posx,line+24,(*itor).content, (*itor).color, (*itor).font);
+110                 line=line+24;
+111                 \textcolor{keywordflow}{break};
+112             \textcolor{keywordflow}{case} 5:
+113                 drawText(posx,line+12,(*itor).content, (*itor).color, (*itor).font);
+114                 line=line+12;
+115                 \textcolor{keywordflow}{break};
+116             \textcolor{keywordflow}{case} 6:
+117                 drawText(posx,line+18,(*itor).content, (*itor).color, (*itor).font);
+118                 line=line+18;
+119                 \textcolor{keywordflow}{break};
+120             \textcolor{keywordflow}{default}:
+121                 drawText(posx,line+10,(*itor).content, (*itor).color, (*itor).font);
+122                 line=line+10;
+123                 \textcolor{keywordflow}{break};              
+124             \}
+125         posx=Get\_x();
+126        
+127         \}
+128 
+129         
+130     \}
+131     uiSetRoundBox(uiround);
+132 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_console_af1d3a54bd8649b46574ad35998563fea}\label{class_console_af1d3a54bd8649b46574ad35998563fea}} 
+\index{Console@{Console}!update@{update}}
+\index{update@{update}!Console@{Console}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Console\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the widget. 
+
+Updates the widget called by Tab\+::update 
+
+Implements \hyperlink{class_widget_a726dc97add2c6eb82967144207280ace}{Widget}.
+
+
+
+Definition at line 134 of file console.\+cpp.
+
+
+\begin{DoxyCode}
+135 \{
+136     
+137 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/\hyperlink{console_8h}{console.\+h}\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/console.\+cpp\end{DoxyCompactItemize}

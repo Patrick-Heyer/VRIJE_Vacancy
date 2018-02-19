@@ -1,0 +1,534 @@
+\hypertarget{class_t_u_i_o_1_1_tuio_time}{}\section{T\+U\+IO\+:\+:Tuio\+Time Class Reference}
+\label{class_t_u_i_o_1_1_tuio_time}\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+
+
+{\ttfamily \#include $<$Tuio\+Time.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_time_a924521ecf43b6484fad9550661eedb0a}{Tuio\+Time} ()
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_time_a3128aa283fb3df08ac1f5915f892e101}{$\sim$\+Tuio\+Time} ()
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_time_a5005f23550f8fa8458c388a67b302ab8}{Tuio\+Time} (long msec)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_time_a4d1a4559c5c389d480ecaa3e5cafbfe9}{Tuio\+Time} (long sec, long usec)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} \hyperlink{class_t_u_i_o_1_1_tuio_time_a182951527d8e7654a653ac49112a9fb1}{operator+} (long us)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} \hyperlink{class_t_u_i_o_1_1_tuio_time_a78bbf034a3b03400954e3dd3a6ba0ba4}{operator+} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} \hyperlink{class_t_u_i_o_1_1_tuio_time_a08d774edb8feaec79f5df44dddaa3a9c}{operator-\/} (long us)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} \hyperlink{class_t_u_i_o_1_1_tuio_time_af72bee5bd9ce897e017a3106b51b3532}{operator-\/} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime)
+\item 
+void \hyperlink{class_t_u_i_o_1_1_tuio_time_a34ae143720ec8f24e8381775ffff340e}{operator=} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime)
+\item 
+bool \hyperlink{class_t_u_i_o_1_1_tuio_time_a15f1b26aa7b3c9a10db9e4a7781a7765}{operator==} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime)
+\item 
+bool \hyperlink{class_t_u_i_o_1_1_tuio_time_a658bdc24d71d0ff9180fbde4fae8aa22}{operator!=} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime)
+\item 
+void \hyperlink{class_t_u_i_o_1_1_tuio_time_aeb2bee6eae0ce633f015bf7958a348ac}{reset} ()
+\item 
+long \hyperlink{class_t_u_i_o_1_1_tuio_time_a7d50635899893b7fbbb05d8356576ccb}{get\+Seconds} ()
+\item 
+long \hyperlink{class_t_u_i_o_1_1_tuio_time_ac511e63e519d31b7eaab97dee0bea0cc}{get\+Microseconds} ()
+\item 
+long \hyperlink{class_t_u_i_o_1_1_tuio_time_a7e861c278e95080b6f087c8c32ed2561}{get\+Total\+Milliseconds} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_t_u_i_o_1_1_tuio_time_af7e2d2ec80cc6be6188469f5d31fdb94}{init\+Session} ()
+\item 
+static \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} \hyperlink{class_t_u_i_o_1_1_tuio_time_a04e3e660b895b349a26b0364401878b9}{get\+Session\+Time} ()
+\item 
+static \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} \hyperlink{class_t_u_i_o_1_1_tuio_time_a748fb038221433dd33ac52f80d7d9c3e}{get\+Start\+Time} ()
+\item 
+static \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} \hyperlink{class_t_u_i_o_1_1_tuio_time_aec89a336368b34d217f571942de40955}{get\+System\+Time} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} class is a simple structure that is used to reprent the time that has elapsed since the session start. The time is internally represented as seconds and fractions of microseconds which should be more than sufficient for gesture related timing requirements. Therefore at the beginning of a typical T\+U\+IO session the static method \hyperlink{class_t_u_i_o_1_1_tuio_time_af7e2d2ec80cc6be6188469f5d31fdb94}{init\+Session()} will set the reference time for the session. Another important static method get\+Session\+Time will return a \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} object representing the time elapsed since the session start. The class also provides various addtional convience method, which allow some simple time arithmetics.
+
+\begin{DoxyAuthor}{Author}
+Martin Kaltenbrunner 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+4 
+\end{DoxyVersion}
+
+
+Definition at line 48 of file Tuio\+Time.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a924521ecf43b6484fad9550661eedb0a}\label{class_t_u_i_o_1_1_tuio_time_a924521ecf43b6484fad9550661eedb0a}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!Tuio\+Time@{Tuio\+Time}}
+\index{Tuio\+Time@{Tuio\+Time}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{Tuio\+Time()}{TuioTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Time\+::\+Tuio\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The default constructor takes no arguments and sets the Seconds and Microseconds attributes of the newly created \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} both to zero. 
+
+Definition at line 60 of file Tuio\+Time.\+h.
+
+
+
+Referenced by operator+(), and operator-\/().
+
+
+\begin{DoxyCode}
+60                     \{
+61             seconds = 0;
+62             micro\_seconds = 0;
+63         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a3128aa283fb3df08ac1f5915f892e101}\label{class_t_u_i_o_1_1_tuio_time_a3128aa283fb3df08ac1f5915f892e101}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!````~Tuio\+Time@{$\sim$\+Tuio\+Time}}
+\index{````~Tuio\+Time@{$\sim$\+Tuio\+Time}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{$\sim$\+Tuio\+Time()}{~TuioTime()}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Time\+::$\sim$\+Tuio\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The destructor is doing nothing in particular. 
+
+Definition at line 68 of file Tuio\+Time.\+h.
+
+
+\begin{DoxyCode}
+68 \{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a5005f23550f8fa8458c388a67b302ab8}\label{class_t_u_i_o_1_1_tuio_time_a5005f23550f8fa8458c388a67b302ab8}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!Tuio\+Time@{Tuio\+Time}}
+\index{Tuio\+Time@{Tuio\+Time}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{Tuio\+Time()}{TuioTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Time\+::\+Tuio\+Time (\begin{DoxyParamCaption}\item[{long}]{msec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor takes the provided time represented in total Milliseconds and assigs this value to the newly created \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msec} & the total time in Millseconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 76 of file Tuio\+Time.\+h.
+
+
+\begin{DoxyCode}
+76                              \{
+77             seconds = msec/MSEC\_SECOND;
+78             micro\_seconds = USEC\_MILLISECOND*(msec%MSEC\_SECOND);
+79         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a4d1a4559c5c389d480ecaa3e5cafbfe9}\label{class_t_u_i_o_1_1_tuio_time_a4d1a4559c5c389d480ecaa3e5cafbfe9}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!Tuio\+Time@{Tuio\+Time}}
+\index{Tuio\+Time@{Tuio\+Time}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{Tuio\+Time()}{TuioTime()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Time\+::\+Tuio\+Time (\begin{DoxyParamCaption}\item[{long}]{sec,  }\item[{long}]{usec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor takes the provided time represented in Seconds and Microseconds and assigs these value to the newly created \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sec} & the total time in seconds \\
+\hline
+{\em usec} & the microseconds time component \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 88 of file Tuio\+Time.\+h.
+
+
+\begin{DoxyCode}
+88                                        \{
+89             seconds = sec;
+90             micro\_seconds = usec;
+91         \};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_ac511e63e519d31b7eaab97dee0bea0cc}\label{class_t_u_i_o_1_1_tuio_time_ac511e63e519d31b7eaab97dee0bea0cc}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!get\+Microseconds@{get\+Microseconds}}
+\index{get\+Microseconds@{get\+Microseconds}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{get\+Microseconds()}{getMicroseconds()}}
+{\footnotesize\ttfamily long T\+U\+I\+O\+::\+Tuio\+Time\+::get\+Microseconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} Microseconds component. \begin{DoxyReturn}{Returns}
+the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} Microseconds component 
+\end{DoxyReturn}
+
+
+Definition at line 208 of file Tuio\+Time.\+h.
+
+
+
+Referenced by operator!=(), operator+(), operator-\/(), operator=(), and operator==().
+
+
+\begin{DoxyCode}
+208                                \{
+209             \textcolor{keywordflow}{return} micro\_seconds;
+210         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a7d50635899893b7fbbb05d8356576ccb}\label{class_t_u_i_o_1_1_tuio_time_a7d50635899893b7fbbb05d8356576ccb}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!get\+Seconds@{get\+Seconds}}
+\index{get\+Seconds@{get\+Seconds}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{get\+Seconds()}{getSeconds()}}
+{\footnotesize\ttfamily long T\+U\+I\+O\+::\+Tuio\+Time\+::get\+Seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} Seconds component. \begin{DoxyReturn}{Returns}
+the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} Seconds component 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file Tuio\+Time.\+h.
+
+
+
+Referenced by operator!=(), operator+(), operator-\/(), operator=(), and operator==().
+
+
+\begin{DoxyCode}
+200                           \{
+201             \textcolor{keywordflow}{return} seconds;
+202         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a04e3e660b895b349a26b0364401878b9}\label{class_t_u_i_o_1_1_tuio_time_a04e3e660b895b349a26b0364401878b9}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!get\+Session\+Time@{get\+Session\+Time}}
+\index{get\+Session\+Time@{get\+Session\+Time}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{get\+Session\+Time()}{getSessionTime()}}
+{\footnotesize\ttfamily static \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} T\+U\+I\+O\+::\+Tuio\+Time\+::get\+Session\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the present \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} representing the time since session start. \begin{DoxyReturn}{Returns}
+the present \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} representing the time since session start 
+\end{DoxyReturn}
+
+
+Referenced by get\+Total\+Milliseconds(), and T\+U\+I\+O\+::\+Tuio\+Point\+::\+Tuio\+Point().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a748fb038221433dd33ac52f80d7d9c3e}\label{class_t_u_i_o_1_1_tuio_time_a748fb038221433dd33ac52f80d7d9c3e}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!get\+Start\+Time@{get\+Start\+Time}}
+\index{get\+Start\+Time@{get\+Start\+Time}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{get\+Start\+Time()}{getStartTime()}}
+{\footnotesize\ttfamily static \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} T\+U\+I\+O\+::\+Tuio\+Time\+::get\+Start\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the absolut \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} representing the session start. \begin{DoxyReturn}{Returns}
+the absolut \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} representing the session start 
+\end{DoxyReturn}
+
+
+Referenced by get\+Total\+Milliseconds().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_aec89a336368b34d217f571942de40955}\label{class_t_u_i_o_1_1_tuio_time_aec89a336368b34d217f571942de40955}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!get\+System\+Time@{get\+System\+Time}}
+\index{get\+System\+Time@{get\+System\+Time}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{get\+System\+Time()}{getSystemTime()}}
+{\footnotesize\ttfamily static \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} T\+U\+I\+O\+::\+Tuio\+Time\+::get\+System\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the absolut \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} representing the current system time. \begin{DoxyReturn}{Returns}
+the absolut \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} representing the current system time 
+\end{DoxyReturn}
+
+
+Referenced by get\+Total\+Milliseconds().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a7e861c278e95080b6f087c8c32ed2561}\label{class_t_u_i_o_1_1_tuio_time_a7e861c278e95080b6f087c8c32ed2561}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!get\+Total\+Milliseconds@{get\+Total\+Milliseconds}}
+\index{get\+Total\+Milliseconds@{get\+Total\+Milliseconds}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{get\+Total\+Milliseconds()}{getTotalMilliseconds()}}
+{\footnotesize\ttfamily long T\+U\+I\+O\+::\+Tuio\+Time\+::get\+Total\+Milliseconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the total \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} in Milliseconds. \begin{DoxyReturn}{Returns}
+the total \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} in Milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 216 of file Tuio\+Time.\+h.
+
+
+
+References get\+Session\+Time(), get\+Start\+Time(), get\+System\+Time(), and init\+Session().
+
+
+
+Referenced by T\+U\+I\+O\+::\+Tuio\+Container\+::update(), and T\+U\+I\+O\+::\+Tuio\+Object\+::update().
+
+
+\begin{DoxyCode}
+216                                     \{
+217             \textcolor{keywordflow}{return} seconds*MSEC\_SECOND+micro\_seconds/MSEC\_SECOND;
+218         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_af7e2d2ec80cc6be6188469f5d31fdb94}\label{class_t_u_i_o_1_1_tuio_time_af7e2d2ec80cc6be6188469f5d31fdb94}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!init\+Session@{init\+Session}}
+\index{init\+Session@{init\+Session}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{init\+Session()}{initSession()}}
+{\footnotesize\ttfamily static void T\+U\+I\+O\+::\+Tuio\+Time\+::init\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This static method globally resets the T\+U\+IO session time. 
+
+Referenced by get\+Total\+Milliseconds().
+
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a658bdc24d71d0ff9180fbde4fae8aa22}\label{class_t_u_i_o_1_1_tuio_time_a658bdc24d71d0ff9180fbde4fae8aa22}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool T\+U\+I\+O\+::\+Tuio\+Time\+::operator!= (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes a \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} argument and compares the provided \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to the private Seconds and Microseconds attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} have differnt Seconds or Microseconds attributes 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file Tuio\+Time.\+h.
+
+
+
+References get\+Microseconds(), and get\+Seconds().
+
+
+\begin{DoxyCode}
+183                                         \{
+184             \textcolor{keywordflow}{if} ((seconds!=(\textcolor{keywordtype}{long})ttime.getSeconds()) || (micro\_seconds!=(\textcolor{keywordtype}{long})ttime.getMicroseconds())) \textcolor{keywordflow}{
+      return} \textcolor{keyword}{true};
+185             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+186         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a182951527d8e7654a653ac49112a9fb1}\label{class_t_u_i_o_1_1_tuio_time_a182951527d8e7654a653ac49112a9fb1}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!operator+@{operator+}}
+\index{operator+@{operator+}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} T\+U\+I\+O\+::\+Tuio\+Time\+::operator+ (\begin{DoxyParamCaption}\item[{long}]{us }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sums the provided time value represented in total Microseconds to this \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em us} & the total time to add in Microseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sum of this \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} with the provided argument in microseconds 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file Tuio\+Time.\+h.
+
+
+
+References Tuio\+Time().
+
+
+\begin{DoxyCode}
+99                                     \{
+100             \textcolor{keywordtype}{long} sec = seconds + us/USEC\_SECOND;
+101             \textcolor{keywordtype}{long} usec = micro\_seconds + us%USEC\_SECOND;
+102             \textcolor{keywordflow}{return} \hyperlink{class_t_u_i_o_1_1_tuio_time_a924521ecf43b6484fad9550661eedb0a}{TuioTime}(sec,usec);
+103         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a78bbf034a3b03400954e3dd3a6ba0ba4}\label{class_t_u_i_o_1_1_tuio_time_a78bbf034a3b03400954e3dd3a6ba0ba4}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!operator+@{operator+}}
+\index{operator+@{operator+}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} T\+U\+I\+O\+::\+Tuio\+Time\+::operator+ (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sums the provided \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to the private Seconds and Microseconds attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sum of this \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} with the provided \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} argument 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file Tuio\+Time.\+h.
+
+
+
+References get\+Microseconds(), get\+Seconds(), and Tuio\+Time().
+
+
+\begin{DoxyCode}
+111                                            \{
+112             \textcolor{keywordtype}{long} sec = seconds + ttime.getSeconds();
+113             \textcolor{keywordtype}{long} usec = micro\_seconds + ttime.getMicroseconds();
+114             sec += usec/USEC\_SECOND;
+115             usec = usec%USEC\_SECOND;
+116             \textcolor{keywordflow}{return} \hyperlink{class_t_u_i_o_1_1_tuio_time_a924521ecf43b6484fad9550661eedb0a}{TuioTime}(sec,usec);
+117         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a08d774edb8feaec79f5df44dddaa3a9c}\label{class_t_u_i_o_1_1_tuio_time_a08d774edb8feaec79f5df44dddaa3a9c}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} T\+U\+I\+O\+::\+Tuio\+Time\+::operator-\/ (\begin{DoxyParamCaption}\item[{long}]{us }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Subtracts the provided time represented in Microseconds from the private Seconds and Microseconds attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em us} & the total time to subtract in Microseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the subtraction result of this \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} minus the provided time in Microseconds 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file Tuio\+Time.\+h.
+
+
+
+References Tuio\+Time().
+
+
+\begin{DoxyCode}
+125                                     \{
+126             \textcolor{keywordtype}{long} sec = seconds - us/USEC\_SECOND;
+127             \textcolor{keywordtype}{long} usec = micro\_seconds - us%USEC\_SECOND;
+128             
+129             \textcolor{keywordflow}{if} (usec<0) \{
+130                 usec += USEC\_SECOND;
+131                 sec--;
+132             \}           
+133             
+134             \textcolor{keywordflow}{return} \hyperlink{class_t_u_i_o_1_1_tuio_time_a924521ecf43b6484fad9550661eedb0a}{TuioTime}(sec,usec);
+135         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_af72bee5bd9ce897e017a3106b51b3532}\label{class_t_u_i_o_1_1_tuio_time_af72bee5bd9ce897e017a3106b51b3532}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} T\+U\+I\+O\+::\+Tuio\+Time\+::operator-\/ (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Subtracts the provided \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} from the private Seconds and Microseconds attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to subtract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the subtraction result of this \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} minus the provided \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file Tuio\+Time.\+h.
+
+
+
+References get\+Microseconds(), get\+Seconds(), and Tuio\+Time().
+
+
+\begin{DoxyCode}
+143                                            \{
+144             \textcolor{keywordtype}{long} sec = seconds - ttime.getSeconds();
+145             \textcolor{keywordtype}{long} usec = micro\_seconds - ttime.getMicroseconds();
+146             
+147             \textcolor{keywordflow}{if} (usec<0) \{
+148                 usec += USEC\_SECOND;
+149                 sec--;
+150             \}
+151             
+152             \textcolor{keywordflow}{return} \hyperlink{class_t_u_i_o_1_1_tuio_time_a924521ecf43b6484fad9550661eedb0a}{TuioTime}(sec,usec);
+153         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a34ae143720ec8f24e8381775ffff340e}\label{class_t_u_i_o_1_1_tuio_time_a34ae143720ec8f24e8381775ffff340e}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!operator=@{operator=}}
+\index{operator=@{operator=}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void T\+U\+I\+O\+::\+Tuio\+Time\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assigns the provided \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to the private Seconds and Microseconds attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 161 of file Tuio\+Time.\+h.
+
+
+
+References get\+Microseconds(), and get\+Seconds().
+
+
+\begin{DoxyCode}
+161                                        \{
+162             seconds = ttime.getSeconds();
+163             micro\_seconds = ttime.getMicroseconds();
+164         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_a15f1b26aa7b3c9a10db9e4a7781a7765}\label{class_t_u_i_o_1_1_tuio_time_a15f1b26aa7b3c9a10db9e4a7781a7765}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!operator==@{operator==}}
+\index{operator==@{operator==}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool T\+U\+I\+O\+::\+Tuio\+Time\+::operator== (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes a \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} argument and compares the provided \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to the private Seconds and Microseconds attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} have equal Seconds and Microseconds attributes 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file Tuio\+Time.\+h.
+
+
+
+References get\+Microseconds(), and get\+Seconds().
+
+
+\begin{DoxyCode}
+172                                         \{
+173             \textcolor{keywordflow}{if} ((seconds==(\textcolor{keywordtype}{long})ttime.getSeconds()) && (micro\_seconds==(\textcolor{keywordtype}{long})ttime.getMicroseconds())) \textcolor{keywordflow}{
+      return} \textcolor{keyword}{true};
+174             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+175         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_time_aeb2bee6eae0ce633f015bf7958a348ac}\label{class_t_u_i_o_1_1_tuio_time_aeb2bee6eae0ce633f015bf7958a348ac}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}!reset@{reset}}
+\index{reset@{reset}!T\+U\+I\+O\+::\+Tuio\+Time@{T\+U\+I\+O\+::\+Tuio\+Time}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void T\+U\+I\+O\+::\+Tuio\+Time\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Resets the seconds and micro\+\_\+seconds attributes to zero. 
+
+Definition at line 191 of file Tuio\+Time.\+h.
+
+
+\begin{DoxyCode}
+191                      \{
+192             seconds = 0;
+193             micro\_seconds = 0;
+194         \};
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Tuio\+\_\+\+Client/Tuio\+Time.\+h\end{DoxyCompactItemize}

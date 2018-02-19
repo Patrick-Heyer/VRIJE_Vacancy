@@ -1,0 +1,54 @@
+\hypertarget{classel_1_1base_1_1_hit_counter}{}\section{el\+:\+:base\+:\+:Hit\+Counter Class Reference}
+\label{classel_1_1base_1_1_hit_counter}\index{el\+::base\+::\+Hit\+Counter@{el\+::base\+::\+Hit\+Counter}}
+
+
+Class that keeps record of current line hit for occasional logging.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classel_1_1base_1_1_hit_counter_1_1_predicate}{Predicate}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_hit_counter_a1fe641f45123641012673f8bc29aefd8}\label{classel_1_1base_1_1_hit_counter_a1fe641f45123641012673f8bc29aefd8}} 
+{\bfseries Hit\+Counter} (const char $\ast$filename, unsigned long int line\+Number)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_hit_counter_abae187cf5ea0f94e812223ee4be7061f}\label{classel_1_1base_1_1_hit_counter_abae187cf5ea0f94e812223ee4be7061f}} 
+{\bfseries Hit\+Counter} (const \hyperlink{classel_1_1base_1_1_hit_counter}{Hit\+Counter} \&hit\+Counter)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_hit_counter_ad32a5e5c2a63ff30fa9d298613d746d1}\label{classel_1_1base_1_1_hit_counter_ad32a5e5c2a63ff30fa9d298613d746d1}} 
+\hyperlink{classel_1_1base_1_1_hit_counter}{Hit\+Counter} \& {\bfseries operator=} (const \hyperlink{classel_1_1base_1_1_hit_counter}{Hit\+Counter} \&hit\+Counter)
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_hit_counter_af58479cb66b71a76a3f8fd26193bfde1}\label{classel_1_1base_1_1_hit_counter_af58479cb66b71a76a3f8fd26193bfde1}} 
+void \hyperlink{classel_1_1base_1_1_hit_counter_af58479cb66b71a76a3f8fd26193bfde1}{reset\+Location} (const char $\ast$filename, unsigned long int line\+Number)
+\begin{DoxyCompactList}\small\item\em Resets location of current hit counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_hit_counter_a04dcca0a3f1b1f9a0ef8d812f00cecf0}\label{classel_1_1base_1_1_hit_counter_a04dcca0a3f1b1f9a0ef8d812f00cecf0}} 
+void \hyperlink{classel_1_1base_1_1_hit_counter_a04dcca0a3f1b1f9a0ef8d812f00cecf0}{validate\+Hit\+Counts} (std\+::size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Validates hit counts and resets it if necessary. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_hit_counter_a47876995665d4f6389ac150ac8a80b89}\label{classel_1_1base_1_1_hit_counter_a47876995665d4f6389ac150ac8a80b89}} 
+const char $\ast$ {\bfseries filename} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_hit_counter_ad91321587b8aef0a257009abc54a2aea}\label{classel_1_1base_1_1_hit_counter_ad91321587b8aef0a257009abc54a2aea}} 
+unsigned long int {\bfseries line\+Number} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_hit_counter_ac2b3af741dc18e7839f4211af26a2887}\label{classel_1_1base_1_1_hit_counter_ac2b3af741dc18e7839f4211af26a2887}} 
+std\+::size\+\_\+t {\bfseries hit\+Counts} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1base_1_1_hit_counter_ae2d7709a89362019195761416d510911}\label{classel_1_1base_1_1_hit_counter_ae2d7709a89362019195761416d510911}} 
+void {\bfseries increment} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that keeps record of current line hit for occasional logging. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/easylogging++.\+h\end{DoxyCompactItemize}

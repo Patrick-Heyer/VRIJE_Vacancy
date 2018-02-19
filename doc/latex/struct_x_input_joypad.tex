@@ -1,0 +1,248 @@
+\hypertarget{struct_x_input_joypad}{}\section{X\+Input\+Joypad Struct Reference}
+\label{struct_x_input_joypad}\index{X\+Input\+Joypad@{X\+Input\+Joypad}}
+
+
+Inheritance diagram for X\+Input\+Joypad\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{struct_x_input_joypad__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a3adfafecc1c0d3c88e354d90cc8cf5eb}\label{struct_x_input_joypad_a3adfafecc1c0d3c88e354d90cc8cf5eb}} 
+enum \hyperlink{struct_x_input_joypad_a3adfafecc1c0d3c88e354d90cc8cf5eb}{e\+Axes} \{ \newline
+{\bfseries X\+\_\+\+A\+X\+IS} = 0x00000001, 
+{\bfseries Y\+\_\+\+A\+X\+IS} = 0x00000002, 
+{\bfseries Z\+\_\+\+A\+X\+IS} = 0x00000004, 
+{\bfseries X\+\_\+\+R\+O\+T\+\_\+\+A\+X\+IS} = 0x00000008, 
+\newline
+{\bfseries Y\+\_\+\+R\+O\+T\+\_\+\+A\+X\+IS} = 0x00000010, 
+{\bfseries Z\+\_\+\+R\+O\+T\+\_\+\+A\+X\+IS} = 0x00000020, 
+{\bfseries S\+L\+I\+D\+E\+R\+\_\+1} = 0x00000040, 
+{\bfseries S\+L\+I\+D\+E\+R\+\_\+2} = 0x00000080, 
+\newline
+{\bfseries A\+X\+I\+S\+\_\+\+L\+A\+ST} = 0x\+F\+F\+F\+F\+F\+F\+FF
+ \}\begin{DoxyCompactList}\small\item\em an enumeration to represent the various axes that may be available \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a7119f927f05cfbeb65e3383fd81a1e1f}\label{struct_x_input_joypad_a7119f927f05cfbeb65e3383fd81a1e1f}} 
+virtual bool {\bfseries Update} ()=0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a93c04a58a50c4c3b18d37d0716d526d6}\label{struct_x_input_joypad_a93c04a58a50c4c3b18d37d0716d526d6}} 
+virtual const char $\ast$const {\bfseries Instance\+Name} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a7c56d532ce6a437a4caeca48c7daa466}\label{struct_x_input_joypad_a7c56d532ce6a437a4caeca48c7daa466}} 
+virtual const char $\ast$const {\bfseries Product\+Name} () const =0
+\item 
+virtual const unsigned short \hyperlink{struct_x_input_joypad_a9bc1d9930ca27e815b05542a7fd38a39}{Num\+Buttons} () const =0
+\item 
+virtual const unsigned short \hyperlink{struct_x_input_joypad_a715b4a23b83fa39ca3940f4e2f45c852}{Num\+Povs} () const =0
+\item 
+virtual bool \hyperlink{struct_x_input_joypad_a9b5317808345c53bc0df5a3054dd0318}{HasX} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_adc9941ccb63f0970f5a2224fb44fdcd0}\label{struct_x_input_joypad_adc9941ccb63f0970f5a2224fb44fdcd0}} 
+virtual bool {\bfseries HasY} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_af740d5b0bce33c49c4a4cb062d7df070}\label{struct_x_input_joypad_af740d5b0bce33c49c4a4cb062d7df070}} 
+virtual bool {\bfseries HasZ} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_af87200b7a9aa629bc3bca3376d125e73}\label{struct_x_input_joypad_af87200b7a9aa629bc3bca3376d125e73}} 
+virtual bool {\bfseries Has\+Xrot} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a4a4f86be4f9cb79b5b6ae53fd07378b1}\label{struct_x_input_joypad_a4a4f86be4f9cb79b5b6ae53fd07378b1}} 
+virtual bool {\bfseries Has\+Yrot} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a9d061e6be6ba35fbdb29a6ba11699184}\label{struct_x_input_joypad_a9d061e6be6ba35fbdb29a6ba11699184}} 
+virtual bool {\bfseries Has\+Zrot} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a71ed4588a01d83d35d30f09746c93151}\label{struct_x_input_joypad_a71ed4588a01d83d35d30f09746c93151}} 
+virtual bool {\bfseries Has\+Extra1} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_adb69c84c61f7edc6de596a5bbe4306d6}\label{struct_x_input_joypad_adb69c84c61f7edc6de596a5bbe4306d6}} 
+virtual bool {\bfseries Has\+Extra2} () const =0
+\item 
+virtual const bool \hyperlink{struct_x_input_joypad_a13cc187aae10747b0376cb1ed3710b5a}{Button} (const unsigned int \&i) const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_af576c7afbf80332fd720903293ddc958}\label{struct_x_input_joypad_af576c7afbf80332fd720903293ddc958}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_af576c7afbf80332fd720903293ddc958}{Xaxis} () const =0
+\begin{DoxyCompactList}\small\item\em X-\/axis, usually the left-\/right movement of a stick. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_af4753b9643cfa1f2c1cc71bca92c3be8}\label{struct_x_input_joypad_af4753b9643cfa1f2c1cc71bca92c3be8}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_af4753b9643cfa1f2c1cc71bca92c3be8}{Xvelocity} () const =0
+\begin{DoxyCompactList}\small\item\em X-\/axis velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_aa2e1a4b890b2bdeb94b5df3a6103cb3d}\label{struct_x_input_joypad_aa2e1a4b890b2bdeb94b5df3a6103cb3d}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_aa2e1a4b890b2bdeb94b5df3a6103cb3d}{Xacceleration} () const =0
+\begin{DoxyCompactList}\small\item\em X-\/axis acceleration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a44f5f31e6f0f63e3708dd4f73fe385df}\label{struct_x_input_joypad_a44f5f31e6f0f63e3708dd4f73fe385df}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a44f5f31e6f0f63e3708dd4f73fe385df}{Xforce} () const =0
+\begin{DoxyCompactList}\small\item\em X-\/axis force. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_ac759aadee2870928828e8ab0454227f2}\label{struct_x_input_joypad_ac759aadee2870928828e8ab0454227f2}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_ac759aadee2870928828e8ab0454227f2}{Yaxis} () const =0
+\begin{DoxyCompactList}\small\item\em Y-\/axis, usually the forward-\/backward movement of a stick. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_ac9a7c48ad012b41ed2113531cb0e6604}\label{struct_x_input_joypad_ac9a7c48ad012b41ed2113531cb0e6604}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_ac9a7c48ad012b41ed2113531cb0e6604}{Yvelocity} () const =0
+\begin{DoxyCompactList}\small\item\em Y-\/axis velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a06c6ece1347b8bb7db762b0181fac206}\label{struct_x_input_joypad_a06c6ece1347b8bb7db762b0181fac206}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a06c6ece1347b8bb7db762b0181fac206}{Yacceleration} () const =0
+\begin{DoxyCompactList}\small\item\em Y-\/axis acceleration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a3365d3f59d8a45b96da53837872c09c6}\label{struct_x_input_joypad_a3365d3f59d8a45b96da53837872c09c6}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a3365d3f59d8a45b96da53837872c09c6}{Yforce} () const =0
+\begin{DoxyCompactList}\small\item\em Y-\/axis force. \end{DoxyCompactList}\item 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_af4bfca4d8f22808a92a0ae26468cdedc}{Zaxis} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a324d7b6c76e29d4dec9f1ecfbf771243}\label{struct_x_input_joypad_a324d7b6c76e29d4dec9f1ecfbf771243}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a324d7b6c76e29d4dec9f1ecfbf771243}{Zvelocity} () const =0
+\begin{DoxyCompactList}\small\item\em Z-\/axis velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_ac6f8ddb5e87a0c30e6c454f1f2ff506b}\label{struct_x_input_joypad_ac6f8ddb5e87a0c30e6c454f1f2ff506b}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_ac6f8ddb5e87a0c30e6c454f1f2ff506b}{Zacceleration} () const =0
+\begin{DoxyCompactList}\small\item\em Z-\/axis acceleration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_ad27b9f26025b9c2a5ffc7c12ec230d18}\label{struct_x_input_joypad_ad27b9f26025b9c2a5ffc7c12ec230d18}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_ad27b9f26025b9c2a5ffc7c12ec230d18}{Zforce} () const =0
+\begin{DoxyCompactList}\small\item\em Z-\/axis force. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a7142a1f6548cc59553846ca7e9889ef6}\label{struct_x_input_joypad_a7142a1f6548cc59553846ca7e9889ef6}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a7142a1f6548cc59553846ca7e9889ef6}{Xrot} () const =0
+\begin{DoxyCompactList}\small\item\em X-\/axis rotation. If the joystick does not have this axis, the value is 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_ad6bcc1e11d6acbd06ebf5829be849eed}\label{struct_x_input_joypad_ad6bcc1e11d6acbd06ebf5829be849eed}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_ad6bcc1e11d6acbd06ebf5829be849eed}{Xrot\+Velocity} () const =0
+\begin{DoxyCompactList}\small\item\em X-\/axis angular velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a7e10a4c04604b17b8148e547625d840d}\label{struct_x_input_joypad_a7e10a4c04604b17b8148e547625d840d}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a7e10a4c04604b17b8148e547625d840d}{Xrot\+Acceleration} () const =0
+\begin{DoxyCompactList}\small\item\em X-\/axis angular acceleration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a4499b53bed5f47866f2afb7f8ff4fd90}\label{struct_x_input_joypad_a4499b53bed5f47866f2afb7f8ff4fd90}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a4499b53bed5f47866f2afb7f8ff4fd90}{Xrot\+Force} () const =0
+\begin{DoxyCompactList}\small\item\em X-\/axis torque. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a20614fa56d86ebf80bd376e382da3967}\label{struct_x_input_joypad_a20614fa56d86ebf80bd376e382da3967}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a20614fa56d86ebf80bd376e382da3967}{Yrot} () const =0
+\begin{DoxyCompactList}\small\item\em Y-\/axis rotation. If the joystick does not have this axis, the value is 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_af59eac449d0f28bbe306d0a2ffbfa1d9}\label{struct_x_input_joypad_af59eac449d0f28bbe306d0a2ffbfa1d9}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_af59eac449d0f28bbe306d0a2ffbfa1d9}{Yrot\+Velocity} () const =0
+\begin{DoxyCompactList}\small\item\em Y-\/axis angular velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a429b94f4163b681812ed8ec3e0deb57f}\label{struct_x_input_joypad_a429b94f4163b681812ed8ec3e0deb57f}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a429b94f4163b681812ed8ec3e0deb57f}{Yrot\+Acceleration} () const =0
+\begin{DoxyCompactList}\small\item\em Y-\/axis angular acceleration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_ab8430f97568768c719350987246876e4}\label{struct_x_input_joypad_ab8430f97568768c719350987246876e4}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_ab8430f97568768c719350987246876e4}{Yrot\+Force} () const =0
+\begin{DoxyCompactList}\small\item\em Y-\/axis torque. \end{DoxyCompactList}\item 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a4319cae362154a8e069ebe290db8239b}{Zrot} () const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_acfaa90edbc89522947d169fdd89d82a8}\label{struct_x_input_joypad_acfaa90edbc89522947d169fdd89d82a8}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_acfaa90edbc89522947d169fdd89d82a8}{Zrot\+Velocity} () const =0
+\begin{DoxyCompactList}\small\item\em Z-\/axis angular velocity. . \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_a17a9b04c995dce9a76925cd1189facc1}\label{struct_x_input_joypad_a17a9b04c995dce9a76925cd1189facc1}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a17a9b04c995dce9a76925cd1189facc1}{Zrot\+Acceleration} () const =0
+\begin{DoxyCompactList}\small\item\em Z-\/axis angular acceleration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_x_input_joypad_ab831c12b47291cc3d3892ed56c1f880e}\label{struct_x_input_joypad_ab831c12b47291cc3d3892ed56c1f880e}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_ab831c12b47291cc3d3892ed56c1f880e}{Zrot\+Force} () const =0
+\begin{DoxyCompactList}\small\item\em Z-\/axis torque. \end{DoxyCompactList}\item 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} \hyperlink{struct_x_input_joypad_a074ad76f1e54b559fcee6606049bb6b7}{Extra\+Axes} (const unsigned int \&i) const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_aabd7d5d90730169be8278036de089e49}\label{struct_x_input_joypad_aabd7d5d90730169be8278036de089e49}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} {\bfseries Extra\+Velocities} (const unsigned int \&i) const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_aa36c5b3fcfeab916dcd011e8f0e1f8bd}\label{struct_x_input_joypad_aa36c5b3fcfeab916dcd011e8f0e1f8bd}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} {\bfseries Extra\+Accelerations} (const unsigned int \&i) const =0
+\item 
+\mbox{\Hypertarget{struct_x_input_joypad_aabb3c119fb0512f326036c8d0cee4bf2}\label{struct_x_input_joypad_aabb3c119fb0512f326036c8d0cee4bf2}} 
+virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} {\bfseries Extra\+Forces} (const unsigned int \&i) const =0
+\item 
+virtual const D\+W\+O\+RD \hyperlink{struct_x_input_joypad_a2f270f296bcaf98089ab23f74a6e9937}{P\+OV} (const unsigned int \&i) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 50 of file Joypad.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_x_input_joypad_a13cc187aae10747b0376cb1ed3710b5a}\label{struct_x_input_joypad_a13cc187aae10747b0376cb1ed3710b5a}} 
+\index{X\+Input\+Joypad@{X\+Input\+Joypad}!Button@{Button}}
+\index{Button@{Button}!X\+Input\+Joypad@{X\+Input\+Joypad}}
+\subsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily virtual const bool X\+Input\+Joypad\+::\+Button (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Array of buttons. The high-\/order bit of the byte is set if the corresponding button is down, and clear if the button is up or does not exist. 
+
+Implemented in \hyperlink{class_c_joypad_a0125d648a2866c9524e70e3ddeb8b675}{C\+Joypad}.
+
+\mbox{\Hypertarget{struct_x_input_joypad_a074ad76f1e54b559fcee6606049bb6b7}\label{struct_x_input_joypad_a074ad76f1e54b559fcee6606049bb6b7}} 
+\index{X\+Input\+Joypad@{X\+Input\+Joypad}!Extra\+Axes@{Extra\+Axes}}
+\index{Extra\+Axes@{Extra\+Axes}!X\+Input\+Joypad@{X\+Input\+Joypad}}
+\subsubsection{\texorpdfstring{Extra\+Axes()}{ExtraAxes()}}
+{\footnotesize\ttfamily virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} X\+Input\+Joypad\+::\+Extra\+Axes (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Two additional axis values (formerly called the u-\/axis and v-\/axis) whose semantics depend on the joystick. Use the I\+Direct\+Input\+Device8\+::\+Get\+Object\+Info method to obtain semantic information about these values. 
+
+Implemented in \hyperlink{class_c_joypad_ac94bd5a534d97f4c82456397e9a01b1c}{C\+Joypad}.
+
+\mbox{\Hypertarget{struct_x_input_joypad_a9b5317808345c53bc0df5a3054dd0318}\label{struct_x_input_joypad_a9b5317808345c53bc0df5a3054dd0318}} 
+\index{X\+Input\+Joypad@{X\+Input\+Joypad}!HasX@{HasX}}
+\index{HasX@{HasX}!X\+Input\+Joypad@{X\+Input\+Joypad}}
+\subsubsection{\texorpdfstring{Has\+X()}{HasX()}}
+{\footnotesize\ttfamily virtual bool X\+Input\+Joypad\+::\+HasX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+the following functions allow you to check to see if the specified axis is available on the joypad. 
+
+Implemented in \hyperlink{class_c_joypad_aad2ba56e14016ef5cd7120b6097caa8c}{C\+Joypad}.
+
+\mbox{\Hypertarget{struct_x_input_joypad_a9bc1d9930ca27e815b05542a7fd38a39}\label{struct_x_input_joypad_a9bc1d9930ca27e815b05542a7fd38a39}} 
+\index{X\+Input\+Joypad@{X\+Input\+Joypad}!Num\+Buttons@{Num\+Buttons}}
+\index{Num\+Buttons@{Num\+Buttons}!X\+Input\+Joypad@{X\+Input\+Joypad}}
+\subsubsection{\texorpdfstring{Num\+Buttons()}{NumButtons()}}
+{\footnotesize\ttfamily virtual const unsigned short X\+Input\+Joypad\+::\+Num\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+this function returns the number of buttons available on the joypad 
+
+Implemented in \hyperlink{class_c_joypad_ab3a3683d1b12e2071af4751afc2d749c}{C\+Joypad}.
+
+\mbox{\Hypertarget{struct_x_input_joypad_a715b4a23b83fa39ca3940f4e2f45c852}\label{struct_x_input_joypad_a715b4a23b83fa39ca3940f4e2f45c852}} 
+\index{X\+Input\+Joypad@{X\+Input\+Joypad}!Num\+Povs@{Num\+Povs}}
+\index{Num\+Povs@{Num\+Povs}!X\+Input\+Joypad@{X\+Input\+Joypad}}
+\subsubsection{\texorpdfstring{Num\+Povs()}{NumPovs()}}
+{\footnotesize\ttfamily virtual const unsigned short X\+Input\+Joypad\+::\+Num\+Povs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+this function returns the number of buttons available on the joypad 
+
+Implemented in \hyperlink{class_c_joypad_af40e2d5725c3e4d6bdc772e24bb52dca}{C\+Joypad}.
+
+\mbox{\Hypertarget{struct_x_input_joypad_a2f270f296bcaf98089ab23f74a6e9937}\label{struct_x_input_joypad_a2f270f296bcaf98089ab23f74a6e9937}} 
+\index{X\+Input\+Joypad@{X\+Input\+Joypad}!P\+OV@{P\+OV}}
+\index{P\+OV@{P\+OV}!X\+Input\+Joypad@{X\+Input\+Joypad}}
+\subsubsection{\texorpdfstring{P\+O\+V()}{POV()}}
+{\footnotesize\ttfamily virtual const D\+W\+O\+RD X\+Input\+Joypad\+::\+P\+OV (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Direction controllers, such as point-\/of-\/view hats. The position is indicated in hundredths of a degree clockwise from north (away from the user). The center position is normally reported as -\/1; but see Remarks. For indicators that have only five positions, the value for a controller is -\/1, 0, 9,000, 18,000, or 27,000. 
+
+Implemented in \hyperlink{class_c_joypad_a52dad2bae4ae8ef1574d963bdd4c1a5d}{C\+Joypad}.
+
+\mbox{\Hypertarget{struct_x_input_joypad_af4bfca4d8f22808a92a0ae26468cdedc}\label{struct_x_input_joypad_af4bfca4d8f22808a92a0ae26468cdedc}} 
+\index{X\+Input\+Joypad@{X\+Input\+Joypad}!Zaxis@{Zaxis}}
+\index{Zaxis@{Zaxis}!X\+Input\+Joypad@{X\+Input\+Joypad}}
+\subsubsection{\texorpdfstring{Zaxis()}{Zaxis()}}
+{\footnotesize\ttfamily virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} X\+Input\+Joypad\+::\+Zaxis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Z-\/axis, often the throttle control. If the joystick does not have this axis, the value is 0. 
+
+Implemented in \hyperlink{class_c_joypad_a1ab390e90331bc036447eb4fc477e796}{C\+Joypad}.
+
+\mbox{\Hypertarget{struct_x_input_joypad_a4319cae362154a8e069ebe290db8239b}\label{struct_x_input_joypad_a4319cae362154a8e069ebe290db8239b}} 
+\index{X\+Input\+Joypad@{X\+Input\+Joypad}!Zrot@{Zrot}}
+\index{Zrot@{Zrot}!X\+Input\+Joypad@{X\+Input\+Joypad}}
+\subsubsection{\texorpdfstring{Zrot()}{Zrot()}}
+{\footnotesize\ttfamily virtual const \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG} X\+Input\+Joypad\+::\+Zrot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Z-\/axis rotation (often called the rudder). If the joystick does not have this axis, the value is 0. 
+
+Implemented in \hyperlink{class_c_joypad_a4cd374af62d1380af4f92156503330a7}{C\+Joypad}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Joystick\+\_\+\+Reader/\hyperlink{_joypad_8h}{Joypad.\+h}\end{DoxyCompactItemize}

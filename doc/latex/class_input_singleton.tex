@@ -1,0 +1,153 @@
+\hypertarget{class_input_singleton}{}\section{Input\+Singleton Class Reference}
+\label{class_input_singleton}\index{Input\+Singleton@{Input\+Singleton}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_input_singleton_accc1b8003b192596f5200624ed5a5475}\label{class_input_singleton_accc1b8003b192596f5200624ed5a5475}} 
+void {\bfseries Initialize} (void)
+\item 
+\mbox{\Hypertarget{class_input_singleton_a85d79fb2cd71a0078d3c097a4de8be2f}\label{class_input_singleton_a85d79fb2cd71a0078d3c097a4de8be2f}} 
+void {\bfseries Process\+Mouse} (int button, int state, int x, int y, int modkey)
+\item 
+\mbox{\Hypertarget{class_input_singleton_a9a3d828de1f6c3a466582151dd8c0d2b}\label{class_input_singleton_a9a3d828de1f6c3a466582151dd8c0d2b}} 
+void {\bfseries Passive\+Motion} (int x, int y)
+\item 
+\mbox{\Hypertarget{class_input_singleton_a870ee08a550bd36d590066daa20a88da}\label{class_input_singleton_a870ee08a550bd36d590066daa20a88da}} 
+void {\bfseries Active\+Motion} (int x, int y)
+\item 
+\mbox{\Hypertarget{class_input_singleton_a70b7de59f1db31cc8898b83b42c4aa12}\label{class_input_singleton_a70b7de59f1db31cc8898b83b42c4aa12}} 
+void {\bfseries Key\+Pressed} (unsigned char key, int x, int y, int modkey)
+\item 
+\mbox{\Hypertarget{class_input_singleton_a984cdcc2bbd59e9888fdc8505ebc031c}\label{class_input_singleton_a984cdcc2bbd59e9888fdc8505ebc031c}} 
+void {\bfseries Key\+Released} (unsigned char key, int x, int y)
+\item 
+\mbox{\Hypertarget{class_input_singleton_a538a3871c978eed948d89df9c01ea9ea}\label{class_input_singleton_a538a3871c978eed948d89df9c01ea9ea}} 
+void {\bfseries Special\+Key\+Pressed} (int key, int x, int y, int modkey)
+\item 
+\mbox{\Hypertarget{class_input_singleton_aff6d806e1f9f1896a4cda094c95741df}\label{class_input_singleton_aff6d806e1f9f1896a4cda094c95741df}} 
+void {\bfseries Special\+Key\+Released} (int key, int x, int y)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_input_singleton_ad01893e0ca9ace6c8c32348057c0c863}\label{class_input_singleton_ad01893e0ca9ace6c8c32348057c0c863}} 
+static \hyperlink{class_input_singleton}{Input\+Singleton} \& {\bfseries get\+Instance} (void)
+\item 
+\mbox{\Hypertarget{class_input_singleton_a6d31594eeeb97d9cd5ad93e2f7e5a405}\label{class_input_singleton_a6d31594eeeb97d9cd5ad93e2f7e5a405}} 
+static void {\bfseries Free\+Instance} (void)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a274e4383c87c3226ad336f09ac78c044}\label{class_input_singleton_a274e4383c87c3226ad336f09ac78c044}} 
+bool {\bfseries keys} \mbox{[}256\mbox{]}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a3fe8a4c0f81373300a67919c3dc5fba3}\label{class_input_singleton_a3fe8a4c0f81373300a67919c3dc5fba3}} 
+bool {\bfseries specialkeys} \mbox{[}256\mbox{]}
+\item 
+\mbox{\Hypertarget{class_input_singleton_abfb4e3d2b71b367d1fc49304eaa0fa32}\label{class_input_singleton_abfb4e3d2b71b367d1fc49304eaa0fa32}} 
+unsigned char {\bfseries key}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a789acd284a6aafc1d5cca4b77902d82f}\label{class_input_singleton_a789acd284a6aafc1d5cca4b77902d82f}} 
+unsigned char {\bfseries special\+\_\+key}
+\item 
+\mbox{\Hypertarget{class_input_singleton_ab6753f5e354789c800db565b965dfa00}\label{class_input_singleton_ab6753f5e354789c800db565b965dfa00}} 
+int {\bfseries keyboard\+\_\+mod\+\_\+key}
+\item 
+\mbox{\Hypertarget{class_input_singleton_ae482afdce79ca39bf4116c08c9a490c3}\label{class_input_singleton_ae482afdce79ca39bf4116c08c9a490c3}} 
+int {\bfseries special\+\_\+mod\+\_\+key}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a23d0c61f59805b078a21e958d4459048}\label{class_input_singleton_a23d0c61f59805b078a21e958d4459048}} 
+int {\bfseries mouse\+\_\+mod\+\_\+key}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a9d37d10a21d60d021fb94ae7e199910b}\label{class_input_singleton_a9d37d10a21d60d021fb94ae7e199910b}} 
+int {\bfseries mouse\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a4d941c37e36b392efdd2607bd7d80cde}\label{class_input_singleton_a4d941c37e36b392efdd2607bd7d80cde}} 
+int {\bfseries mouse\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a1ed098b8ceb8e13fcb313206bc2b5e6d}\label{class_input_singleton_a1ed098b8ceb8e13fcb313206bc2b5e6d}} 
+int {\bfseries last\+\_\+clicked\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a81bb3472aa8fc18c907871940746ce70}\label{class_input_singleton_a81bb3472aa8fc18c907871940746ce70}} 
+int {\bfseries left\+\_\+click\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_ab973bf58983496ab88445f157761d751}\label{class_input_singleton_ab973bf58983496ab88445f157761d751}} 
+int {\bfseries left\+\_\+click\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_ae95cf37da9f49a2ebaca4931e667fe84}\label{class_input_singleton_ae95cf37da9f49a2ebaca4931e667fe84}} 
+int {\bfseries right\+\_\+click\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a1935140059a1787c85d5d3ac4d8aadb6}\label{class_input_singleton_a1935140059a1787c85d5d3ac4d8aadb6}} 
+int {\bfseries right\+\_\+click\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a39b651be2eb90cf7559a10e034d4c12e}\label{class_input_singleton_a39b651be2eb90cf7559a10e034d4c12e}} 
+int {\bfseries middle\+\_\+click\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a6fdff907cf83cade1001bb61a6d88038}\label{class_input_singleton_a6fdff907cf83cade1001bb61a6d88038}} 
+int {\bfseries middle\+\_\+click\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_af2021e31b32b21e8015b44ff2a8c09d1}\label{class_input_singleton_af2021e31b32b21e8015b44ff2a8c09d1}} 
+int {\bfseries left\+\_\+active\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a2b2acc8eb27727c7d467c3701578c023}\label{class_input_singleton_a2b2acc8eb27727c7d467c3701578c023}} 
+int {\bfseries left\+\_\+active\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_abc88b62a0f678dde8a19c811bfe13c85}\label{class_input_singleton_abc88b62a0f678dde8a19c811bfe13c85}} 
+int {\bfseries right\+\_\+active\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a91525cf245dfa4e277428101365e458a}\label{class_input_singleton_a91525cf245dfa4e277428101365e458a}} 
+int {\bfseries right\+\_\+active\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a0c61c0edc43bfd9cfe42bb4599b70c0b}\label{class_input_singleton_a0c61c0edc43bfd9cfe42bb4599b70c0b}} 
+int {\bfseries middle\+\_\+active\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a8c5061049b2bedd6e10812a5e46949ab}\label{class_input_singleton_a8c5061049b2bedd6e10812a5e46949ab}} 
+int {\bfseries middle\+\_\+active\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_ab024eb964346cfba364d8e3b5f74673e}\label{class_input_singleton_ab024eb964346cfba364d8e3b5f74673e}} 
+int {\bfseries last\+\_\+released\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_input_singleton_aa6bf27d8f2c64d06790129346b8d7315}\label{class_input_singleton_aa6bf27d8f2c64d06790129346b8d7315}} 
+int {\bfseries left\+\_\+released\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a8b537b3e4a8fcaa624cdd8f0fcfb5f9f}\label{class_input_singleton_a8b537b3e4a8fcaa624cdd8f0fcfb5f9f}} 
+int {\bfseries left\+\_\+released\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_aa2aae5d88258fdfe478da02de4f9caa2}\label{class_input_singleton_aa2aae5d88258fdfe478da02de4f9caa2}} 
+int {\bfseries right\+\_\+released\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_adce35db1fdc6cca1134cf329fc18cc6a}\label{class_input_singleton_adce35db1fdc6cca1134cf329fc18cc6a}} 
+int {\bfseries right\+\_\+released\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a6994134dd6ff26086b91c467cd29ba2c}\label{class_input_singleton_a6994134dd6ff26086b91c467cd29ba2c}} 
+int {\bfseries middle\+\_\+released\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_input_singleton_abc24acc212652b2895710bc29adbffd3}\label{class_input_singleton_abc24acc212652b2895710bc29adbffd3}} 
+int {\bfseries middle\+\_\+released\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a04cfffc19439756a77564e2208a1bdc0}\label{class_input_singleton_a04cfffc19439756a77564e2208a1bdc0}} 
+bool {\bfseries mouse\+\_\+active}
+\item 
+\mbox{\Hypertarget{class_input_singleton_ac30bbdf3d597ccae16e0d2f7dd75bf84}\label{class_input_singleton_ac30bbdf3d597ccae16e0d2f7dd75bf84}} 
+bool {\bfseries left\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a1da4a269ee33c505bb1bd3d640c0865a}\label{class_input_singleton_a1da4a269ee33c505bb1bd3d640c0865a}} 
+bool {\bfseries middle\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_input_singleton_a0844c0a3d5c3290799010e01c49ebec5}\label{class_input_singleton_a0844c0a3d5c3290799010e01c49ebec5}} 
+bool {\bfseries right\+\_\+button}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 17 of file input\+\_\+singleton.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/input\+\_\+singleton.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/input\+\_\+singleton.\+cpp\end{DoxyCompactItemize}

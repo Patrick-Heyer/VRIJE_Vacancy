@@ -1,0 +1,300 @@
+\hypertarget{namespaceel}{}\section{el Namespace Reference}
+\label{namespaceel}\index{el@{el}}
+
+
+Easylogging++ entry namespace.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceel_1_1base}{base}
+\begin{DoxyCompactList}\small\item\em Namespace containing base/internal functionality used by Easylogging++. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classel_1_1_callback}{Callback}
+\item 
+class \hyperlink{classel_1_1_configuration}{Configuration}
+\begin{DoxyCompactList}\small\item\em Represents single configuration that has representing level, configuration type and a string based value. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_configurations}{Configurations}
+\begin{DoxyCompactList}\small\item\em Thread-\/safe \hyperlink{classel_1_1_configuration}{Configuration} repository. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_configuration_type_helper}{Configuration\+Type\+Helper}
+\begin{DoxyCompactList}\small\item\em Static class that contains helper functions for \hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{el\+::\+Configuration\+Type}. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_custom_format_specifier}{Custom\+Format\+Specifier}
+\begin{DoxyCompactList}\small\item\em User-\/provided custom format specifier. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_helpers}{Helpers}
+\begin{DoxyCompactList}\small\item\em Static helpers for developers. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_level_helper}{Level\+Helper}
+\begin{DoxyCompactList}\small\item\em Static class that contains helper functions for \hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{el\+::\+Level}. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_log_builder}{Log\+Builder}
+\item 
+class \hyperlink{classel_1_1_log_dispatch_callback}{Log\+Dispatch\+Callback}
+\item 
+class \hyperlink{classel_1_1_log_dispatch_data}{Log\+Dispatch\+Data}
+\item 
+class \hyperlink{classel_1_1_loggable}{Loggable}
+\begin{DoxyCompactList}\small\item\em Base of Easylogging++ friendly class. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_logger}{Logger}
+\begin{DoxyCompactList}\small\item\em Represents a logger holding ID and configurations we need to write logs. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_loggers}{Loggers}
+\begin{DoxyCompactList}\small\item\em Static helpers to deal with loggers and their configurations. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_log_message}{Log\+Message}
+\item 
+class \hyperlink{classel_1_1_performance_tracking_callback}{Performance\+Tracking\+Callback}
+\item 
+class \hyperlink{classel_1_1_performance_tracking_data}{Performance\+Tracking\+Data}
+\item 
+class \hyperlink{classel_1_1_sys_log_initializer}{Sys\+Log\+Initializer}
+\begin{DoxyCompactList}\small\item\em Initializes syslog with process ID, options and facility. calls closelog() on d\textquotesingle{}tor. \end{DoxyCompactList}\item 
+class \hyperlink{classel_1_1_version_info}{Version\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceel_aeb764b890a6f3cd41d2726bcd4e9c0cf}\label{namespaceel_aeb764b890a6f3cd41d2726bcd4e9c0cf}} 
+typedef std\+::function$<$ void(const char $\ast$, std\+::size\+\_\+t)$>$ {\bfseries Pre\+Roll\+Out\+Callback}
+\item 
+\mbox{\Hypertarget{namespaceel_ab3cd18425a11df166a041d9024b8b5c6}\label{namespaceel_ab3cd18425a11df166a041d9024b8b5c6}} 
+typedef std\+::function$<$ const char $\ast$(void)$>$ \hyperlink{namespaceel_ab3cd18425a11df166a041d9024b8b5c6}{Format\+Specifier\+Value\+Resolver}
+\begin{DoxyCompactList}\small\item\em Resolving function for format specifier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceel_ad4c4b2f7d70a4b02568a9f70724a6b39}\label{namespaceel_ad4c4b2f7d70a4b02568a9f70724a6b39}} 
+typedef std\+::shared\+\_\+ptr$<$ \hyperlink{classel_1_1_log_builder}{Log\+Builder} $>$ {\bfseries Log\+Builder\+Ptr}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level} \+: base\+::type\+::\+Enum\+Type \{ \newline
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{Level\+::\+Global} = 1, 
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36add4ec0ac4e58f7c32a01244ae91150b1}{Level\+::\+Trace} = 2, 
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36aa603905470e2a5b8c13e96b579ef0dba}{Level\+::\+Debug} = 4, 
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a882384ec38ce8d9582b57e70861730e4}{Level\+::\+Fatal} = 8, 
+\newline
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a902b0d55fddef6f8d651fe1035b7d4bd}{Level\+::\+Error} = 16, 
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a0eaadb4fcb48a0a0ed7bc9868be9fbaa}{Level\+::\+Warning} = 32, 
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36ad4a9fa383ab700c5bdd6f31cf7df0faf}{Level\+::\+Verbose} = 64, 
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4059b0251f66a18cb56f544728796875}{Level\+::\+Info} = 128, 
+\newline
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a88183b946cc5f0e8c96b2e66e1c74a7e}{Level\+::\+Unknown} = 1010
+ \}\begin{DoxyCompactList}\small\item\em Represents enumeration for severity level used to determine level of logging. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type} \+: base\+::type\+::\+Enum\+Type \{ \newline
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a00d23a76e43b46dae9ec7aa9dcbebb32}{Configuration\+Type\+::\+Enabled} = 1, 
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124acb76297988b895ca263f62728b32dbcc}{Configuration\+Type\+::\+To\+File} = 2, 
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a9b9a9244b0b26da988f9af8310ab899d}{Configuration\+Type\+::\+To\+Standard\+Output} = 4, 
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a520d0db389f362bf79ef56ca0af3dcab}{Configuration\+Type\+::\+Format} = 8, 
+\newline
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a1351017ac6423911223bc19a8cb7c653}{Configuration\+Type\+::\+Filename} = 16, 
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a052bf0f0c813b3c41c5b5046ebc26529}{Configuration\+Type\+::\+Milliseconds\+Width} = 32, 
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124abe9e43d200c5698cb8519daed7035874}{Configuration\+Type\+::\+Performance\+Tracking} = 64, 
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a4b35e615142d60db6383426f051e700b}{Configuration\+Type\+::\+Max\+Log\+File\+Size} = 128, 
+\newline
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124ac1b4aae5c168e64292c9aa87a124ae86}{Configuration\+Type\+::\+Log\+Flush\+Threshold} = 256, 
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a88183b946cc5f0e8c96b2e66e1c74a7e}{Configuration\+Type\+::\+Unknown} = 1010
+ \}\begin{DoxyCompactList}\small\item\em Represents enumeration of Configuration\+Type used to configure or access certain aspect of logging. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cb}{Logging\+Flag} \+: base\+::type\+::\+Enum\+Type \{ \newline
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba8246f93d9afd63f87632d2d718cabca8}{Logging\+Flag\+::\+New\+Line\+For\+Container} = 1, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbac80d746c4296fe8e99ed032f5ffef31e}{Logging\+Flag\+::\+Allow\+Verbose\+If\+Module\+Not\+Specified} = 2, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba81ac37ef3ee37a01bf853be6abeb4ede}{Logging\+Flag\+::\+Log\+Detailed\+Crash\+Reason} = 4, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba8dd9782f8a19cf7a41e4ec38d1c6a4ae}{Logging\+Flag\+::\+Disable\+Application\+Abort\+On\+Fatal\+Log} = 8, 
+\newline
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba7817e369fa619155822043e76ef88c7c}{Logging\+Flag\+::\+Immediate\+Flush} = 16, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba8496303f20ab09751ff3ec8802b187f5}{Logging\+Flag\+::\+Strict\+Log\+File\+Size\+Check} = 32, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbaeececaef2fc38e4f3c91f9f6b6fb6d49}{Logging\+Flag\+::\+Colored\+Terminal\+Output} = 64, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbaa2ce18adf399149a1b75bdafa773617e}{Logging\+Flag\+::\+Multi\+Logger\+Support} = 128, 
+\newline
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba18ea5964e8caa7c476dd5eee8e4f74a0}{Logging\+Flag\+::\+Disable\+Performance\+Tracking\+Checkpoint\+Comparison} = 256, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba22cae5066e8e0623cb90e20a18abb631}{Logging\+Flag\+::\+Disable\+V\+Modules} = 512, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba18a8e65b84ca0cc82451b5e155d7aeb4}{Logging\+Flag\+::\+Disable\+V\+Modules\+Extensions} = 1024, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba477de0500d7a5b64a4500d82811fc058}{Logging\+Flag\+::\+Hierarchical\+Logging} = 2048, 
+\newline
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba2afa5afe77105aadedcbb90dd8547cc3}{Logging\+Flag\+::\+Create\+Logger\+Automatically} = 4096, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba34620f140246d3c3b68c17fdf7b8ada7}{Logging\+Flag\+::\+Auto\+Spacing} = 8192, 
+\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbaebbb601e28e0cf821dfe13b4a7cf409e}{Logging\+Flag\+::\+Fixed\+Time\+Format} = 16384
+ \}\begin{DoxyCompactList}\small\item\em Flags used while writing logs. This flags are set by user. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceel_ab9770514f33aef6683dbba37be2b471d}\label{namespaceel_ab9770514f33aef6683dbba37be2b471d}} 
+\hyperlink{classel_1_1base_1_1debug_1_1_crash_handler}{base\+::debug\+::\+Crash\+Handler} {\bfseries el\+Crash\+Handler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Easylogging++ entry namespace. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124}} 
+\index{el@{el}!Configuration\+Type@{Configuration\+Type}}
+\index{Configuration\+Type@{Configuration\+Type}!el@{el}}
+\subsubsection{\texorpdfstring{Configuration\+Type}{ConfigurationType}}
+{\footnotesize\ttfamily enum \hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{el\+::\+Configuration\+Type} \+: base\+::type\+::\+Enum\+Type\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents enumeration of Configuration\+Type used to configure or access certain aspect of logging. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Enabled@{Enabled}!el@{el}}\index{el@{el}!Enabled@{Enabled}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124a00d23a76e43b46dae9ec7aa9dcbebb32}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124a00d23a76e43b46dae9ec7aa9dcbebb32}} 
+Enabled&Determines whether or not corresponding level and logger of logging is enabled You may disable all logs by using \hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{el\+::\+Level\+::\+Global}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{To\+File@{To\+File}!el@{el}}\index{el@{el}!To\+File@{To\+File}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124acb76297988b895ca263f62728b32dbcc}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124acb76297988b895ca263f62728b32dbcc}} 
+To\+File&Whether or not to write corresponding log to log file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{To\+Standard\+Output@{To\+Standard\+Output}!el@{el}}\index{el@{el}!To\+Standard\+Output@{To\+Standard\+Output}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124a9b9a9244b0b26da988f9af8310ab899d}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124a9b9a9244b0b26da988f9af8310ab899d}} 
+To\+Standard\+Output&Whether or not to write corresponding level and logger log to standard output. By standard output meaning termnal, command prompt etc. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Format@{Format}!el@{el}}\index{el@{el}!Format@{Format}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124a520d0db389f362bf79ef56ca0af3dcab}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124a520d0db389f362bf79ef56ca0af3dcab}} 
+Format&Determines format of logging corresponding level and logger. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Filename@{Filename}!el@{el}}\index{el@{el}!Filename@{Filename}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124a1351017ac6423911223bc19a8cb7c653}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124a1351017ac6423911223bc19a8cb7c653}} 
+Filename&Determines log file (full path) to write logs to for correponding level and logger. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Milliseconds\+Width@{Milliseconds\+Width}!el@{el}}\index{el@{el}!Milliseconds\+Width@{Milliseconds\+Width}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124a052bf0f0c813b3c41c5b5046ebc26529}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124a052bf0f0c813b3c41c5b5046ebc26529}} 
+Milliseconds\+Width&Specifies milliseconds width. Width can be within range (1-\/6) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Performance\+Tracking@{Performance\+Tracking}!el@{el}}\index{el@{el}!Performance\+Tracking@{Performance\+Tracking}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124abe9e43d200c5698cb8519daed7035874}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124abe9e43d200c5698cb8519daed7035874}} 
+Performance\+Tracking&Determines whether or not performance tracking is enabled. This does not depend on logger or level. Performance tracking always uses \textquotesingle{}performance\textquotesingle{} logger \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Max\+Log\+File\+Size@{Max\+Log\+File\+Size}!el@{el}}\index{el@{el}!Max\+Log\+File\+Size@{Max\+Log\+File\+Size}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124a4b35e615142d60db6383426f051e700b}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124a4b35e615142d60db6383426f051e700b}} 
+Max\+Log\+File\+Size&Specifies log file max size. If file size of corresponding log file (for corresponding level) is $>$= specified size, log file will be truncated and re-\/initiated. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Log\+Flush\+Threshold@{Log\+Flush\+Threshold}!el@{el}}\index{el@{el}!Log\+Flush\+Threshold@{Log\+Flush\+Threshold}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124ac1b4aae5c168e64292c9aa87a124ae86}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124ac1b4aae5c168e64292c9aa87a124ae86}} 
+Log\+Flush\+Threshold&Specifies number of log entries to hold until we flush pending log data. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!el@{el}}\index{el@{el}!Unknown@{Unknown}}}\mbox{\Hypertarget{namespaceel_a281f5db6d6163678bc68a8b23b59e124a88183b946cc5f0e8c96b2e66e1c74a7e}\label{namespaceel_a281f5db6d6163678bc68a8b23b59e124a88183b946cc5f0e8c96b2e66e1c74a7e}} 
+Unknown&Represents unknown configuration. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}} 
+\index{el@{el}!Level@{Level}}
+\index{Level@{Level}!el@{el}}
+\subsubsection{\texorpdfstring{Level}{Level}}
+{\footnotesize\ttfamily enum \hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{el\+::\+Level} \+: base\+::type\+::\+Enum\+Type\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents enumeration for severity level used to determine level of logging. 
+
+With Easylogging++, developers may disable or enable any level regardless of what the severity is. Or they can choose to log using hierarchical logging flag \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Global@{Global}!el@{el}}\index{el@{el}!Global@{Global}}}\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}} 
+Global&Generic level that represents all the levels. Useful when setting global configuration for all levels. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trace@{Trace}!el@{el}}\index{el@{el}!Trace@{Trace}}}\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36add4ec0ac4e58f7c32a01244ae91150b1}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36add4ec0ac4e58f7c32a01244ae91150b1}} 
+Trace&Information that can be useful to back-\/trace certain events -\/ mostly useful than debug logs. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Debug@{Debug}!el@{el}}\index{el@{el}!Debug@{Debug}}}\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36aa603905470e2a5b8c13e96b579ef0dba}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36aa603905470e2a5b8c13e96b579ef0dba}} 
+Debug&Informational events most useful for developers to debug application. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fatal@{Fatal}!el@{el}}\index{el@{el}!Fatal@{Fatal}}}\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a882384ec38ce8d9582b57e70861730e4}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a882384ec38ce8d9582b57e70861730e4}} 
+Fatal&Severe error information that will presumably abort application. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Error@{Error}!el@{el}}\index{el@{el}!Error@{Error}}}\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a902b0d55fddef6f8d651fe1035b7d4bd}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a902b0d55fddef6f8d651fe1035b7d4bd}} 
+Error&Information representing errors in application but application will keep running. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Warning@{Warning}!el@{el}}\index{el@{el}!Warning@{Warning}}}\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a0eaadb4fcb48a0a0ed7bc9868be9fbaa}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a0eaadb4fcb48a0a0ed7bc9868be9fbaa}} 
+Warning&Useful when application has potentially harmful situtaions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Verbose@{Verbose}!el@{el}}\index{el@{el}!Verbose@{Verbose}}}\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36ad4a9fa383ab700c5bdd6f31cf7df0faf}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36ad4a9fa383ab700c5bdd6f31cf7df0faf}} 
+Verbose&Information that can be highly useful and vary with verbose logging level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Info@{Info}!el@{el}}\index{el@{el}!Info@{Info}}}\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4059b0251f66a18cb56f544728796875}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4059b0251f66a18cb56f544728796875}} 
+Info&Mainly useful to represent current progress of application. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!el@{el}}\index{el@{el}!Unknown@{Unknown}}}\mbox{\Hypertarget{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a88183b946cc5f0e8c96b2e66e1c74a7e}\label{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a88183b946cc5f0e8c96b2e66e1c74a7e}} 
+Unknown&Represents unknown level. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cb}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cb}} 
+\index{el@{el}!Logging\+Flag@{Logging\+Flag}}
+\index{Logging\+Flag@{Logging\+Flag}!el@{el}}
+\subsubsection{\texorpdfstring{Logging\+Flag}{LoggingFlag}}
+{\footnotesize\ttfamily enum \hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cb}{el\+::\+Logging\+Flag} \+: base\+::type\+::\+Enum\+Type\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Flags used while writing logs. This flags are set by user. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{New\+Line\+For\+Container@{New\+Line\+For\+Container}!el@{el}}\index{el@{el}!New\+Line\+For\+Container@{New\+Line\+For\+Container}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba8246f93d9afd63f87632d2d718cabca8}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba8246f93d9afd63f87632d2d718cabca8}} 
+New\+Line\+For\+Container&Makes sure we have new line for each container log entry. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Allow\+Verbose\+If\+Module\+Not\+Specified@{Allow\+Verbose\+If\+Module\+Not\+Specified}!el@{el}}\index{el@{el}!Allow\+Verbose\+If\+Module\+Not\+Specified@{Allow\+Verbose\+If\+Module\+Not\+Specified}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbac80d746c4296fe8e99ed032f5ffef31e}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbac80d746c4296fe8e99ed032f5ffef31e}} 
+Allow\+Verbose\+If\+Module\+Not\+Specified&Makes sure if -\/vmodule is used and does not specifies a module, then verbose logging is allowed via that module. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Log\+Detailed\+Crash\+Reason@{Log\+Detailed\+Crash\+Reason}!el@{el}}\index{el@{el}!Log\+Detailed\+Crash\+Reason@{Log\+Detailed\+Crash\+Reason}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba81ac37ef3ee37a01bf853be6abeb4ede}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba81ac37ef3ee37a01bf853be6abeb4ede}} 
+Log\+Detailed\+Crash\+Reason&When handling crashes by default, detailed crash reason will be logged as well. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disable\+Application\+Abort\+On\+Fatal\+Log@{Disable\+Application\+Abort\+On\+Fatal\+Log}!el@{el}}\index{el@{el}!Disable\+Application\+Abort\+On\+Fatal\+Log@{Disable\+Application\+Abort\+On\+Fatal\+Log}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba8dd9782f8a19cf7a41e4ec38d1c6a4ae}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba8dd9782f8a19cf7a41e4ec38d1c6a4ae}} 
+Disable\+Application\+Abort\+On\+Fatal\+Log&Allows to disable application abortion when logged using F\+A\+T\+AL level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Immediate\+Flush@{Immediate\+Flush}!el@{el}}\index{el@{el}!Immediate\+Flush@{Immediate\+Flush}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba7817e369fa619155822043e76ef88c7c}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba7817e369fa619155822043e76ef88c7c}} 
+Immediate\+Flush&Flushes log with every log-\/entry (performance sensative) -\/ Disabled by default. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Strict\+Log\+File\+Size\+Check@{Strict\+Log\+File\+Size\+Check}!el@{el}}\index{el@{el}!Strict\+Log\+File\+Size\+Check@{Strict\+Log\+File\+Size\+Check}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba8496303f20ab09751ff3ec8802b187f5}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba8496303f20ab09751ff3ec8802b187f5}} 
+Strict\+Log\+File\+Size\+Check&Enables strict file rolling. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Colored\+Terminal\+Output@{Colored\+Terminal\+Output}!el@{el}}\index{el@{el}!Colored\+Terminal\+Output@{Colored\+Terminal\+Output}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbaeececaef2fc38e4f3c91f9f6b6fb6d49}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbaeececaef2fc38e4f3c91f9f6b6fb6d49}} 
+Colored\+Terminal\+Output&Make terminal output colorful for supported terminals. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Multi\+Logger\+Support@{Multi\+Logger\+Support}!el@{el}}\index{el@{el}!Multi\+Logger\+Support@{Multi\+Logger\+Support}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbaa2ce18adf399149a1b75bdafa773617e}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbaa2ce18adf399149a1b75bdafa773617e}} 
+Multi\+Logger\+Support&Supports use of multiple logging in same macro, e.\+g, C\+L\+OG(I\+N\+FO, \char`\"{}default\char`\"{}, \char`\"{}network\char`\"{}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disable\+Performance\+Tracking\+Checkpoint\+Comparison@{Disable\+Performance\+Tracking\+Checkpoint\+Comparison}!el@{el}}\index{el@{el}!Disable\+Performance\+Tracking\+Checkpoint\+Comparison@{Disable\+Performance\+Tracking\+Checkpoint\+Comparison}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba18ea5964e8caa7c476dd5eee8e4f74a0}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba18ea5964e8caa7c476dd5eee8e4f74a0}} 
+Disable\+Performance\+Tracking\+Checkpoint\+Comparison&Disables comparing performance tracker\textquotesingle{}s checkpoints. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disable\+V\+Modules@{Disable\+V\+Modules}!el@{el}}\index{el@{el}!Disable\+V\+Modules@{Disable\+V\+Modules}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba22cae5066e8e0623cb90e20a18abb631}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba22cae5066e8e0623cb90e20a18abb631}} 
+Disable\+V\+Modules&Disable V\+Modules. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disable\+V\+Modules\+Extensions@{Disable\+V\+Modules\+Extensions}!el@{el}}\index{el@{el}!Disable\+V\+Modules\+Extensions@{Disable\+V\+Modules\+Extensions}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba18a8e65b84ca0cc82451b5e155d7aeb4}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba18a8e65b84ca0cc82451b5e155d7aeb4}} 
+Disable\+V\+Modules\+Extensions&Disable V\+Modules extensions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hierarchical\+Logging@{Hierarchical\+Logging}!el@{el}}\index{el@{el}!Hierarchical\+Logging@{Hierarchical\+Logging}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba477de0500d7a5b64a4500d82811fc058}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba477de0500d7a5b64a4500d82811fc058}} 
+Hierarchical\+Logging&Enables hierarchical logging. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Create\+Logger\+Automatically@{Create\+Logger\+Automatically}!el@{el}}\index{el@{el}!Create\+Logger\+Automatically@{Create\+Logger\+Automatically}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba2afa5afe77105aadedcbb90dd8547cc3}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba2afa5afe77105aadedcbb90dd8547cc3}} 
+Create\+Logger\+Automatically&Creates logger automatically when not available. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Auto\+Spacing@{Auto\+Spacing}!el@{el}}\index{el@{el}!Auto\+Spacing@{Auto\+Spacing}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba34620f140246d3c3b68c17fdf7b8ada7}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba34620f140246d3c3b68c17fdf7b8ada7}} 
+Auto\+Spacing&Adds spaces b/w logs that separated by left-\/shift operator. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fixed\+Time\+Format@{Fixed\+Time\+Format}!el@{el}}\index{el@{el}!Fixed\+Time\+Format@{Fixed\+Time\+Format}}}\mbox{\Hypertarget{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbaebbb601e28e0cf821dfe13b4a7cf409e}\label{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbaebbb601e28e0cf821dfe13b4a7cf409e}} 
+Fixed\+Time\+Format&Preserves time format and does not convert it to sec, hour etc (performance tracking only) \\
+\hline
+
+\end{DoxyEnumFields}

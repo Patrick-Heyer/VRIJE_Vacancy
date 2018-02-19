@@ -1,0 +1,166 @@
+\hypertarget{class_video}{}\section{Video Class Reference}
+\label{class_video}\index{Video@{Video}}
+
+
+Inheritance diagram for Video\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{class_video__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Video\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{class_video__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_video_a992e46fb5bb3b423768d30788a965fba}{Video} (int x, int y, int widht, int height, std\+::string name, \hyperlink{class_tab}{Tab} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{class_video}{Video} dislpay. \end{DoxyCompactList}\item 
+void \hyperlink{class_video_a7b1ff4d51ad92b96c8b23642a3634cc0}{Set\+Image} (Ipl\+Image $\ast$value)
+\begin{DoxyCompactList}\small\item\em Sets the image to display. \end{DoxyCompactList}\item 
+void \hyperlink{class_video_ae6377f888f7d485fddde3df9abaa4eda}{Draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the widget. \end{DoxyCompactList}\item 
+void \hyperlink{class_video_a91036fd835d742420767e9a7af9e62fb}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_video_a038dc566376b70f5c84ded49b54b93e6}\label{class_video_a038dc566376b70f5c84ded49b54b93e6}} 
+void {\bfseries procces\+Input} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file video.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_video_a992e46fb5bb3b423768d30788a965fba}\label{class_video_a992e46fb5bb3b423768d30788a965fba}} 
+\index{Video@{Video}!Video@{Video}}
+\index{Video@{Video}!Video@{Video}}
+\subsubsection{\texorpdfstring{Video()}{Video()}}
+{\footnotesize\ttfamily Video\+::\+Video (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{widht,  }\item[{int}]{height,  }\item[{std\+::string}]{name,  }\item[{\hyperlink{class_tab}{Tab} $\ast$}]{parent }\end{DoxyParamCaption})}
+
+
+
+Creates a new \hyperlink{class_video}{Video} dislpay. 
+
+! 
+
+Definition at line 29 of file video.\+cpp.
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{keywordflow}{if} (pthread\_mutex\_init(&video\_lock, NULL) != 0)
+32     \{
+33         LOG(WARNING) << \textcolor{stringliteral}{"Video mutex "}<< name << \textcolor{stringliteral}{" lock init failed"};
+34         \textcolor{keywordflow}{return};
+35     \}
+36     this->SetName(name);
+37     this->SetPosition(x, y);
+38     this->SetSize(widht, height);
+39     image=NULL;
+40     parent->InsertWidget(\textcolor{keyword}{this});
+41     
+42     
+43 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_video_ae6377f888f7d485fddde3df9abaa4eda}\label{class_video_ae6377f888f7d485fddde3df9abaa4eda}} 
+\index{Video@{Video}!Draw@{Draw}}
+\index{Draw@{Draw}!Video@{Video}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Video\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws the widget. 
+
+Draws the widget called by \hyperlink{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}{Tab\+::\+Draw} 
+
+Implements \hyperlink{class_widget_ac4c2063cd671468ad05d84cfe963c032}{Widget}.
+
+
+
+Definition at line 81 of file video.\+cpp.
+
+
+\begin{DoxyCode}
+82 \{
+83     pthread\_mutex\_lock(&video\_lock);
+84     \textcolor{keywordflow}{if} (image!=NULL)
+85     DrawIplImage(image, Get\_x(), Get\_y());
+86     pthread\_mutex\_unlock(&video\_lock);
+87 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_video_a7b1ff4d51ad92b96c8b23642a3634cc0}\label{class_video_a7b1ff4d51ad92b96c8b23642a3634cc0}} 
+\index{Video@{Video}!Set\+Image@{Set\+Image}}
+\index{Set\+Image@{Set\+Image}!Video@{Video}}
+\subsubsection{\texorpdfstring{Set\+Image()}{SetImage()}}
+{\footnotesize\ttfamily void Video\+::\+Set\+Image (\begin{DoxyParamCaption}\item[{Ipl\+Image $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the image to display. 
+
+! 
+\begin{DoxyParams}{Parameters}
+{\em value} & is a standard opencv Ipl\+Image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file video.\+cpp.
+
+
+\begin{DoxyCode}
+51 \{
+52     pthread\_mutex\_lock(&video\_lock);
+53     cvReleaseImage(&image);
+54     image = cvCloneImage(value);
+55     pthread\_mutex\_unlock(&video\_lock);
+56 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_video_a91036fd835d742420767e9a7af9e62fb}\label{class_video_a91036fd835d742420767e9a7af9e62fb}} 
+\index{Video@{Video}!update@{update}}
+\index{update@{update}!Video@{Video}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Video\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the widget. 
+
+Updates the widget called by Tab\+::update 
+
+Implements \hyperlink{class_widget_a726dc97add2c6eb82967144207280ace}{Widget}.
+
+
+
+Definition at line 45 of file video.\+cpp.
+
+
+\begin{DoxyCode}
+46 \{
+47 
+48 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/video.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/video.\+cpp\end{DoxyCompactItemize}

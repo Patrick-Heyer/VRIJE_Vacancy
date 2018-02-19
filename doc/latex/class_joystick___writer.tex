@@ -1,0 +1,351 @@
+\hypertarget{class_joystick___writer}{}\section{Joystick\+\_\+\+Writer Class Reference}
+\label{class_joystick___writer}\index{Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}}
+
+
+\hyperlink{class_joystick___writer}{Joystick\+\_\+\+Writer} plugin.  
+
+
+
+
+{\ttfamily \#include $<$Joystick\+\_\+\+Writer.\+h$>$}
+
+
+
+Inheritance diagram for Joystick\+\_\+\+Writer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_joystick___writer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Joystick\+\_\+\+Writer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_joystick___writer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_joystick___writer_aeb9c03f2389a5ed060b9c2a46fb84316}{Main} ()
+\begin{DoxyCompactList}\small\item\em Main funcction of the plugin. \end{DoxyCompactList}\item 
+bool \hyperlink{class_joystick___writer_a8c8c94397bbbb2058685ad6e0f92b4b1}{load\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Load configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_joystick___writer_a67a56e0ae63ad59657f4745dcac2f7a3}{save\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Save configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_joystick___writer_a3b341bb82658ee52172b22d90a18628f}{Initialize\+\_\+\+Output} ()
+\begin{DoxyCompactList}\small\item\em Initialize Output variables for the plugin to publish. \end{DoxyCompactList}\item 
+bool \hyperlink{class_joystick___writer_a4f7355cdbd819e5ce41575e152c98660}{Initialize\+\_\+\+Input} ()
+\begin{DoxyCompactList}\small\item\em Initialize Input variables for the plugin to publish. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_joystick___writer_a4bf2e08d435de90408c97e32dce88c45}\label{class_joystick___writer_a4bf2e08d435de90408c97e32dce88c45}} 
+void {\bfseries Init\+\_\+\+Joy} ()
+\item 
+void \hyperlink{class_joystick___writer_aa1ab2778180c281887758883622b78bf}{run} ()
+\begin{DoxyCompactList}\small\item\em Execute plugin. \end{DoxyCompactList}\item 
+void \hyperlink{class_joystick___writer_a3c606f3961eea4b6a371146479ca26da}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_joystick___writer}{Joystick\+\_\+\+Writer} plugin. 
+
+This plugin is a legacy wrapper that alows us to use Hocoma\textquotesingle{}s games with this architecture it writes output to a shared memory segment defined by hocoma that can not be changed \begin{DoxyAuthor}{Author}
+Patrick Heyer, \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+jul 13, 2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 15 of file Joystick\+\_\+\+Writer.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_joystick___writer_a4f7355cdbd819e5ce41575e152c98660}\label{class_joystick___writer_a4f7355cdbd819e5ce41575e152c98660}} 
+\index{Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}!Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}}
+\index{Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}!Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Input()}{Initialize\_Input()}}
+{\footnotesize\ttfamily bool Joystick\+\_\+\+Writer\+::\+Initialize\+\_\+\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Input variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}{I\+Plugin}.
+
+
+
+Definition at line 134 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+135 \{
+136     X\_axis=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"Tracker\_X"});
+137     Y\_axis=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"Tracker\_Y"});
+138     Z\_axis=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"Tracker\_Z"});
+139     RX\_axis=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"Position\_For\_Game\_RX"});
+140     RY\_axis=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"Position\_For\_Game\_RY"});
+141     RZ\_axis=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"Position\_For\_Game\_RZ"});
+142     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+143 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_joystick___writer_a3b341bb82658ee52172b22d90a18628f}\label{class_joystick___writer_a3b341bb82658ee52172b22d90a18628f}} 
+\index{Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}!Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}}
+\index{Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}!Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Output()}{Initialize\_Output()}}
+{\footnotesize\ttfamily bool Joystick\+\_\+\+Writer\+::\+Initialize\+\_\+\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Output variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}{I\+Plugin}.
+
+
+
+Definition at line 129 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+130 \{
+131     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+132 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_joystick___writer_a8c8c94397bbbb2058685ad6e0f92b4b1}\label{class_joystick___writer_a8c8c94397bbbb2058685ad6e0f92b4b1}} 
+\index{Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}
+{\footnotesize\ttfamily bool Joystick\+\_\+\+Writer\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load configuration. 
+
+The configuration can be loaded from file, or be hard coded into the plugin (not recomended), initialization of public and private variables should occur here
+
+By default load\+Configuration is called during \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Plugin\+Manager\+::\+Initialize()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}{I\+Plugin}.
+
+
+
+Definition at line 119 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+120 \{
+121     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+122 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_joystick___writer_aeb9c03f2389a5ed060b9c2a46fb84316}\label{class_joystick___writer_aeb9c03f2389a5ed060b9c2a46fb84316}} 
+\index{Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}!Main@{Main}}
+\index{Main@{Main}!Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily void Joystick\+\_\+\+Writer\+::\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main funcction of the plugin. 
+
+Started in a new thread by the Run() funcction is the most importatn funcction of the plugin. Infinite loop (generaly a while(running) function that runs undefenitly in a read/process/write cicle). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}{I\+Plugin}.
+
+
+
+Definition at line 57 of file Main.\+cpp.
+
+
+
+References stop().
+
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{keyword}{struct }uinput\_user\_dev uidev;
+60 
+61     \textcolor{keywordtype}{int}                    i;
+62     \textcolor{keywordtype}{int}                    fd;
+63 
+64     fd = open(\textcolor{stringliteral}{"/dev/uinput"}, O\_WRONLY | O\_NONBLOCK);
+65     \textcolor{keywordflow}{if}(fd < 0)
+66         die(\textcolor{stringliteral}{"error: open"});
+67 
+68     memset(&uidev, 0, \textcolor{keyword}{sizeof}(uidev));
+69     snprintf(uidev.name, UINPUT\_MAX\_NAME\_SIZE, \textcolor{stringliteral}{"Virtual\_joystick"});
+70     uidev.id.bustype = BUS\_USB;
+71     uidev.id.vendor  = 0x1;
+72     uidev.id.product = 0x1;
+73     uidev.id.version = 1;
+74 
+75     ioctl (fd, UI\_SET\_EVBIT, EV\_SYN);
+76     ioctl (fd, UI\_SET\_EVBIT, EV\_ABS);
+77     ioctl (fd, UI\_SET\_EVBIT, EV\_KEY);
+78 
+79     ioctl (fd, UI\_SET\_ABSBIT, ABS\_X);
+80     ioctl (fd, UI\_SET\_ABSBIT, ABS\_Y);
+81     ioctl (fd, UI\_SET\_ABSBIT, ABS\_Z);
+82     ioctl (fd, UI\_SET\_ABSBIT, ABS\_RX);
+83     ioctl (fd, UI\_SET\_ABSBIT, ABS\_RY);
+84     ioctl (fd, UI\_SET\_ABSBIT, ABS\_RZ);
+85     ioctl (fd, UI\_SET\_ABSBIT, ABS\_RT);
+86     ioctl (fd, UI\_SET\_ABSBIT, ABS\_MAX);
+87 
+88     \textcolor{keywordflow}{for}(i = 0; i < ABS\_MAX; ++i)
+89     \{
+90         uidev.absmax[i] = 511;
+91         uidev.absmin[i] = -512;
+92     \}
+93 
+94     \textcolor{comment}{// Create device}
+95     write (fd, &uidev, \textcolor{keyword}{sizeof} (uidev));
+96     \textcolor{keywordflow}{if} (ioctl (fd, UI\_DEV\_CREATE))
+97     \{
+98         LOG(WARNING) << \textcolor{stringliteral}{"Unable to create UIDEVUT device."};
+99         LOG(ERROR) << PluginDisplayName << \textcolor{stringliteral}{" will NOT keep executing"};
+100         \hyperlink{class_joystick___writer_a3c606f3961eea4b6a371146479ca26da}{stop}();
+101     running=\textcolor{keyword}{false};
+102     stoped = \textcolor{keyword}{true};
+103     \textcolor{keywordflow}{return};
+104     \}
+105 
+106     \textcolor{keywordflow}{while}(running)
+107     \{
+108         do\_uinput(fd,ABS\_X,*X\_axis*32767, EV\_ABS);
+109         do\_uinput(fd,ABS\_Y,*Y\_axis*32767, EV\_ABS);
+110         do\_uinput(fd,ABS\_Z,*Z\_axis*32767, EV\_ABS);
+111         do\_uinput(fd,ABS\_RX,*RX\_axis*32767, EV\_ABS);
+112         do\_uinput(fd,ABS\_RY,*RY\_axis*32767, EV\_ABS);
+113         do\_uinput(fd,ABS\_RZ,*RZ\_axis*32767, EV\_ABS);
+114     \}
+115     stoped = \textcolor{keyword}{true};
+116     \textcolor{keywordflow}{return};
+117 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_joystick___writer_aa1ab2778180c281887758883622b78bf}\label{class_joystick___writer_aa1ab2778180c281887758883622b78bf}} 
+\index{Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}!run@{run}}
+\index{run@{run}!Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Joystick\+\_\+\+Writer\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Execute plugin. 
+
+Starts a new thread and executes the plugins main() funcction. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}{I\+Plugin}.
+
+
+
+Definition at line 145 of file Main.\+cpp.
+
+
+
+References I\+Plugin\+::\+Inc\+Wrapper().
+
+
+\begin{DoxyCode}
+146 \{
+147     pthread\_create(&thread\_id, NULL, &\hyperlink{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}{IPlugin::IncWrapper}, \textcolor{keyword}{this});
+148     running = \textcolor{keyword}{true};
+149     stoped = \textcolor{keyword}{false};
+150 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_joystick___writer_a67a56e0ae63ad59657f4745dcac2f7a3}\label{class_joystick___writer_a67a56e0ae63ad59657f4745dcac2f7a3}} 
+\index{Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}!save\+Configuration@{save\+Configuration}}
+\index{save\+Configuration@{save\+Configuration}!Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{save\+Configuration()}{saveConfiguration()}}
+{\footnotesize\ttfamily bool Joystick\+\_\+\+Writer\+::save\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save configuration. 
+
+The configuration should be saved to file, public and private variables that should be configured at startup should be saved.
+
+By default save\+Configuration is called during \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Plugin\+Manager\+::\+Unload()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}{I\+Plugin}.
+
+
+
+Definition at line 124 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+125 \{
+126     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+127 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_joystick___writer_a3c606f3961eea4b6a371146479ca26da}\label{class_joystick___writer_a3c606f3961eea4b6a371146479ca26da}} 
+\index{Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}!stop@{stop}}
+\index{stop@{stop}!Joystick\+\_\+\+Writer@{Joystick\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Joystick\+\_\+\+Writer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop plugin. 
+
+Stops the plugin \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}{I\+Plugin}.
+
+
+
+Definition at line 153 of file Main.\+cpp.
+
+
+
+Referenced by Main().
+
+
+\begin{DoxyCode}
+154 \{
+155     running = \textcolor{keyword}{false};
+156 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Joystick\+\_\+\+Writer/Joystick\+\_\+\+Writer.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Joystick\+\_\+\+Writer/Main.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\hypertarget{class_plugin_factory}{}\section{Plugin\+Factory Class Reference}
+\label{class_plugin_factory}\index{Plugin\+Factory@{Plugin\+Factory}}
+
+
+{\ttfamily \#include $<$coreapi.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plugin_factory_a41c268ee65f48bf9b26bdcb7e4935450}\label{class_plugin_factory_a41c268ee65f48bf9b26bdcb7e4935450}} 
+typedef \hyperlink{class_i_plugin}{I\+Plugin} $\ast$($\ast$ {\bfseries Create\+Callback}) ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plugin_factory_a360ceed22a62ac005d2b848ffa0a9955}\label{class_plugin_factory_a360ceed22a62ac005d2b848ffa0a9955}} 
+static void {\bfseries Register\+Plugin} (const std\+::string \&type, Create\+Callback cb)
+\item 
+\mbox{\Hypertarget{class_plugin_factory_a7ae6fd89d1c98a27010ea9dc64d4adfc}\label{class_plugin_factory_a7ae6fd89d1c98a27010ea9dc64d4adfc}} 
+static void {\bfseries Unregister\+Plugin} (const std\+::string \&type)
+\item 
+\mbox{\Hypertarget{class_plugin_factory_ab85d7d514d60732ecb335561effdf886}\label{class_plugin_factory_ab85d7d514d60732ecb335561effdf886}} 
+static \hyperlink{class_i_plugin}{I\+Plugin} $\ast$ {\bfseries Create\+Plugin} (const std\+::string \&type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A factory object in the Core A\+PI 
+
+Definition at line 19 of file coreapi.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Plugin\+\_\+\+A\+P\+I/\hyperlink{coreapi_8h}{coreapi.\+h}\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Plugin\+\_\+\+A\+P\+I/coreapi.\+cpp\end{DoxyCompactItemize}

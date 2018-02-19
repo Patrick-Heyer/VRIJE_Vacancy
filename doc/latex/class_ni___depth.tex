@@ -1,0 +1,283 @@
+\hypertarget{class_ni___depth}{}\section{Ni\+\_\+\+Depth Class Reference}
+\label{class_ni___depth}\index{Ni\+\_\+\+Depth@{Ni\+\_\+\+Depth}}
+
+
+Inheritance diagram for Ni\+\_\+\+Depth\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{class_ni___depth__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ni\+\_\+\+Depth\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{class_ni___depth__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ni___depth_a5eb2d53894b1e891c70648587c6f45e9}\label{class_ni___depth_a5eb2d53894b1e891c70648587c6f45e9}} 
+{\bfseries Ni\+\_\+\+Depth} (int x, int y, xn\+::\+Depth\+Meta\+Data $\ast$Depth\+Data, xn\+::\+User\+Generator g\+\_\+\+User\+Generator, xn\+::\+Depth\+Generator g\+\_\+\+Depth\+Generator, std\+::string name, \hyperlink{class_tab}{Tab} $\ast$parent)
+\item 
+void \hyperlink{class_ni___depth_a6f6a022f4fbae3f3e157669929ec0d38}{Draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ni___depth_aa46fac0e5af19021fd82a93804748f5e}\label{class_ni___depth_aa46fac0e5af19021fd82a93804748f5e}} 
+void {\bfseries procces\+Input} ()
+\item 
+void \hyperlink{class_ni___depth_a6cf160e8edd85c236f61b5a45aa743dc}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file Ni\+\_\+\+Depth.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ni___depth_a6f6a022f4fbae3f3e157669929ec0d38}\label{class_ni___depth_a6f6a022f4fbae3f3e157669929ec0d38}} 
+\index{Ni\+\_\+\+Depth@{Ni\+\_\+\+Depth}!Draw@{Draw}}
+\index{Draw@{Draw}!Ni\+\_\+\+Depth@{Ni\+\_\+\+Depth}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Ni\+\_\+\+Depth\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws the widget. 
+
+Draws the widget called by \hyperlink{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}{Tab\+::\+Draw} 
+
+Implements \hyperlink{class_widget_ac4c2063cd671468ad05d84cfe963c032}{Widget}.
+
+
+
+Definition at line 169 of file Ni\+\_\+\+Depth.\+cpp.
+
+
+\begin{DoxyCode}
+170 \{
+171     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} bInitialized = \textcolor{keyword}{false};   
+172         \textcolor{keyword}{static} GLuint depthTexID;
+173         \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* pDepthTexBuf;
+174         \textcolor{keyword}{static} \textcolor{keywordtype}{int} texWidth, texHeight;
+175 
+176         \textcolor{keywordtype}{float} topLeftX;
+177         \textcolor{keywordtype}{float} topLeftY;
+178         \textcolor{keywordtype}{float} bottomRightY;
+179         \textcolor{keywordtype}{float} bottomRightX;
+180         \textcolor{keywordtype}{float} texXpos;
+181         \textcolor{keywordtype}{float} texYpos;
+182         \textcolor{keywordtype}{int} userCount;
+183 
+184         userCount = 0;
+185         \textcolor{keywordflow}{if}(!bInitialized)
+186         \{
+187                 texWidth =  getClosestPowerOfTwo(dmd->XRes());
+188                 texHeight = getClosestPowerOfTwo(dmd->YRes());
+189 
+190 \textcolor{comment}{//              printf("Initializing depth texture: width = %d, height = %d\(\backslash\)n", texWidth, texHeight);}
+191                 depthTexID = initTexture((\textcolor{keywordtype}{void}**)&pDepthTexBuf,texWidth, texHeight) ;
+192 
+193 \textcolor{comment}{//              printf("Initialized depth texture: width = %d, height = %d\(\backslash\)n", texWidth, texHeight);}
+194                 bInitialized = \textcolor{keyword}{true};
+195 
+196                 topLeftX = dmd->XRes();
+197                 topLeftY = 0;
+198                 bottomRightY = dmd->YRes();
+199                 bottomRightX = 0;
+200                 texXpos =(float)dmd->XRes()/texWidth;
+201                 texYpos  =(float)dmd->YRes()/texHeight;
+202 
+203                 memset(texcoords, 0, 8*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));
+204                 texcoords[0] = texXpos, texcoords[1] = texYpos, texcoords[2] = texXpos, texcoords[7] = 
+      texYpos;
+205         \}
+206 
+207         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nValue = 0;
+208         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nHistValue = 0;
+209         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nIndex = 0;
+210         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nX = 0;
+211         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nY = 0;
+212         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nNumberOfPoints = 0;
+213         XnUInt16 g\_nXRes = dmd->XRes();
+214         XnUInt16 g\_nYRes = dmd->YRes();
+215 
+216         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* pDestImage = pDepthTexBuf;
+217 
+218         \textcolor{keyword}{const} XnDepthPixel* pDepth = dmd->Data();
+219 \textcolor{comment}{//         const XnLabel* pLabels = smd.Data();}
+220 
+221         \textcolor{comment}{// Calculate the accumulative histogram}
+222         memset(g\_pDepthHist, 0, MAX\_DEPTH*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));
+223         \textcolor{keywordflow}{for} (nY=0; nY<g\_nYRes; nY++)
+224         \{
+225                 \textcolor{keywordflow}{for} (nX=0; nX<g\_nXRes; nX++)
+226                 \{
+227                         nValue = *pDepth;
+228 
+229                         \textcolor{keywordflow}{if} (nValue != 0)
+230                         \{
+231                                 g\_pDepthHist[nValue]++;
+232                                 nNumberOfPoints++;
+233                         \}
+234 
+235                         pDepth++;
+236                 \}
+237         \}
+238 
+239         \textcolor{keywordflow}{for} (nIndex=1; nIndex<MAX\_DEPTH; nIndex++)
+240         \{
+241                 g\_pDepthHist[nIndex] += g\_pDepthHist[nIndex-1];
+242         \}
+243         \textcolor{keywordflow}{if} (nNumberOfPoints)
+244         \{
+245                 \textcolor{keywordflow}{for} (nIndex=1; nIndex<MAX\_DEPTH; nIndex++)
+246                 \{
+247                         g\_pDepthHist[nIndex] = (\textcolor{keywordtype}{unsigned} int)(256 * (1.0f - (g\_pDepthHist[nIndex] / 
+      nNumberOfPoints)));
+248                 \}
+249         \}
+250 
+251         pDepth = dmd->Data();
+252         \textcolor{keywordflow}{if} (1 \textcolor{comment}{/*g\_bDrawPixels*/})
+253         \{
+254                 XnUInt32 nIndex = 0;
+255                 \textcolor{comment}{// Prepare the texture map}
+256                 \textcolor{keywordflow}{for} (nY=0; nY<g\_nYRes; nY++)
+257                 \{
+258                         \textcolor{keywordflow}{for} (nX=0; nX < g\_nXRes; nX++, nIndex++)
+259                         \{
+260 
+261                                 pDestImage[0] = 0;
+262                                 pDestImage[1] = 0;
+263                                 pDestImage[2] = 0;
+264 \textcolor{comment}{//                                 if (g\_bDrawBackground || *pLabels != 0)}
+265 \textcolor{comment}{//                                 \{}
+266 \textcolor{comment}{//                                         nValue = *pDepth;}
+267 \textcolor{comment}{//                                         XnLabel label = *pLabels;}
+268 \textcolor{comment}{//                                         XnUInt32 nColorID = label % nColors;}
+269 \textcolor{comment}{//                                         if (label == 0)}
+270 \textcolor{comment}{//                                         \{}
+271 \textcolor{comment}{//                                                 nColorID = nColors;}
+272 \textcolor{comment}{//                                         \}}
+273 \textcolor{comment}{// }
+274 \textcolor{comment}{//                                         if (nValue != 0)}
+275 \textcolor{comment}{//                                         \{}
+276 \textcolor{comment}{//                                                 nHistValue = g\_pDepthHist[nValue];}
+277 \textcolor{comment}{// }
+278 \textcolor{comment}{//                                                 pDestImage[0] = nHistValue * Colors[nColorID][0]; }
+279 \textcolor{comment}{//                                                 pDestImage[1] = nHistValue * Colors[nColorID][1];}
+280 \textcolor{comment}{//                                                 pDestImage[2] = nHistValue * Colors[nColorID][2];}
+281 \textcolor{comment}{//                                         \}}
+282 \textcolor{comment}{//                                 \}}
+283 
+284                                 pDepth++;
+285 \textcolor{comment}{//                                 pLabels++;}
+286                                 pDestImage+=3;
+287                         \}
+288 
+289                         pDestImage += (texWidth - g\_nXRes) *3;
+290                 \}
+291         \}
+292         \textcolor{keywordflow}{else}
+293         \{
+294                 xnOSMemSet(pDepthTexBuf, 0, 3*2*g\_nXRes*g\_nYRes);
+295         \}
+296 
+297         glBindTexture(GL\_TEXTURE\_2D, depthTexID);
+298         glTexImage2D(GL\_TEXTURE\_2D, 0, GL\_RGB, texWidth, texHeight, 0, GL\_RGB, GL\_UNSIGNED\_BYTE, 
+      pDepthTexBuf);
+299 
+300         \textcolor{comment}{// Display the OpenGL texture map}
+301         glColor4f(0.75,0.75,0.75,1);
+302 
+303         glEnable(GL\_TEXTURE\_2D);
+304         DrawTexture(dmd->XRes(),dmd->YRes(),0,0); 
+305         glDisable(GL\_TEXTURE\_2D);
+306 
+307         \textcolor{keywordtype}{char} strLabel[50] = \textcolor{stringliteral}{""};
+308         XnUserID aUsers[15];
+309         XnUInt16 nUsers = 15;
+310         this->UserGenerator.GetUsers(aUsers, nUsers);
+311         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nUsers; ++i)
+312         \{
+313 \textcolor{comment}{/*}
+314 \textcolor{comment}{                if (g\_bPrintID)}
+315 \textcolor{comment}{                \{}
+316 \textcolor{comment}{                        XnPoint3D com;}
+317 \textcolor{comment}{                        this->UserGenerator.GetCoM(aUsers[i], com);}
+318 \textcolor{comment}{                        this->DepthGenerator.ConvertRealWorldToProjective(1, &com, &com);}
+319 \textcolor{comment}{}
+320 \textcolor{comment}{                        xnOSMemSet(strLabel, 0, sizeof(strLabel));}
+321 \textcolor{comment}{                        if (!g\_bPrintState)}
+322 \textcolor{comment}{                        \{}
+323 \textcolor{comment}{                                // Tracking}
+324 \textcolor{comment}{                                sprintf(strLabel, "%d", aUsers[i]);}
+325 \textcolor{comment}{                        \}}
+326 \textcolor{comment}{                        else if (this->UserGenerator.GetSkeletonCap().IsTracking(aUsers[i]))}
+327 \textcolor{comment}{                        \{}
+328 \textcolor{comment}{                                // Tracking}
+329 \textcolor{comment}{                                sprintf(strLabel, "%d - Tracking", aUsers[i]);}
+330 \textcolor{comment}{                        \}}
+331 \textcolor{comment}{                        else if (this->UserGenerator.GetSkeletonCap().IsCalibrating(aUsers[i]))}
+332 \textcolor{comment}{                        \{}
+333 \textcolor{comment}{                                // Calibrating}
+334 \textcolor{comment}{                                sprintf(strLabel, "%d - Calibrating [%s]", aUsers[i],
+       GetCalibrationErrorString(m\_Errors[aUsers[i]].first));}
+335 \textcolor{comment}{                        \}}
+336 \textcolor{comment}{                        else}
+337 \textcolor{comment}{                        \{}
+338 \textcolor{comment}{                                // Nothing}
+339 \textcolor{comment}{                                sprintf(strLabel, "%d - Looking for pose [%s]", aUsers[i],
+       GetPoseErrorString(m\_Errors[aUsers[i]].second));}
+340 \textcolor{comment}{                        \}}
+341 \textcolor{comment}{}
+342 \textcolor{comment}{}
+343 \textcolor{comment}{                        glColor4f(1-Colors[i%nColors][0], 1-Colors[i%nColors][1], 1-Colors[i%nColors][2],
+       1);}
+344 \textcolor{comment}{}
+345 \textcolor{comment}{                        glRasterPos2i(com.X, com.Y);}
+346 \textcolor{comment}{                        glPrintString(GLUT\_BITMAP\_HELVETICA\_18, strLabel);}
+347 \textcolor{comment}{                \}*/}
+348 
+349                
+350         \}
+351 
+352 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ni___depth_a6cf160e8edd85c236f61b5a45aa743dc}\label{class_ni___depth_a6cf160e8edd85c236f61b5a45aa743dc}} 
+\index{Ni\+\_\+\+Depth@{Ni\+\_\+\+Depth}!update@{update}}
+\index{update@{update}!Ni\+\_\+\+Depth@{Ni\+\_\+\+Depth}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Ni\+\_\+\+Depth\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the widget. 
+
+Updates the widget called by Tab\+::update 
+
+Implements \hyperlink{class_widget_a726dc97add2c6eb82967144207280ace}{Widget}.
+
+
+
+Definition at line 359 of file Ni\+\_\+\+Depth.\+cpp.
+
+
+\begin{DoxyCode}
+360 \{
+361 
+362 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/Ni\+\_\+\+Depth.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/Ni\+\_\+\+Depth.\+cpp\end{DoxyCompactItemize}

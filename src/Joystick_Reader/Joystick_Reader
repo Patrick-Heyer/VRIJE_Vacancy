@@ -1,0 +1,50 @@
+#include "pluginapi.h"
+#include "Shared_Memory.h"
+#include "../Logger_API/Logger.h"
+
+
+/**
+* @brief Joystick_Reader plugin
+*
+* This plugin is a legacy wrapper that alows us to use Hocoma's games with this architecture
+* it writes output to a shared memory segment defined by hocoma that can not be changed
+* @author     Patrick Heyer, patrickhey@prodigy.net.mx
+* @date       jul 13, 2014
+* @version    1.0
+**/
+
+class Joystick_Reader : public IPlugin
+{
+public:
+	void Main();
+	bool loadConfiguration();
+	bool saveConfiguration();
+	bool Initialize_Output();
+	bool Initialize_Input();
+	int Init_Joy();
+	void stop();
+	void run();
+
+private:
+	XInputJoypad* g_pJoypad;
+
+	double X_axis;
+	double Y_axis;
+	double Z_axis;
+	double U_axis;
+	double V_axis;
+	double W_axis;
+
+	bool button_1;
+	bool button_2;
+	bool button_3;
+	bool button_4;
+	bool button_5;
+	bool button_6;
+	bool button_7;
+	bool button_8;
+	bool button_9;
+	bool button_10;
+	bool button_11;
+	bool button_12;
+};

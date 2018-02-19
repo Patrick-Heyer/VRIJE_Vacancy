@@ -1,0 +1,243 @@
+\hypertarget{class_gui}{}\section{Gui Class Reference}
+\label{class_gui}\index{Gui@{Gui}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gui_a2a20c5db0b4e9a337f07a822a0e5d952}\label{class_gui_a2a20c5db0b4e9a337f07a822a0e5d952}} 
+void {\bfseries initialize} (void)
+\item 
+void \hyperlink{class_gui_acf4f1d3954d40aec3bc0ab4652b6a060}{Draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the \hyperlink{class_gui}{Gui} and its sub elements on screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_gui_af057adcdd96ee8b8021519d68ed9042e}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the \hyperlink{class_gui}{Gui}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gui_a59ceaded048a18563961252e3be66436}\label{class_gui_a59ceaded048a18563961252e3be66436}} 
+void {\bfseries procces\+Input} ()
+\item 
+\mbox{\Hypertarget{class_gui_a0bafcd9e94ade1deec435ca998e9b749}\label{class_gui_a0bafcd9e94ade1deec435ca998e9b749}} 
+void {\bfseries resize} (int x, int y)
+\item 
+void \hyperlink{class_gui_a30be0666694e35dbcc4f6473e02b6fdc}{set\+Active\+Tab} (std\+::string value)
+\begin{DoxyCompactList}\small\item\em Sets the tab to be displayed. \end{DoxyCompactList}\item 
+void \hyperlink{class_gui_ae192d588b4f3cfef2ed9772d74689465}{set\+Active\+Tab} (int tab)
+\begin{DoxyCompactList}\small\item\em Sets the tab to be displayed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gui_a55e8bca58c3c35f3a3c90d33ca112998}\label{class_gui_a55e8bca58c3c35f3a3c90d33ca112998}} 
+void {\bfseries add\+Tab} (\hyperlink{class_tab}{Tab} $\ast$value)
+\item 
+\mbox{\Hypertarget{class_gui_ad5dd19ab9b458dc56602ad2c1a13919e}\label{class_gui_ad5dd19ab9b458dc56602ad2c1a13919e}} 
+int {\bfseries get\+Active\+Tab} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_gui}{Gui} \& \hyperlink{class_gui_a613c787488c374d68a04886cc63127a7}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the \hyperlink{class_gui}{Gui} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gui_a900f9430f39f25922dd9c08d6853fa83}\label{class_gui_a900f9430f39f25922dd9c08d6853fa83}} 
+static void {\bfseries free\+Instance} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gui_a6e03ddcbaab0496911208f41c8c02ea3}\label{class_gui_a6e03ddcbaab0496911208f41c8c02ea3}} 
+{\bfseries Gui} (const \hyperlink{class_gui}{Gui} \&other)
+\item 
+\mbox{\Hypertarget{class_gui_a2babe9aa24b2538a5c2b243cd88912ba}\label{class_gui_a2babe9aa24b2538a5c2b243cd88912ba}} 
+virtual \hyperlink{class_gui}{Gui} \& {\bfseries operator=} (const \hyperlink{class_gui}{Gui} \&other)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file gui.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gui_acf4f1d3954d40aec3bc0ab4652b6a060}\label{class_gui_acf4f1d3954d40aec3bc0ab4652b6a060}} 
+\index{Gui@{Gui}!Draw@{Draw}}
+\index{Draw@{Draw}!Gui@{Gui}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Gui\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the \hyperlink{class_gui}{Gui} and its sub elements on screen. 
+
+Draws the \hyperlink{class_gui}{Gui} the tabs acces button and the active\+Tab 
+
+Definition at line 85 of file gui.\+cpp.
+
+
+\begin{DoxyCode}
+86 \{
+87     \textcolor{keywordflow}{if}(numTabs!=0)
+88     \{
+89     \textcolor{keywordtype}{float} color[4];
+90     glLoadIdentity();
+91     glDisable ( GL\_TEXTURE\_2D );
+92     setOrthographicProjection ( width, height);
+93     \textcolor{keywordtype}{int} w=width/numTabs;
+94     \textcolor{keywordtype}{int} i=0;
+95     \textcolor{keywordflow}{for}( ListItor itor = tabList.begin(); itor != tabList.end(); ++itor )
+96     \{
+97         uiSetRoundBox(\textcolor{stringliteral}{"1100"});
+98         
+99         \textcolor{keywordflow}{if} (i==getActiveTab ())
+100         \{
+101             gl\_round\_box\_Hshade(GL\_POLYGON,i*w+1,1,(i+1)*w,height*.02,height*.02*.5,\textcolor{stringliteral}{"FFFFFF"}, \textcolor{stringliteral}{"008800"});
+102             (*itor)->Draw();
+103         \}
+104         \textcolor{keywordflow}{else}
+105         \{
+106             gl\_round\_box\_Hshade(GL\_POLYGON,i*w+1,1,(i+1)*w,height*.02,height*.02*.5,\textcolor{stringliteral}{"FFFFFF"}, \textcolor{stringliteral}{"444488"});
+107         \}
+108         drawText((w*i)+5, 15,(*itor)->get\_Name(), \textcolor{stringliteral}{"FFFFFF"}, 1 );
+109         i++;
+110     \}
+111     resetPerspectiveProjection();
+112     \}
+113 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gui_a613c787488c374d68a04886cc63127a7}\label{class_gui_a613c787488c374d68a04886cc63127a7}} 
+\index{Gui@{Gui}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Gui@{Gui}}
+\subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily \hyperlink{class_gui}{Gui} \& Gui\+::get\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a pointer to the \hyperlink{class_gui}{Gui} object. 
+
+Returns a pointer to the only copy in memory of the \hyperlink{class_gui}{Gui} object. If no object exist it will initialize the instance befor returning the pointer \begin{DoxyReturn}{Returns}
+\hyperlink{class_gui}{Gui} 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file gui.\+cpp.
+
+
+
+Referenced by File\+\_\+\+Writer\+::\+Main(), Tuio\+\_\+\+Client\+::\+Main(), Tab\+::\+Tab(), and update().
+
+
+\begin{DoxyCode}
+67 \{
+68     \textcolor{keywordflow}{if} ( guiSingleton == 0 )
+69     \{
+70         guiSingleton = \textcolor{keyword}{new} \hyperlink{class_gui}{Gui};
+71     \}
+72     
+73     \textcolor{keywordflow}{return} *guiSingleton;
+74 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gui_a30be0666694e35dbcc4f6473e02b6fdc}\label{class_gui_a30be0666694e35dbcc4f6473e02b6fdc}} 
+\index{Gui@{Gui}!set\+Active\+Tab@{set\+Active\+Tab}}
+\index{set\+Active\+Tab@{set\+Active\+Tab}!Gui@{Gui}}
+\subsubsection{\texorpdfstring{set\+Active\+Tab()}{setActiveTab()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Gui\+::set\+Active\+Tab (\begin{DoxyParamCaption}\item[{std\+::string}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the tab to be displayed. 
+
+Sets the tab to be displayed by the gui 
+\begin{DoxyParams}{Parameters}
+{\em value} & is the name of the tab to display \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 231 of file gui.\+cpp.
+
+
+
+Referenced by File\+\_\+\+Writer\+::\+Main(), Tuio\+\_\+\+Client\+::\+Main(), and update().
+
+
+\begin{DoxyCode}
+232 \{
+233     Var\_type::iterator iter = pestana.begin();
+234 
+235     iter = pestana.find(value);
+236     \textcolor{keywordflow}{if} (iter != pestana.end() )
+237     \{
+238       \hyperlink{class_gui_a30be0666694e35dbcc4f6473e02b6fdc}{setActiveTab}(iter->second);
+239     \}
+240 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gui_ae192d588b4f3cfef2ed9772d74689465}\label{class_gui_ae192d588b4f3cfef2ed9772d74689465}} 
+\index{Gui@{Gui}!set\+Active\+Tab@{set\+Active\+Tab}}
+\index{set\+Active\+Tab@{set\+Active\+Tab}!Gui@{Gui}}
+\subsubsection{\texorpdfstring{set\+Active\+Tab()}{setActiveTab()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Gui\+::set\+Active\+Tab (\begin{DoxyParamCaption}\item[{int}]{tab }\end{DoxyParamCaption})}
+
+
+
+Sets the tab to be displayed. 
+
+Sets the tab to be displayed by the gui 
+\begin{DoxyParams}{Parameters}
+{\em value} & is the numerical ID of the tab to display \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 209 of file gui.\+cpp.
+
+
+\begin{DoxyCode}
+210 \{
+211     \textcolor{keywordflow}{if}(tabList.size()>tab)
+212     \{
+213         selectedTab=tab;
+214     \}
+215     \textcolor{keywordtype}{int} i=0;
+216     \textcolor{keywordflow}{for}( ListItor itor = tabList.begin(); itor != tabList.end(); ++itor )
+217     \{
+218      
+219         \textcolor{keywordflow}{if} (i==getActiveTab ())
+220         \{
+221             
+222             (*itor)->set\_active(\textcolor{keyword}{true});
+223         \}
+224         \textcolor{keywordflow}{else}
+225         \{
+226             (*itor)->set\_active(\textcolor{keyword}{false});
+227         \}
+228         i++;
+229     \}
+230 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gui_af057adcdd96ee8b8021519d68ed9042e}\label{class_gui_af057adcdd96ee8b8021519d68ed9042e}} 
+\index{Gui@{Gui}!update@{update}}
+\index{update@{update}!Gui@{Gui}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Gui\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the \hyperlink{class_gui}{Gui}. 
+
+Updates the \hyperlink{class_gui}{Gui} generaly not needed as Draw updates it 
+
+Definition at line 115 of file gui.\+cpp.
+
+
+
+References get\+Instance(), and set\+Active\+Tab().
+
+
+\begin{DoxyCode}
+116 \{
+117     \textcolor{keywordflow}{for}( ListItor itor = tabList.begin(); itor != tabList.end(); ++itor )
+118     \{
+119         (*itor)->Update();
+120     \}
+121 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/gui.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/gui.\+cpp\end{DoxyCompactItemize}

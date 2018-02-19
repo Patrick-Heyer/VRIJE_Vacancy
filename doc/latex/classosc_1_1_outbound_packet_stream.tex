@@ -1,0 +1,99 @@
+\hypertarget{classosc_1_1_outbound_packet_stream}{}\section{osc\+:\+:Outbound\+Packet\+Stream Class Reference}
+\label{classosc_1_1_outbound_packet_stream}\index{osc\+::\+Outbound\+Packet\+Stream@{osc\+::\+Outbound\+Packet\+Stream}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a498469840e2525400417630ab5b743b4}\label{classosc_1_1_outbound_packet_stream_a498469840e2525400417630ab5b743b4}} 
+{\bfseries Outbound\+Packet\+Stream} (char $\ast$buffer, unsigned long capacity)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a8564dda9feca993620970a8ad2272ef5}\label{classosc_1_1_outbound_packet_stream_a8564dda9feca993620970a8ad2272ef5}} 
+void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a906ec2f83c497e07899591fe93964950}\label{classosc_1_1_outbound_packet_stream_a906ec2f83c497e07899591fe93964950}} 
+unsigned int {\bfseries Capacity} () const
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a9094a24a45ac7c75e4d0752fa6f91f60}\label{classosc_1_1_outbound_packet_stream_a9094a24a45ac7c75e4d0752fa6f91f60}} 
+unsigned int {\bfseries Size} () const
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a05f577be8faa8676521dcce67a567078}\label{classosc_1_1_outbound_packet_stream_a05f577be8faa8676521dcce67a567078}} 
+const char $\ast$ {\bfseries Data} () const
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a8c6635b9585a827d7f3b7fde13d00690}\label{classosc_1_1_outbound_packet_stream_a8c6635b9585a827d7f3b7fde13d00690}} 
+bool {\bfseries Is\+Ready} () const
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a8482902f790a1571480a0bedf66bbc2c}\label{classosc_1_1_outbound_packet_stream_a8482902f790a1571480a0bedf66bbc2c}} 
+bool {\bfseries Is\+Message\+In\+Progress} () const
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a02c405572fa61e0b82c021e4125be902}\label{classosc_1_1_outbound_packet_stream_a02c405572fa61e0b82c021e4125be902}} 
+bool {\bfseries Is\+Bundle\+In\+Progress} () const
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_af664359b307f80c9159d9f1b7fc8a8df}\label{classosc_1_1_outbound_packet_stream_af664359b307f80c9159d9f1b7fc8a8df}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_bundle_initiator}{Bundle\+Initiator} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_afb1ae9919cb4f6cc915afa0e5b1a9b4e}\label{classosc_1_1_outbound_packet_stream_afb1ae9919cb4f6cc915afa0e5b1a9b4e}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_bundle_terminator}{Bundle\+Terminator} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a70568cf72d659fc8a1d4bc9e7fff2b20}\label{classosc_1_1_outbound_packet_stream_a70568cf72d659fc8a1d4bc9e7fff2b20}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_begin_message}{Begin\+Message} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a3717b68b63a6e9a7b885be0a9b821ebe}\label{classosc_1_1_outbound_packet_stream_a3717b68b63a6e9a7b885be0a9b821ebe}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_message_terminator}{Message\+Terminator} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_ae0bd84a08b799d6082a5b694fe8df7e9}\label{classosc_1_1_outbound_packet_stream_ae0bd84a08b799d6082a5b694fe8df7e9}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (bool rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_ad1953729e5a5d5c27c50dc3c3981b56f}\label{classosc_1_1_outbound_packet_stream_ad1953729e5a5d5c27c50dc3c3981b56f}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_nil_type}{Nil\+Type} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a1ad22e32da894b404b86e4b6558ae06b}\label{classosc_1_1_outbound_packet_stream_a1ad22e32da894b404b86e4b6558ae06b}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_infinitum_type}{Infinitum\+Type} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_aa8f4b350f403410a32863bc6181d48f0}\label{classosc_1_1_outbound_packet_stream_aa8f4b350f403410a32863bc6181d48f0}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (int32 rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a268286f0d240da9eb17a5c99e7e33fa4}\label{classosc_1_1_outbound_packet_stream_a268286f0d240da9eb17a5c99e7e33fa4}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (int rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_adfa98e70c0fd5ffc8bcebebddcd69614}\label{classosc_1_1_outbound_packet_stream_adfa98e70c0fd5ffc8bcebebddcd69614}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (float rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a6413852829c0b2aeb7a981c7660ae684}\label{classosc_1_1_outbound_packet_stream_a6413852829c0b2aeb7a981c7660ae684}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (char rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a1cb71bd9392e69b16a73a1208d78d541}\label{classosc_1_1_outbound_packet_stream_a1cb71bd9392e69b16a73a1208d78d541}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_rgba_color}{Rgba\+Color} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a7547101c97fb5c898927eb9ca10bbe13}\label{classosc_1_1_outbound_packet_stream_a7547101c97fb5c898927eb9ca10bbe13}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_midi_message}{Midi\+Message} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_acb05e7674adfe6dca9f06f60079eb31d}\label{classosc_1_1_outbound_packet_stream_acb05e7674adfe6dca9f06f60079eb31d}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (int64 rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a7eacf6f45bf6359c310b8d69bd3a9d90}\label{classosc_1_1_outbound_packet_stream_a7eacf6f45bf6359c310b8d69bd3a9d90}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_time_tag}{Time\+Tag} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a6f57f187947013425f380b0d4638df76}\label{classosc_1_1_outbound_packet_stream_a6f57f187947013425f380b0d4638df76}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (double rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_adaf8af6da2a34b867e1f14ddac41551c}\label{classosc_1_1_outbound_packet_stream_adaf8af6da2a34b867e1f14ddac41551c}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const char $\ast$rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_a2b9bf271bb9f901b5bef6443b812b76e}\label{classosc_1_1_outbound_packet_stream_a2b9bf271bb9f901b5bef6443b812b76e}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_symbol}{Symbol} \&rhs)
+\item 
+\mbox{\Hypertarget{classosc_1_1_outbound_packet_stream_adc2a4bfa7b09d66e617a05d2c3cdb675}\label{classosc_1_1_outbound_packet_stream_adc2a4bfa7b09d66e617a05d2c3cdb675}} 
+\hyperlink{classosc_1_1_outbound_packet_stream}{Outbound\+Packet\+Stream} \& {\bfseries operator$<$$<$} (const \hyperlink{structosc_1_1_blob}{Blob} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 67 of file Osc\+Outbound\+Packet\+Stream.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Tuio\+\_\+\+Client/osc/Osc\+Outbound\+Packet\+Stream.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Tuio\+\_\+\+Client/osc/Osc\+Outbound\+Packet\+Stream.\+cpp\end{DoxyCompactItemize}

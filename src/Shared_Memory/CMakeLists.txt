@@ -1,0 +1,7 @@
+PROJECT(Gesture_Therapy)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+INCLUDE_DIRECTORIES(../Logger_API)
+
+ADD_LIBRARY(Shared_Memory SHARED Shared_Memory.cpp)
+TARGET_LINK_LIBRARIES(Shared_Memory Plugin_API Logger_API)

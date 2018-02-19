@@ -1,0 +1,97 @@
+\hypertarget{pluginapi_8h}{}\section{/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Plugin\+\_\+\+A\+P\+I/pluginapi.h File Reference}
+\label{pluginapi_8h}\index{/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Plugin\+\_\+\+A\+P\+I/pluginapi.\+h@{/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Plugin\+\_\+\+A\+P\+I/pluginapi.\+h}}
+
+
+An A\+PI that lets users write plugins.  
+
+
+{\ttfamily \#include \char`\"{}defines.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}plugin.\+h\char`\"{}}\newline
+Include dependency graph for pluginapi.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{pluginapi_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pluginapi_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pluginapi_8h_ac3bcb9217a74830c51b6c46c9b5f997f}\label{pluginapi_8h_ac3bcb9217a74830c51b6c46c9b5f997f}} 
+\#define {\bfseries P\+L\+U\+G\+I\+N\+\_\+\+A\+P\+I\+\_\+\+V\+E\+R\+S\+I\+ON}~1
+\item 
+\mbox{\Hypertarget{pluginapi_8h_ada5e32e6261f8ecb0a75d6360a2d967c}\label{pluginapi_8h_ada5e32e6261f8ecb0a75d6360a2d967c}} 
+\#define {\bfseries C\+O\+R\+E\+\_\+\+F\+U\+NC}~extern \char`\"{}C\char`\"{} C\+O\+R\+E\+\_\+\+A\+PI
+\item 
+\mbox{\Hypertarget{pluginapi_8h_a44d2700cebad9f4eb409e36bfe609ffb}\label{pluginapi_8h_a44d2700cebad9f4eb409e36bfe609ffb}} 
+\#define {\bfseries P\+L\+U\+G\+I\+N\+\_\+\+F\+U\+NC}~extern \char`\"{}C\char`\"{} P\+L\+U\+G\+I\+N\+\_\+\+A\+PI
+\item 
+\#define \hyperlink{pluginapi_8h_a7a0dfe7f380fed1c658a9f1c2e66c910}{P\+L\+U\+G\+I\+N\+\_\+\+I\+N\+IT}()
+\begin{DoxyCompactList}\small\item\em declare the initialization routine for a plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pluginapi_8h_a3a167eda0b8a7aa8854d62708a971a84}\label{pluginapi_8h_a3a167eda0b8a7aa8854d62708a971a84}} 
+\#define \hyperlink{pluginapi_8h_a3a167eda0b8a7aa8854d62708a971a84}{P\+L\+U\+G\+I\+N\+\_\+\+F\+R\+EE}()~P\+L\+U\+G\+I\+N\+\_\+\+F\+U\+NC int Plugin\+Free()
+\begin{DoxyCompactList}\small\item\em declare the cleanup routine for a plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pluginapi_8h_a1431b663bad20be0e123860f4977abf6}\label{pluginapi_8h_a1431b663bad20be0e123860f4977abf6}} 
+\#define \hyperlink{pluginapi_8h_a1431b663bad20be0e123860f4977abf6}{P\+L\+U\+G\+I\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+N\+A\+ME}(name)~P\+L\+U\+G\+I\+N\+\_\+\+A\+PI const char $\ast$ Plugin\+Display\+Name = name
+\begin{DoxyCompactList}\small\item\em declare the display name a plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pluginapi_8h_a3fa7c23fe803aced93676073abd6bb93}\label{pluginapi_8h_a3fa7c23fe803aced93676073abd6bb93}} 
+\#define \hyperlink{pluginapi_8h_a3fa7c23fe803aced93676073abd6bb93}{P\+L\+U\+G\+I\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+T\+Y\+PE}(type)~P\+L\+U\+G\+I\+N\+\_\+\+A\+PI const char $\ast$ Plugin\+Type = type
+\begin{DoxyCompactList}\small\item\em declare the type of a plugin I\+N\+P\+UT I\+N\+\_\+\+O\+UT O\+U\+T\+P\+UT \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pluginapi_8h_ac1cb009f19f3d03f8c42fd5bc10fec5b}\label{pluginapi_8h_ac1cb009f19f3d03f8c42fd5bc10fec5b}} 
+\#define \hyperlink{pluginapi_8h_ac1cb009f19f3d03f8c42fd5bc10fec5b}{P\+L\+U\+G\+I\+N\+\_\+\+M\+I\+N\+\_\+\+V\+E\+R\+S\+I\+ON}(version)~P\+L\+U\+G\+I\+N\+\_\+\+A\+PI const char $\ast$ Plugin\+Min\+Version = version
+\begin{DoxyCompactList}\small\item\em declare the minimum required Plugin A\+PI version for a plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pluginapi_8h_a53cb1b274328eea11a979368bf873062}\label{pluginapi_8h_a53cb1b274328eea11a979368bf873062}} 
+\#define \hyperlink{pluginapi_8h_a53cb1b274328eea11a979368bf873062}{P\+L\+U\+G\+I\+N\+\_\+\+M\+A\+X\+\_\+\+V\+E\+R\+S\+I\+ON}(version)~P\+L\+U\+G\+I\+N\+\_\+\+A\+PI const char $\ast$ Plugin\+Max\+Version = version
+\begin{DoxyCompactList}\small\item\em declare the maximum supported Plugin A\+PI version for a plugin \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pluginapi_8h_a246ac6d825804d6cb3f284a783fe1495}\label{pluginapi_8h_a246ac6d825804d6cb3f284a783fe1495}} 
+typedef \hyperlink{class_i_plugin}{I\+Plugin} $\ast$($\ast$ \hyperlink{pluginapi_8h_a246ac6d825804d6cb3f284a783fe1495}{Plugin\+Init\+Func}) ()
+\begin{DoxyCompactList}\small\item\em The function signature for a routine that creates a Plugin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pluginapi_8h_ac55cc84b1f174f0cb9fcbe29ead2ce37}\label{pluginapi_8h_ac55cc84b1f174f0cb9fcbe29ead2ce37}} 
+typedef void($\ast$ \hyperlink{pluginapi_8h_ac55cc84b1f174f0cb9fcbe29ead2ce37}{Plugin\+Free\+Func}) (\hyperlink{class_i_plugin}{I\+Plugin} $\ast$)
+\begin{DoxyCompactList}\small\item\em The function signature for a routine that destroys a Plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pluginapi_8h_ae5498706132ac40ada14c815d183ebfe}\label{pluginapi_8h_ae5498706132ac40ada14c815d183ebfe}} 
+C\+O\+R\+E\+\_\+\+F\+U\+NC void \hyperlink{pluginapi_8h_ae5498706132ac40ada14c815d183ebfe}{Register\+Plugin} (const char $\ast$type, \hyperlink{pluginapi_8h_a246ac6d825804d6cb3f284a783fe1495}{Plugin\+Init\+Func} init\+\_\+cb, \hyperlink{pluginapi_8h_ac55cc84b1f174f0cb9fcbe29ead2ce37}{Plugin\+Free\+Func} free\+\_\+cb)
+\begin{DoxyCompactList}\small\item\em A routine to let a plugin register a new Plugin type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An A\+PI that lets users write plugins. 
+
+\begin{DoxyAuthor}{Author}
+Patrick Heyer \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pluginapi_8h_a7a0dfe7f380fed1c658a9f1c2e66c910}\label{pluginapi_8h_a7a0dfe7f380fed1c658a9f1c2e66c910}} 
+\index{pluginapi.\+h@{pluginapi.\+h}!P\+L\+U\+G\+I\+N\+\_\+\+I\+N\+IT@{P\+L\+U\+G\+I\+N\+\_\+\+I\+N\+IT}}
+\index{P\+L\+U\+G\+I\+N\+\_\+\+I\+N\+IT@{P\+L\+U\+G\+I\+N\+\_\+\+I\+N\+IT}!pluginapi.\+h@{pluginapi.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+U\+G\+I\+N\+\_\+\+I\+N\+IT}{PLUGIN\_INIT}}
+{\footnotesize\ttfamily \#define P\+L\+U\+G\+I\+N\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{const} \textcolor{keywordtype}{int} PluginVersion = PLUGIN\_API\_VERSION; \(\backslash\)
+    PLUGIN\_FUNC \textcolor{keywordtype}{int} PluginInit()
+\end{DoxyCode}
+
+
+declare the initialization routine for a plugin 
+
+
+
+Definition at line 20 of file pluginapi.\+h.
+

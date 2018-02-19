@@ -1,0 +1,448 @@
+\hypertarget{class_file___writer}{}\section{File\+\_\+\+Writer Class Reference}
+\label{class_file___writer}\index{File\+\_\+\+Writer@{File\+\_\+\+Writer}}
+
+
+\hyperlink{class_file___writer}{File\+\_\+\+Writer} plugin.  
+
+
+
+
+{\ttfamily \#include $<$File\+\_\+\+Writer.\+h$>$}
+
+
+
+Inheritance diagram for File\+\_\+\+Writer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_file___writer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for File\+\_\+\+Writer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_file___writer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_file___writer_a0738556056b69f64bf524fee06a6e69f}{Main} ()
+\begin{DoxyCompactList}\small\item\em Main funcction of the plugin. \end{DoxyCompactList}\item 
+bool \hyperlink{class_file___writer_a8f9010f501d8349bd9e8895405a8de8b}{load\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Load configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_file___writer_a6561b234c4ce33315aa5931463a1cb20}{save\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Save configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_file___writer_a7450494cfffa8ba1635f9121dfd955de}{Initialize\+\_\+\+Output} ()
+\begin{DoxyCompactList}\small\item\em Initialize Output variables for the plugin to publish. \end{DoxyCompactList}\item 
+bool \hyperlink{class_file___writer_a13697d8b3249804553ef61a54fea5ce1}{Initialize\+\_\+\+Input} ()
+\begin{DoxyCompactList}\small\item\em Initialize Input variables for the plugin to publish. \end{DoxyCompactList}\item 
+void \hyperlink{class_file___writer_a3a7de57b86f801257806115b54136fd7}{run} ()
+\begin{DoxyCompactList}\small\item\em Execute plugin. \end{DoxyCompactList}\item 
+void \hyperlink{class_file___writer_ad420a007be3af0efd8ea76bac66e2cb0}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_file___writer}{File\+\_\+\+Writer} plugin. 
+
+This plugin is a network server that accepts client conections to comunicate with other programs (running on the same computer or over the network) \begin{DoxyAuthor}{Author}
+Patrick Heyer, \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx}, Juan Herrera \href{mailto:juan_antonio_@hotmail.com}{\tt juan\+\_\+antonio\+\_\+@hotmail.\+com}, Manuel Oropeza \href{mailto:zodiacanimations@msn.com}{\tt zodiacanimations@msn.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+jul 04, 2012 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 13 of file File\+\_\+\+Writer.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_file___writer_a13697d8b3249804553ef61a54fea5ce1}\label{class_file___writer_a13697d8b3249804553ef61a54fea5ce1}} 
+\index{File\+\_\+\+Writer@{File\+\_\+\+Writer}!Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}}
+\index{Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}!File\+\_\+\+Writer@{File\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Input()}{Initialize\_Input()}}
+{\footnotesize\ttfamily bool File\+\_\+\+Writer\+::\+Initialize\+\_\+\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Input variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}{I\+Plugin}.
+
+
+
+Definition at line 150 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+151 \{
+152 
+153     RShoulder\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_SHOULDER\_X"});
+154     RShoulder\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_SHOULDER\_Y"});
+155     RShoulder\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_SHOULDER\_Z"});
+156     RElbow\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_ELBOW\_X"});
+157     RElbow\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_ELBOW\_Y"});
+158     RElbow\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_ELBOW\_Z"});
+159     RHand\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_HAND\_X"});
+160     RHand\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_HAND\_Y"});
+161     RHand\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_HAND\_Z"});
+162 
+163     LShoulder\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LEFT\_SHOULDER\_X"});
+164     LShoulder\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LEFT\_SHOULDER\_Y"});
+165     LShoulder\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LEFT\_SHOULDER\_Z"});
+166     LElbow\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LEFT\_ELBOW\_X"});
+167     LElbow\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LEFT\_ELBOW\_Y"});
+168     LElbow\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LEFT\_ELBOW\_Z"});
+169     LHand\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LEFT\_HAND\_X"});
+170     LHand\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LEFT\_HAND\_Y"});
+171     LHand\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LEFT\_HAND\_Z"});
+172 
+173     Torso\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"TORSO\_X"});
+174     Torso\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"TORSO\_Y"});
+175     Torso\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"TORSO\_Z"});
+176 
+177     Head\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"HEAD\_X"});
+178     Head\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"HEAD\_Y"});
+179     Head\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"HEAD\_Z"});
+180 \textcolor{comment}{/*}
+181 \textcolor{comment}{    BTGripper\_X=Shared\_Memory::getInstance().Register\_Double\_Input("BTGripper\_X");}
+182 \textcolor{comment}{    BTGripper\_Y=Shared\_Memory::getInstance().Register\_Double\_Input("BTGripper\_Y");}
+183 \textcolor{comment}{    BTGripper\_Z=Shared\_Memory::getInstance().Register\_Double\_Input("BTGripper\_Z");*/}
+184 
+185     LPMS\_QUAT\_W=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_QUAT\_W"});
+186     LPMS\_QUAT\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_QUAT\_X"});
+187     LPMS\_QUAT\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_QUAT\_Y"});
+188     LPMS\_QUAT\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_QUAT\_Z"});
+189 
+190 
+191     LPMS\_QUAT\_W=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_QUAT\_W"});
+192     LPMS\_QUAT\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_QUAT\_X"});
+193     LPMS\_QUAT\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_QUAT\_Y"});
+194     LPMS\_QUAT\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_QUAT\_Z"});
+195 
+196     LPMS\_ACCEL\_RAW\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_ACCEL\_RAW\_X"});
+197     LPMS\_ACCEL\_RAW\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_ACCEL\_RAW\_Y"});
+198     LPMS\_ACCEL\_RAW\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_ACCEL\_RAW\_Z"});
+199 
+200     LPMS\_GYRO\_RAW\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_GYRO\_RAW\_X"});
+201     LPMS\_GYRO\_RAW\_Y=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_GYRO\_RAW\_Y"});
+202     LPMS\_GYRO\_RAW\_Z=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_GYRO\_RAW\_Z"});
+203 
+204     LPMS\_MAT\_11=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_11"});
+205     LPMS\_MAT\_12=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_12"});
+206     LPMS\_MAT\_13=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_13"});
+207     LPMS\_MAT\_21=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_21"});
+208     LPMS\_MAT\_22=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_22"});
+209     LPMS\_MAT\_23=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_23"});
+210     LPMS\_MAT\_31=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_31"});
+211     LPMS\_MAT\_32=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_32"});
+212     LPMS\_MAT\_33=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_33"});
+213 
+214     LPMS\_MAT\_OFFSET\_11=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_11"});
+215     LPMS\_MAT\_OFFSET\_12=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_12"});
+216     LPMS\_MAT\_OFFSET\_13=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_13"});
+217     LPMS\_MAT\_OFFSET\_21=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_21"});
+218     LPMS\_MAT\_OFFSET\_22=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_22"});
+219     LPMS\_MAT\_OFFSET\_23=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_23"});
+220     LPMS\_MAT\_OFFSET\_31=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_31"});
+221     LPMS\_MAT\_OFFSET\_32=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_32"});
+222     LPMS\_MAT\_OFFSET\_33=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_33"});
+223 
+224     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+225 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_file___writer_a7450494cfffa8ba1635f9121dfd955de}\label{class_file___writer_a7450494cfffa8ba1635f9121dfd955de}} 
+\index{File\+\_\+\+Writer@{File\+\_\+\+Writer}!Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}}
+\index{Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}!File\+\_\+\+Writer@{File\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Output()}{Initialize\_Output()}}
+{\footnotesize\ttfamily bool File\+\_\+\+Writer\+::\+Initialize\+\_\+\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Output variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}{I\+Plugin}.
+
+
+
+Definition at line 145 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+146 \{
+147     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+148 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_file___writer_a8f9010f501d8349bd9e8895405a8de8b}\label{class_file___writer_a8f9010f501d8349bd9e8895405a8de8b}} 
+\index{File\+\_\+\+Writer@{File\+\_\+\+Writer}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!File\+\_\+\+Writer@{File\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}
+{\footnotesize\ttfamily bool File\+\_\+\+Writer\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load configuration. 
+
+The configuration can be loaded from file, or be hard coded into the plugin (not recomended), initialization of public and private variables should occur here
+
+By default load\+Configuration is called during \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Plugin\+Manager\+::\+Initialize()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}{I\+Plugin}.
+
+
+
+Definition at line 126 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+127 \{
+128     std::stringstream path;
+129     path <<\textcolor{stringliteral}{"../conf/"} << PLUGIN\_NAME;
+130     \hyperlink{class_config_file}{ConfigFile} config( path.str() );
+131     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+132 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_file___writer_a0738556056b69f64bf524fee06a6e69f}\label{class_file___writer_a0738556056b69f64bf524fee06a6e69f}} 
+\index{File\+\_\+\+Writer@{File\+\_\+\+Writer}!Main@{Main}}
+\index{Main@{Main}!File\+\_\+\+Writer@{File\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily void File\+\_\+\+Writer\+::\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main funcction of the plugin. 
+
+Started in a new thread by the Run() funcction is the most importatn funcction of the plugin. Infinite loop (generaly a while(running) function that runs undefenitly in a read/process/write cicle). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}{I\+Plugin}.
+
+
+
+Definition at line 49 of file Main.\+cpp.
+
+
+
+References save\+Configuration().
+
+
+\begin{DoxyCode}
+50 \{
+51 \textcolor{preprocessor}{    #ifdef OPENGL\_GUI}
+52     
+53     Gui::getInstance();
+54     Tab *pluginTab;
+55     
+56     pluginTab = \textcolor{keyword}{new} Tab(\textcolor{stringliteral}{"File\_Writer"});
+57     Gui::getInstance().setActiveTab(\textcolor{stringliteral}{"File\_Writer"});
+58 \textcolor{preprocessor}{    #endif}
+59     
+60     std::ofstream myfile;
+61 
+62 
+63     \textcolor{keywordflow}{while}(running)
+64     \{
+65         \textcolor{keywordflow}{if}(InputSingleton::getInstance().key==32)
+66         \{
+67             InputSingleton::getInstance().key=NULL;
+68             \textcolor{keywordflow}{if}(recording==\textcolor{keyword}{false})
+69             \{
+70                 recording=\textcolor{keyword}{true};
+71                 std::cout << \textcolor{stringliteral}{"Start Recording "} << std::endl;
+72                 std::stringstream sstm;
+73                 sstm << name << User\_ID << \textcolor{stringliteral}{"\_"} << counter << \textcolor{stringliteral}{".csv"};
+74                 counter++;
+75 
+76                 myfile.open (sstm.str().c\_str(), std::ios::out| std::ios::trunc );
+77                 sstm.str(\textcolor{stringliteral}{" "});
+78                 myfile << \textcolor{stringliteral}{"RShoulder\_X,RShoulder\_Y,RShoulder\_Z,RElbow\_X,RElbow\_Y,RElbow\_Z
+       ,RHand\_X,RHand\_Y,RHand\_Z,"} <<
+79                        \textcolor{stringliteral}{"LShoulder\_X,LShoulder\_Y,LShoulder\_Z,LElbow\_X,LElbow\_Y,LElbow\_Z
+       ,LHand\_X,LHand\_Y,LHand\_Z,"} <<
+80                        \textcolor{stringliteral}{"Torso\_X,Torso\_Y,Torso\_Z,Head\_X,Head\_Y,Head\_Z,"} <<
+81 \textcolor{comment}{//                        "BTGripper\_X,BTGripper\_Y,BTGripper\_Z," <<}
+82                        \textcolor{stringliteral}{"LPMS\_QUAT\_W,LPMS\_QUAT\_X,LPMS\_QUAT\_Y,LPMS\_QUAT\_Z,"} <<
+83                        \textcolor{stringliteral}{"LPMS\_ACCEL\_RAW\_X,LPMS\_ACCEL\_RAW\_Y,LPMS\_ACCEL\_RAW\_Z,"}<<
+84                        \textcolor{stringliteral}{"LPMS\_GYRO\_RAW\_X,LPMS\_GYRO\_RAW\_Y,LPMS\_GYRO\_RAW\_Z,"} <<
+85                        \textcolor{stringliteral}{"
+      LPMS\_MAT\_11,LPMS\_MAT\_12,LPMS\_MAT\_13,LPMS\_MAT\_21,LPMS\_MAT\_22,LPMS\_MAT\_23,LPMS\_MAT\_31,LPMS\_MAT\_32,LPMS\_MAT\_33,"} <<
+86                        \textcolor{stringliteral}{"
+      LPMS\_MAT\_OFFSET\_11,LPMS\_MAT\_OFFSET\_12,LPMS\_MAT\_OFFSET\_13,LPMS\_MAT\_OFFSET\_21,LPMS\_MAT\_OFFSET\_22,LPMS\_MAT\_OFFSET\_23,"} <<
+87                        \textcolor{stringliteral}{"LPMS\_MAT\_OFFSET\_31,LPMS\_MAT\_OFFSET\_32,LPMS\_MAT\_OFFSET\_33\(\backslash\)n"};
+88 
+89 
+90             \}
+91             \textcolor{keywordflow}{else}
+92             \{
+93                 recording=\textcolor{keyword}{false};
+94                 std::cout << \textcolor{stringliteral}{"Stop Recording "} << std::endl;
+95                 myfile.close();
+96             \}
+97         \}
+98 
+99         \textcolor{keywordflow}{if}(recording==\textcolor{keyword}{true})
+100         \{
+101             myfile << *RShoulder\_X << \textcolor{stringliteral}{","} << *RShoulder\_Y << \textcolor{stringliteral}{","} << *RShoulder\_Z << \textcolor{stringliteral}{","} << *RElbow\_X << \textcolor{stringliteral}{","}
+       << *RElbow\_Y << \textcolor{stringliteral}{","} << *RElbow\_Z  << \textcolor{stringliteral}{","} << *RHand\_X << \textcolor{stringliteral}{","} << *RHand\_Y << \textcolor{stringliteral}{","} << *RHand\_Z << \textcolor{stringliteral}{","} ;
+102             myfile << *LShoulder\_X << \textcolor{stringliteral}{","} << *LShoulder\_Y << \textcolor{stringliteral}{","} << *LShoulder\_Z << \textcolor{stringliteral}{","} << *LElbow\_X << \textcolor{stringliteral}{","}
+       << *LElbow\_Y << \textcolor{stringliteral}{","} << *LElbow\_Z  << \textcolor{stringliteral}{","} << *LHand\_X << \textcolor{stringliteral}{","} << *LHand\_Y << \textcolor{stringliteral}{","} << *LHand\_Z << \textcolor{stringliteral}{","} ;
+103             myfile << *Torso\_X << \textcolor{stringliteral}{","} << *Torso\_Y << \textcolor{stringliteral}{","} << *Torso\_Z << \textcolor{stringliteral}{","} << *Head\_X << \textcolor{stringliteral}{","} << *Head\_Y <<
+       \textcolor{stringliteral}{","} << *Head\_Z << \textcolor{stringliteral}{","} ;
+104 \textcolor{comment}{//             myfile << *BTGripper\_X << "," << *BTGripper\_Y << "," << *BTGripper\_Z << "," ;}
+105             myfile << *LPMS\_QUAT\_W << \textcolor{stringliteral}{","} << *LPMS\_QUAT\_X << \textcolor{stringliteral}{","} << *LPMS\_QUAT\_Y << \textcolor{stringliteral}{","} << *LPMS\_QUAT\_Z << \textcolor{stringliteral}{
+      ","} ;
+106             myfile << *LPMS\_ACCEL\_RAW\_X << \textcolor{stringliteral}{","} << *LPMS\_ACCEL\_RAW\_Y << \textcolor{stringliteral}{","} << *LPMS\_ACCEL\_RAW\_Z << \textcolor{stringliteral}{","} ;
+107             myfile << *LPMS\_GYRO\_RAW\_X << \textcolor{stringliteral}{","} << *LPMS\_GYRO\_RAW\_Y << \textcolor{stringliteral}{","} << *LPMS\_GYRO\_RAW\_Z << \textcolor{stringliteral}{","} ;
+108             myfile << *LPMS\_MAT\_11 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_12 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_13 << \textcolor{stringliteral}{","} ;
+109             myfile << *LPMS\_MAT\_21 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_22 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_23 << \textcolor{stringliteral}{","} ;
+110             myfile << *LPMS\_MAT\_31 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_32 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_33 << \textcolor{stringliteral}{","} ;
+111             myfile << *LPMS\_MAT\_OFFSET\_11 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_OFFSET\_12 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_OFFSET\_13 << \textcolor{stringliteral}{",
+      "} ;
+112             myfile << *LPMS\_MAT\_OFFSET\_21 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_OFFSET\_22 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_OFFSET\_23 << \textcolor{stringliteral}{",
+      "} ;
+113             myfile << *LPMS\_MAT\_OFFSET\_31 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_OFFSET\_32 << \textcolor{stringliteral}{","} << *LPMS\_MAT\_OFFSET\_33 << \textcolor{stringliteral}{"
+      \(\backslash\)n"};
+114         \}
+115 
+116         \textcolor{comment}{//Shared\_Memory::getInstance().Print\_Double\_Values();}
+117         usleep(500);
+118     \}
+119     \hyperlink{class_file___writer_a6561b234c4ce33315aa5931463a1cb20}{saveConfiguration}();
+120     myfile.close();
+121     stoped=\textcolor{keyword}{true};
+122     \textcolor{keywordflow}{return};
+123 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_file___writer_a3a7de57b86f801257806115b54136fd7}\label{class_file___writer_a3a7de57b86f801257806115b54136fd7}} 
+\index{File\+\_\+\+Writer@{File\+\_\+\+Writer}!run@{run}}
+\index{run@{run}!File\+\_\+\+Writer@{File\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void File\+\_\+\+Writer\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Execute plugin. 
+
+Starts a new thread and executes the plugins main() funcction. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}{I\+Plugin}.
+
+
+
+Definition at line 227 of file Main.\+cpp.
+
+
+
+References I\+Plugin\+::\+Inc\+Wrapper().
+
+
+\begin{DoxyCode}
+228 \{
+229     pthread\_create(&thread\_id, NULL, &\hyperlink{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}{IPlugin::IncWrapper}, \textcolor{keyword}{this});
+230     running = \textcolor{keyword}{true};
+231     stoped = \textcolor{keyword}{false};
+232 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_file___writer_a6561b234c4ce33315aa5931463a1cb20}\label{class_file___writer_a6561b234c4ce33315aa5931463a1cb20}} 
+\index{File\+\_\+\+Writer@{File\+\_\+\+Writer}!save\+Configuration@{save\+Configuration}}
+\index{save\+Configuration@{save\+Configuration}!File\+\_\+\+Writer@{File\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{save\+Configuration()}{saveConfiguration()}}
+{\footnotesize\ttfamily bool File\+\_\+\+Writer\+::save\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save configuration. 
+
+The configuration should be saved to file, public and private variables that should be configured at startup should be saved.
+
+By default save\+Configuration is called during \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Plugin\+Manager\+::\+Unload()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}{I\+Plugin}.
+
+
+
+Definition at line 134 of file Main.\+cpp.
+
+
+
+Referenced by Main().
+
+
+\begin{DoxyCode}
+135 \{
+136     std::stringstream path;
+137     path <<\textcolor{stringliteral}{"../conf/"} << PLUGIN\_NAME;
+138     \hyperlink{class_config_file}{ConfigFile} config( path.str() );
+139     std::ofstream file(path.str());
+140     file << config;
+141     file.close();
+142     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+143 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_file___writer_ad420a007be3af0efd8ea76bac66e2cb0}\label{class_file___writer_ad420a007be3af0efd8ea76bac66e2cb0}} 
+\index{File\+\_\+\+Writer@{File\+\_\+\+Writer}!stop@{stop}}
+\index{stop@{stop}!File\+\_\+\+Writer@{File\+\_\+\+Writer}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void File\+\_\+\+Writer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop plugin. 
+
+Stops the plugin \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}{I\+Plugin}.
+
+
+
+Definition at line 234 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+235 \{
+236     running = \textcolor{keyword}{false};
+237 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+File\+\_\+\+Writer/File\+\_\+\+Writer.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+File\+\_\+\+Writer/Main.\+cpp\end{DoxyCompactItemize}

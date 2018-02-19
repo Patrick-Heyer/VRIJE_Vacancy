@@ -1,0 +1,8 @@
+<map id="Widget" name="Widget">
+<area shape="rect" id="node2" href="$class_button.html" title="Button" alt="" coords="5,80,65,107"/>
+<area shape="rect" id="node3" href="$class_console.html" title="... " alt="" coords="89,80,160,107"/>
+<area shape="rect" id="node4" href="$class_g_l___window.html" title="GL_Window" alt="" coords="185,80,278,107"/>
+<area shape="rect" id="node5" href="$class_ni___depth.html" title="Ni_Depth" alt="" coords="302,80,379,107"/>
+<area shape="rect" id="node6" href="$class_text_box.html" title="TextBox" alt="" coords="404,80,475,107"/>
+<area shape="rect" id="node7" href="$class_video.html" title="Video" alt="" coords="499,80,553,107"/>
+</map>

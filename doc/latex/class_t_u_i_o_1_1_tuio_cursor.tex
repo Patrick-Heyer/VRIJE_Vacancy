@@ -1,0 +1,214 @@
+\hypertarget{class_t_u_i_o_1_1_tuio_cursor}{}\section{T\+U\+IO\+:\+:Tuio\+Cursor Class Reference}
+\label{class_t_u_i_o_1_1_tuio_cursor}\index{T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}}
+
+
+{\ttfamily \#include $<$Tuio\+Cursor.\+h$>$}
+
+
+
+Inheritance diagram for T\+U\+IO\+:\+:Tuio\+Cursor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_t_u_i_o_1_1_tuio_cursor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for T\+U\+IO\+:\+:Tuio\+Cursor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{class_t_u_i_o_1_1_tuio_cursor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_cursor_a8901620d6aee4fef2d568e3d3c04a729}{Tuio\+Cursor} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} ttime, long si, int ci, float xp, float yp)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_cursor_a3ae0c962c0f2e722b4a16cf963b43c2a}{Tuio\+Cursor} (long si, int ci, float xp, float yp)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_cursor_ad894df065d0e0059e98da92ad83ed3ff}{Tuio\+Cursor} (\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$tcur)
+\item 
+\hyperlink{class_t_u_i_o_1_1_tuio_cursor_ab791383734f2121d7bc217c108213e36}{$\sim$\+Tuio\+Cursor} ()
+\item 
+int \hyperlink{class_t_u_i_o_1_1_tuio_cursor_a3e8ee1381e61eb54c7563e10a2fafb0b}{get\+Cursor\+ID} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_t_u_i_o_1_1_tuio_cursor_a6ce31b46c0bb528acc3be28e5dd1e278}{cursor\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} class encapsulates /tuio/2\+Dcur T\+U\+IO cursors.
+
+\begin{DoxyAuthor}{Author}
+Martin Kaltenbrunner 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+4 
+\end{DoxyVersion}
+
+
+Definition at line 36 of file Tuio\+Cursor.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_cursor_a8901620d6aee4fef2d568e3d3c04a729}\label{class_t_u_i_o_1_1_tuio_cursor_a8901620d6aee4fef2d568e3d3c04a729}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}!Tuio\+Cursor@{Tuio\+Cursor}}
+\index{Tuio\+Cursor@{Tuio\+Cursor}!T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}}
+\subsubsection{\texorpdfstring{Tuio\+Cursor()}{TuioCursor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Cursor\+::\+Tuio\+Cursor (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ttime,  }\item[{long}]{si,  }\item[{int}]{ci,  }\item[{float}]{xp,  }\item[{float}]{yp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor takes a \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} argument and assigns it along with the provided Session ID, Cursor ID, X and Y coordinate to the newly created \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttime} & the \hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} to assign \\
+\hline
+{\em si} & the Session ID to assign \\
+\hline
+{\em ci} & the Cursor ID to assign \\
+\hline
+{\em xp} & the X coordinate to assign \\
+\hline
+{\em yp} & the Y coordinate to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file Tuio\+Cursor.\+h.
+
+
+\begin{DoxyCode}
+55                                                                         :
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a970e6fa8eefc231dccf75d11b68c289d}{TuioContainer}(ttime,si,xp,yp) \{
+56             \hyperlink{class_t_u_i_o_1_1_tuio_cursor_a6ce31b46c0bb528acc3be28e5dd1e278}{cursor\_id} = ci;
+57         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_cursor_a3ae0c962c0f2e722b4a16cf963b43c2a}\label{class_t_u_i_o_1_1_tuio_cursor_a3ae0c962c0f2e722b4a16cf963b43c2a}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}!Tuio\+Cursor@{Tuio\+Cursor}}
+\index{Tuio\+Cursor@{Tuio\+Cursor}!T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}}
+\subsubsection{\texorpdfstring{Tuio\+Cursor()}{TuioCursor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Cursor\+::\+Tuio\+Cursor (\begin{DoxyParamCaption}\item[{long}]{si,  }\item[{int}]{ci,  }\item[{float}]{xp,  }\item[{float}]{yp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor takes the provided Session ID, Cursor ID, X and Y coordinate and assigs these values to the newly created \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & the Session ID to assign \\
+\hline
+{\em ci} & the Cursor ID to assign \\
+\hline
+{\em xp} & the X coordinate to assign \\
+\hline
+{\em yp} & the Y coordinate to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file Tuio\+Cursor.\+h.
+
+
+\begin{DoxyCode}
+68                                                         :\hyperlink{class_t_u_i_o_1_1_tuio_container_a970e6fa8eefc231dccf75d11b68c289d}{TuioContainer}(si,xp,yp) \{
+69             \hyperlink{class_t_u_i_o_1_1_tuio_cursor_a6ce31b46c0bb528acc3be28e5dd1e278}{cursor\_id} = ci;
+70         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_cursor_ad894df065d0e0059e98da92ad83ed3ff}\label{class_t_u_i_o_1_1_tuio_cursor_ad894df065d0e0059e98da92ad83ed3ff}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}!Tuio\+Cursor@{Tuio\+Cursor}}
+\index{Tuio\+Cursor@{Tuio\+Cursor}!T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}}
+\subsubsection{\texorpdfstring{Tuio\+Cursor()}{TuioCursor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Cursor\+::\+Tuio\+Cursor (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$}]{tcur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor takes the atttibutes of the provided \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} and assigs these values to the newly created \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcur} & the \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} to assign \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file Tuio\+Cursor.\+h.
+
+
+
+References get\+Cursor\+I\+D().
+
+
+\begin{DoxyCode}
+78                                      :\hyperlink{class_t_u_i_o_1_1_tuio_container_a970e6fa8eefc231dccf75d11b68c289d}{TuioContainer}(tcur) \{
+79             \hyperlink{class_t_u_i_o_1_1_tuio_cursor_a6ce31b46c0bb528acc3be28e5dd1e278}{cursor\_id} = tcur->getCursorID();
+80         \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_cursor_ab791383734f2121d7bc217c108213e36}\label{class_t_u_i_o_1_1_tuio_cursor_ab791383734f2121d7bc217c108213e36}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}!````~Tuio\+Cursor@{$\sim$\+Tuio\+Cursor}}
+\index{````~Tuio\+Cursor@{$\sim$\+Tuio\+Cursor}!T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}}
+\subsubsection{\texorpdfstring{$\sim$\+Tuio\+Cursor()}{~TuioCursor()}}
+{\footnotesize\ttfamily T\+U\+I\+O\+::\+Tuio\+Cursor\+::$\sim$\+Tuio\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The destructor is doing nothing in particular. 
+
+Definition at line 85 of file Tuio\+Cursor.\+h.
+
+
+\begin{DoxyCode}
+85 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_cursor_a3e8ee1381e61eb54c7563e10a2fafb0b}\label{class_t_u_i_o_1_1_tuio_cursor_a3e8ee1381e61eb54c7563e10a2fafb0b}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}!get\+Cursor\+ID@{get\+Cursor\+ID}}
+\index{get\+Cursor\+ID@{get\+Cursor\+ID}!T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}}
+\subsubsection{\texorpdfstring{get\+Cursor\+I\+D()}{getCursorID()}}
+{\footnotesize\ttfamily int T\+U\+I\+O\+::\+Tuio\+Cursor\+::get\+Cursor\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the Cursor ID of this \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor}. \begin{DoxyReturn}{Returns}
+the Cursor ID of this \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file Tuio\+Cursor.\+h.
+
+
+
+References cursor\+\_\+id.
+
+
+
+Referenced by Tuio\+Dump\+::add\+Tuio\+Cursor(), Tuio\+Dump\+::remove\+Tuio\+Cursor(), Tuio\+Cursor(), and Tuio\+Dump\+::update\+Tuio\+Cursor().
+
+
+\begin{DoxyCode}
+91                           \{
+92             \textcolor{keywordflow}{return} \hyperlink{class_t_u_i_o_1_1_tuio_cursor_a6ce31b46c0bb528acc3be28e5dd1e278}{cursor\_id};
+93         \};
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_u_i_o_1_1_tuio_cursor_a6ce31b46c0bb528acc3be28e5dd1e278}\label{class_t_u_i_o_1_1_tuio_cursor_a6ce31b46c0bb528acc3be28e5dd1e278}} 
+\index{T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}!cursor\+\_\+id@{cursor\+\_\+id}}
+\index{cursor\+\_\+id@{cursor\+\_\+id}!T\+U\+I\+O\+::\+Tuio\+Cursor@{T\+U\+I\+O\+::\+Tuio\+Cursor}}
+\subsubsection{\texorpdfstring{cursor\+\_\+id}{cursor\_id}}
+{\footnotesize\ttfamily int T\+U\+I\+O\+::\+Tuio\+Cursor\+::cursor\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+The individual cursor ID number that is assigned to each \hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor}. 
+
+Definition at line 42 of file Tuio\+Cursor.\+h.
+
+
+
+Referenced by get\+Cursor\+I\+D().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Tuio\+\_\+\+Client/Tuio\+Cursor.\+h\end{DoxyCompactItemize}

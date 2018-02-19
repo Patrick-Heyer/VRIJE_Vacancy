@@ -1,0 +1,279 @@
+\hypertarget{class_tuio_dump}{}\section{Tuio\+Dump Class Reference}
+\label{class_tuio_dump}\index{Tuio\+Dump@{Tuio\+Dump}}
+
+
+Inheritance diagram for Tuio\+Dump\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_tuio_dump__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tuio\+Dump\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_tuio_dump__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_tuio_dump_a978520453aaf17d3409ae13573b7334f}{add\+Tuio\+Object} (\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$tobj)
+\item 
+void \hyperlink{class_tuio_dump_a0bade2cba83fe3dcdb11ca475e2f4862}{update\+Tuio\+Object} (\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$tobj)
+\item 
+void \hyperlink{class_tuio_dump_a5ed9e2ea7858b885bf52558c1c6e7e69}{remove\+Tuio\+Object} (\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$tobj)
+\item 
+void \hyperlink{class_tuio_dump_ab633ec2cbd9472a8c128fac33fca183f}{add\+Tuio\+Cursor} (\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$tcur)
+\item 
+void \hyperlink{class_tuio_dump_a6b54d0d57d714c5b51f5cf76a9b8b62a}{update\+Tuio\+Cursor} (\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$tcur)
+\item 
+void \hyperlink{class_tuio_dump_a29bea77556080ef3a2efea2d20b17b54}{remove\+Tuio\+Cursor} (\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$tcur)
+\item 
+void \hyperlink{class_tuio_dump_a8a664f2e278fac90065c57e366d4277e}{refresh} (\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time} frame\+Time)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 40 of file Tuio\+Dump.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tuio_dump_ab633ec2cbd9472a8c128fac33fca183f}\label{class_tuio_dump_ab633ec2cbd9472a8c128fac33fca183f}} 
+\index{Tuio\+Dump@{Tuio\+Dump}!add\+Tuio\+Cursor@{add\+Tuio\+Cursor}}
+\index{add\+Tuio\+Cursor@{add\+Tuio\+Cursor}!Tuio\+Dump@{Tuio\+Dump}}
+\subsubsection{\texorpdfstring{add\+Tuio\+Cursor()}{addTuioCursor()}}
+{\footnotesize\ttfamily void Tuio\+Dump\+::add\+Tuio\+Cursor (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$}]{tcur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This callback method is invoked by the Tuio\+Client when a new Tuio\+Cursor is added to the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcur} & the Tuio\+Cursor reference associated to the add\+Tuio\+Cursor event \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_t_u_i_o_1_1_tuio_listener_a431a957994470c3767e94379debeb875}{T\+U\+I\+O\+::\+Tuio\+Listener}.
+
+
+
+Definition at line 73 of file Main.\+cpp.
+
+
+
+References T\+U\+I\+O\+::\+Tuio\+Cursor\+::get\+Cursor\+I\+D(), T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Session\+I\+D(), T\+U\+I\+O\+::\+Tuio\+Point\+::get\+X(), and T\+U\+I\+O\+::\+Tuio\+Point\+::get\+Y().
+
+
+\begin{DoxyCode}
+73                                              \{
+74     std::cout << \textcolor{stringliteral}{"add cur "} << tcur->\hyperlink{class_t_u_i_o_1_1_tuio_cursor_a3e8ee1381e61eb54c7563e10a2fafb0b}{getCursorID}() << \textcolor{stringliteral}{" ("} <<  tcur->
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a84c29bb63b233dbfd22811dab5b62833}{getSessionID}() << \textcolor{stringliteral}{") "} << tcur->\hyperlink{class_t_u_i_o_1_1_tuio_point_ad5bb767c0a7b151704b59a38793345f0}{getX}() << \textcolor{stringliteral}{" "} << tcur->\hyperlink{class_t_u_i_o_1_1_tuio_point_a6c591de33c3c0f0d5e8df159ce643b7a}{getY}() << std::endl;
+75 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio_dump_a978520453aaf17d3409ae13573b7334f}\label{class_tuio_dump_a978520453aaf17d3409ae13573b7334f}} 
+\index{Tuio\+Dump@{Tuio\+Dump}!add\+Tuio\+Object@{add\+Tuio\+Object}}
+\index{add\+Tuio\+Object@{add\+Tuio\+Object}!Tuio\+Dump@{Tuio\+Dump}}
+\subsubsection{\texorpdfstring{add\+Tuio\+Object()}{addTuioObject()}}
+{\footnotesize\ttfamily void Tuio\+Dump\+::add\+Tuio\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$}]{tobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This callback method is invoked by the Tuio\+Client when a new Tuio\+Object is added to the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tobj} & the Tuio\+Object reference associated to the add\+Tuio\+Object event \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_t_u_i_o_1_1_tuio_listener_a7180002e5898259cecdb8b614a0f67ff}{T\+U\+I\+O\+::\+Tuio\+Listener}.
+
+
+
+Definition at line 60 of file Main.\+cpp.
+
+
+
+References T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Angle(), T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Session\+I\+D(), T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Symbol\+I\+D(), T\+U\+I\+O\+::\+Tuio\+Point\+::get\+X(), and T\+U\+I\+O\+::\+Tuio\+Point\+::get\+Y().
+
+
+\begin{DoxyCode}
+60                                              \{
+61     std::cout << \textcolor{stringliteral}{"add obj "} << tobj->\hyperlink{class_t_u_i_o_1_1_tuio_object_a0d0b9b6e48c657350559acded6a1e53b}{getSymbolID}() << \textcolor{stringliteral}{" ("} << tobj->
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a84c29bb63b233dbfd22811dab5b62833}{getSessionID}() << \textcolor{stringliteral}{") "}<< tobj->\hyperlink{class_t_u_i_o_1_1_tuio_point_ad5bb767c0a7b151704b59a38793345f0}{getX}() << \textcolor{stringliteral}{" "} << tobj->\hyperlink{class_t_u_i_o_1_1_tuio_point_a6c591de33c3c0f0d5e8df159ce643b7a}{getY}() << \textcolor{stringliteral}{" "} << tobj->
+      \hyperlink{class_t_u_i_o_1_1_tuio_object_a7757d3c07bb7014f50bc645016d58933}{getAngle}() << std::endl;
+62 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio_dump_a8a664f2e278fac90065c57e366d4277e}\label{class_tuio_dump_a8a664f2e278fac90065c57e366d4277e}} 
+\index{Tuio\+Dump@{Tuio\+Dump}!refresh@{refresh}}
+\index{refresh@{refresh}!Tuio\+Dump@{Tuio\+Dump}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void Tuio\+Dump\+::refresh (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_time}{Tuio\+Time}}]{ftime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This callback method is invoked by the Tuio\+Client to mark the end of a received T\+U\+IO message bundle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ftime} & the Tuio\+Time associated to the current T\+U\+IO message bundle \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_t_u_i_o_1_1_tuio_listener_a14d16f24c27bb22fe2e24419e447dd63}{T\+U\+I\+O\+::\+Tuio\+Listener}.
+
+
+
+Definition at line 86 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+86                                           \{
+87     \textcolor{comment}{//std::cout << "refresh " << frameTime.getTotalMilliseconds() << std::endl;}
+88 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio_dump_a29bea77556080ef3a2efea2d20b17b54}\label{class_tuio_dump_a29bea77556080ef3a2efea2d20b17b54}} 
+\index{Tuio\+Dump@{Tuio\+Dump}!remove\+Tuio\+Cursor@{remove\+Tuio\+Cursor}}
+\index{remove\+Tuio\+Cursor@{remove\+Tuio\+Cursor}!Tuio\+Dump@{Tuio\+Dump}}
+\subsubsection{\texorpdfstring{remove\+Tuio\+Cursor()}{removeTuioCursor()}}
+{\footnotesize\ttfamily void Tuio\+Dump\+::remove\+Tuio\+Cursor (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$}]{tcur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This callback method is invoked by the Tuio\+Client when an existing Tuio\+Cursor is removed from the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcur} & the Tuio\+Cursor reference associated to the remove\+Tuio\+Cursor event \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_t_u_i_o_1_1_tuio_listener_ade7712d189c28c82c447a815022254d9}{T\+U\+I\+O\+::\+Tuio\+Listener}.
+
+
+
+Definition at line 82 of file Main.\+cpp.
+
+
+
+References T\+U\+I\+O\+::\+Tuio\+Cursor\+::get\+Cursor\+I\+D(), and T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Session\+I\+D().
+
+
+\begin{DoxyCode}
+82                                                 \{
+83     std::cout << \textcolor{stringliteral}{"del cur "} << tcur->\hyperlink{class_t_u_i_o_1_1_tuio_cursor_a3e8ee1381e61eb54c7563e10a2fafb0b}{getCursorID}() << \textcolor{stringliteral}{" ("} <<  tcur->
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a84c29bb63b233dbfd22811dab5b62833}{getSessionID}() << \textcolor{stringliteral}{")"} << std::endl;
+84 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio_dump_a5ed9e2ea7858b885bf52558c1c6e7e69}\label{class_tuio_dump_a5ed9e2ea7858b885bf52558c1c6e7e69}} 
+\index{Tuio\+Dump@{Tuio\+Dump}!remove\+Tuio\+Object@{remove\+Tuio\+Object}}
+\index{remove\+Tuio\+Object@{remove\+Tuio\+Object}!Tuio\+Dump@{Tuio\+Dump}}
+\subsubsection{\texorpdfstring{remove\+Tuio\+Object()}{removeTuioObject()}}
+{\footnotesize\ttfamily void Tuio\+Dump\+::remove\+Tuio\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$}]{tobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This callback method is invoked by the Tuio\+Client when an existing Tuio\+Object is removed from the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tobj} & the Tuio\+Object reference associated to the remove\+Tuio\+Object event \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_t_u_i_o_1_1_tuio_listener_acf6d81485aaad7747cb399c325b831ee}{T\+U\+I\+O\+::\+Tuio\+Listener}.
+
+
+
+Definition at line 69 of file Main.\+cpp.
+
+
+
+References T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Session\+I\+D(), and T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Symbol\+I\+D().
+
+
+\begin{DoxyCode}
+69                                                 \{
+70     std::cout << \textcolor{stringliteral}{"del obj "} << tobj->\hyperlink{class_t_u_i_o_1_1_tuio_object_a0d0b9b6e48c657350559acded6a1e53b}{getSymbolID}() << \textcolor{stringliteral}{" ("} << tobj->
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a84c29bb63b233dbfd22811dab5b62833}{getSessionID}() << \textcolor{stringliteral}{")"} << std::endl;
+71 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio_dump_a6b54d0d57d714c5b51f5cf76a9b8b62a}\label{class_tuio_dump_a6b54d0d57d714c5b51f5cf76a9b8b62a}} 
+\index{Tuio\+Dump@{Tuio\+Dump}!update\+Tuio\+Cursor@{update\+Tuio\+Cursor}}
+\index{update\+Tuio\+Cursor@{update\+Tuio\+Cursor}!Tuio\+Dump@{Tuio\+Dump}}
+\subsubsection{\texorpdfstring{update\+Tuio\+Cursor()}{updateTuioCursor()}}
+{\footnotesize\ttfamily void Tuio\+Dump\+::update\+Tuio\+Cursor (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_cursor}{Tuio\+Cursor} $\ast$}]{tcur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This callback method is invoked by the Tuio\+Client when an existing Tuio\+Cursor is updated during the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcur} & the Tuio\+Cursor reference associated to the update\+Tuio\+Cursor event \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_t_u_i_o_1_1_tuio_listener_a1d60e2d80b0e09d74ded8713362c43c4}{T\+U\+I\+O\+::\+Tuio\+Listener}.
+
+
+
+Definition at line 77 of file Main.\+cpp.
+
+
+
+References T\+U\+I\+O\+::\+Tuio\+Cursor\+::get\+Cursor\+I\+D(), T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Motion\+Accel(), T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Motion\+Speed(), T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Session\+I\+D(), T\+U\+I\+O\+::\+Tuio\+Point\+::get\+X(), and T\+U\+I\+O\+::\+Tuio\+Point\+::get\+Y().
+
+
+\begin{DoxyCode}
+77                                                 \{
+78     std::cout << \textcolor{stringliteral}{"set cur "} << tcur->\hyperlink{class_t_u_i_o_1_1_tuio_cursor_a3e8ee1381e61eb54c7563e10a2fafb0b}{getCursorID}() << \textcolor{stringliteral}{" ("} <<  tcur->
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a84c29bb63b233dbfd22811dab5b62833}{getSessionID}() << \textcolor{stringliteral}{") "} << tcur->\hyperlink{class_t_u_i_o_1_1_tuio_point_ad5bb767c0a7b151704b59a38793345f0}{getX}() << \textcolor{stringliteral}{" "} << tcur->\hyperlink{class_t_u_i_o_1_1_tuio_point_a6c591de33c3c0f0d5e8df159ce643b7a}{getY}() 
+79                 << \textcolor{stringliteral}{" "} << tcur->\hyperlink{class_t_u_i_o_1_1_tuio_container_ad8c0682163804a1f7e7e908d10272e20}{getMotionSpeed}() << \textcolor{stringliteral}{" "} << tcur->
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_ac2a47a96b789844909b2fffd17a63f36}{getMotionAccel}() << \textcolor{stringliteral}{" "} << std::endl;
+80 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio_dump_a0bade2cba83fe3dcdb11ca475e2f4862}\label{class_tuio_dump_a0bade2cba83fe3dcdb11ca475e2f4862}} 
+\index{Tuio\+Dump@{Tuio\+Dump}!update\+Tuio\+Object@{update\+Tuio\+Object}}
+\index{update\+Tuio\+Object@{update\+Tuio\+Object}!Tuio\+Dump@{Tuio\+Dump}}
+\subsubsection{\texorpdfstring{update\+Tuio\+Object()}{updateTuioObject()}}
+{\footnotesize\ttfamily void Tuio\+Dump\+::update\+Tuio\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_u_i_o_1_1_tuio_object}{Tuio\+Object} $\ast$}]{tobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This callback method is invoked by the Tuio\+Client when an existing Tuio\+Object is updated during the session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tobj} & the Tuio\+Object reference associated to the update\+Tuio\+Object event \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_t_u_i_o_1_1_tuio_listener_a27a13b031781a609c08bc40548d2e42d}{T\+U\+I\+O\+::\+Tuio\+Listener}.
+
+
+
+Definition at line 64 of file Main.\+cpp.
+
+
+
+References T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Angle(), T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Motion\+Accel(), T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Motion\+Speed(), T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Rotation\+Accel(), T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Rotation\+Speed(), T\+U\+I\+O\+::\+Tuio\+Container\+::get\+Session\+I\+D(), T\+U\+I\+O\+::\+Tuio\+Object\+::get\+Symbol\+I\+D(), T\+U\+I\+O\+::\+Tuio\+Point\+::get\+X(), and T\+U\+I\+O\+::\+Tuio\+Point\+::get\+Y().
+
+
+\begin{DoxyCode}
+64                                                 \{
+65     std::cout << \textcolor{stringliteral}{"set obj "} << tobj->\hyperlink{class_t_u_i_o_1_1_tuio_object_a0d0b9b6e48c657350559acded6a1e53b}{getSymbolID}() << \textcolor{stringliteral}{" ("} << tobj->
+      \hyperlink{class_t_u_i_o_1_1_tuio_container_a84c29bb63b233dbfd22811dab5b62833}{getSessionID}() << \textcolor{stringliteral}{") "}<< tobj->\hyperlink{class_t_u_i_o_1_1_tuio_point_ad5bb767c0a7b151704b59a38793345f0}{getX}() << \textcolor{stringliteral}{" "} << tobj->\hyperlink{class_t_u_i_o_1_1_tuio_point_a6c591de33c3c0f0d5e8df159ce643b7a}{getY}() << \textcolor{stringliteral}{" "} << tobj->
+      \hyperlink{class_t_u_i_o_1_1_tuio_object_a7757d3c07bb7014f50bc645016d58933}{getAngle}() 
+66                 << \textcolor{stringliteral}{" "} << tobj->\hyperlink{class_t_u_i_o_1_1_tuio_container_ad8c0682163804a1f7e7e908d10272e20}{getMotionSpeed}() << \textcolor{stringliteral}{" "} << tobj->
+      \hyperlink{class_t_u_i_o_1_1_tuio_object_af2257dc8331077f50a618cc61474bf81}{getRotationSpeed}() << \textcolor{stringliteral}{" "} << tobj->\hyperlink{class_t_u_i_o_1_1_tuio_container_ac2a47a96b789844909b2fffd17a63f36}{getMotionAccel}() << \textcolor{stringliteral}{" "} << tobj->
+      \hyperlink{class_t_u_i_o_1_1_tuio_object_a228d923c770dd1fe767ea5899c1258b6}{getRotationAccel}() << std::endl;
+67 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Tuio\+\_\+\+Client/Tuio\+Dump.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Tuio\+\_\+\+Client/Main.\+cpp\end{DoxyCompactItemize}

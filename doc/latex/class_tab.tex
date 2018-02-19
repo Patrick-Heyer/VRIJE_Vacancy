@@ -1,0 +1,129 @@
+\hypertarget{class_tab}{}\section{Tab Class Reference}
+\label{class_tab}\index{Tab@{Tab}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tab_a497b3e128d1fe6625b9f3734fba8b416}{Tab} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Creates a new tab. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tab_aec6e556831d7efa5f510d9f0ab859b56}\label{class_tab_aec6e556831d7efa5f510d9f0ab859b56}} 
+void {\bfseries Procces\+Input} ()
+\item 
+\mbox{\Hypertarget{class_tab_abf76c4aa09eb2c2ed239b7ae9d400301}\label{class_tab_abf76c4aa09eb2c2ed239b7ae9d400301}} 
+void {\bfseries Insert\+Widget} (\hyperlink{class_widget}{Widget} $\ast$value)
+\item 
+void \hyperlink{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}{Draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the \hyperlink{class_tab}{Tab} on screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_tab_a67a6f492fc37ea3632604802f10a4f18}{Update} ()
+\begin{DoxyCompactList}\small\item\em Updates the \hyperlink{class_tab}{Tab}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tab_ab66bde58841ba5149c4fc3d4748d9910}\label{class_tab_ab66bde58841ba5149c4fc3d4748d9910}} 
+std\+::string {\bfseries get\+\_\+\+Name} ()
+\item 
+\mbox{\Hypertarget{class_tab_ae939018aba71c1de9be971553a5a76ee}\label{class_tab_ae939018aba71c1de9be971553a5a76ee}} 
+void {\bfseries set\+\_\+active\+\_\+widget} (\hyperlink{class_widget}{Widget} $\ast$value)
+\item 
+\mbox{\Hypertarget{class_tab_af11a3e34e8f1e987728bba121643c2d4}\label{class_tab_af11a3e34e8f1e987728bba121643c2d4}} 
+\hyperlink{class_widget}{Widget} $\ast$ {\bfseries get\+\_\+active\+\_\+widget} ()
+\item 
+\mbox{\Hypertarget{class_tab_a65088c5332b105d860280e098949bc2b}\label{class_tab_a65088c5332b105d860280e098949bc2b}} 
+void {\bfseries set\+\_\+active} (bool value)
+\item 
+\mbox{\Hypertarget{class_tab_ad68e1eda0c9eb8526dc60591914813e1}\label{class_tab_ad68e1eda0c9eb8526dc60591914813e1}} 
+bool {\bfseries get\+\_\+active} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file tab.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tab_a497b3e128d1fe6625b9f3734fba8b416}\label{class_tab_a497b3e128d1fe6625b9f3734fba8b416}} 
+\index{Tab@{Tab}!Tab@{Tab}}
+\index{Tab@{Tab}!Tab@{Tab}}
+\subsubsection{\texorpdfstring{Tab()}{Tab()}}
+{\footnotesize\ttfamily Tab\+::\+Tab (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Creates a new tab. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name that will identify this tab in the list of tabs from \hyperlink{class_gui}{Gui} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file tab.\+cpp.
+
+
+
+References Gui\+::get\+Instance().
+
+
+\begin{DoxyCode}
+25 \{
+26     this->name=name;
+27     \hyperlink{class_gui_a613c787488c374d68a04886cc63127a7}{Gui::getInstance}().addTab(\textcolor{keyword}{this});
+28     
+29 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}\label{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}} 
+\index{Tab@{Tab}!Draw@{Draw}}
+\index{Draw@{Draw}!Tab@{Tab}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Tab\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the \hyperlink{class_tab}{Tab} on screen. 
+
+Draws the \hyperlink{class_tab}{Tab} and its widgets on screen called by \hyperlink{class_gui_acf4f1d3954d40aec3bc0ab4652b6a060}{Gui\+::\+Draw} 
+
+Definition at line 38 of file tab.\+cpp.
+
+
+\begin{DoxyCode}
+39 \{
+40     \textcolor{keywordflow}{for}( ListItor itor = m\_widgetslist.begin(); itor != m\_widgetslist.end(); ++itor )
+41     \{
+42         (*itor)->Draw();
+43     \}   
+44 
+45 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tab_a67a6f492fc37ea3632604802f10a4f18}\label{class_tab_a67a6f492fc37ea3632604802f10a4f18}} 
+\index{Tab@{Tab}!Update@{Update}}
+\index{Update@{Update}!Tab@{Tab}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Tab\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the \hyperlink{class_tab}{Tab}. 
+
+Updates the \hyperlink{class_tab}{Tab} called by \hyperlink{class_gui_af057adcdd96ee8b8021519d68ed9042e}{Gui\+::update} 
+
+Definition at line 53 of file tab.\+cpp.
+
+
+\begin{DoxyCode}
+54 \{
+55     \textcolor{keywordflow}{for}( ListItor itor = m\_widgetslist.begin(); itor != m\_widgetslist.end(); ++itor )
+56     \{
+57             (*itor)->update();
+58     \}  
+59 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/tab.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/tab.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,309 @@
+\hypertarget{class_tuio___client}{}\section{Tuio\+\_\+\+Client Class Reference}
+\label{class_tuio___client}\index{Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}}
+
+
+\hyperlink{class_tuio___client}{Tuio\+\_\+\+Client} plugin.  
+
+
+
+
+Inheritance diagram for Tuio\+\_\+\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_tuio___client__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tuio\+\_\+\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_tuio___client__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_tuio___client_a13aed5267c36dd0bc9b4dcf6939194d5}{Main} ()
+\begin{DoxyCompactList}\small\item\em Main funcction of the plugin. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tuio___client_aef7de42628eef1f5c0fb3ff83b26de8b}{load\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Load configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tuio___client_a56700c6b7cf9447fde0e3828e90cd55f}{save\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Save configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tuio___client_a170015752bb0bb4c7815a08150a42620}{Initialize\+\_\+\+Output} ()
+\begin{DoxyCompactList}\small\item\em Initialize Output variables for the plugin to publish. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tuio___client_a66bd1d9dc23405e7589d899ef6c5d892}{Initialize\+\_\+\+Input} ()
+\begin{DoxyCompactList}\small\item\em Initialize Input variables for the plugin to publish. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tuio___client_a977ef88120a27438054a2638fb76af3c}\label{class_tuio___client_a977ef88120a27438054a2638fb76af3c}} 
+void {\bfseries Init\+\_\+\+Joy} ()
+\item 
+void \hyperlink{class_tuio___client_ae326548bc87892e62dbe5f0a5a8b27cc}{run} ()
+\begin{DoxyCompactList}\small\item\em Execute plugin. \end{DoxyCompactList}\item 
+void \hyperlink{class_tuio___client_a2df126802294be8dc168c409af801779}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_tuio___client}{Tuio\+\_\+\+Client} plugin. 
+
+This plugin is a legacy wrapper that alows us to use Hocoma\textquotesingle{}s games with this architecture it writes output to a shared memory segment defined by hocoma that can not be changed \begin{DoxyAuthor}{Author}
+Patrick Heyer, \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+jul 13, 2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 100 of file Main.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tuio___client_a66bd1d9dc23405e7589d899ef6c5d892}\label{class_tuio___client_a66bd1d9dc23405e7589d899ef6c5d892}} 
+\index{Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}!Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}}
+\index{Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}!Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Input()}{Initialize\_Input()}}
+{\footnotesize\ttfamily bool Tuio\+\_\+\+Client\+::\+Initialize\+\_\+\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Input variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}{I\+Plugin}.
+
+
+
+Definition at line 205 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+206 \{
+207     RShoulder\_X=Shared\_Memory::getInstance().Register\_Double\_Input(\textcolor{stringliteral}{"RIGHT\_SHOULDER\_X"});
+208     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+209 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio___client_a170015752bb0bb4c7815a08150a42620}\label{class_tuio___client_a170015752bb0bb4c7815a08150a42620}} 
+\index{Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}!Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}}
+\index{Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}!Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Output()}{Initialize\_Output()}}
+{\footnotesize\ttfamily bool Tuio\+\_\+\+Client\+::\+Initialize\+\_\+\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Output variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}{I\+Plugin}.
+
+
+
+Definition at line 198 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+199 \{
+200     Shared\_Memory::getInstance().Register\_Output(\textcolor{stringliteral}{"TUIO\_0X"}, &X\_axis);
+201     Shared\_Memory::getInstance().Register\_Output(\textcolor{stringliteral}{"TUIO\_0Y"}, &Y\_axis);
+202     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+203 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio___client_aef7de42628eef1f5c0fb3ff83b26de8b}\label{class_tuio___client_aef7de42628eef1f5c0fb3ff83b26de8b}} 
+\index{Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}}
+\subsubsection{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}
+{\footnotesize\ttfamily bool Tuio\+\_\+\+Client\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load configuration. 
+
+The configuration can be loaded from file, or be hard coded into the plugin (not recomended), initialization of public and private variables should occur here
+
+By default load\+Configuration is called during \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Plugin\+Manager\+::\+Initialize()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}{I\+Plugin}.
+
+
+
+Definition at line 188 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+189 \{
+190     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+191 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio___client_a13aed5267c36dd0bc9b4dcf6939194d5}\label{class_tuio___client_a13aed5267c36dd0bc9b4dcf6939194d5}} 
+\index{Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}!Main@{Main}}
+\index{Main@{Main}!Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}}
+\subsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily void Tuio\+\_\+\+Client\+::\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main funcction of the plugin. 
+
+Started in a new thread by the Run() funcction is the most importatn funcction of the plugin. Infinite loop (generaly a while(running) function that runs undefenitly in a read/process/write cicle). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}{I\+Plugin}.
+
+
+
+Definition at line 152 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+153 \{
+154     running=\textcolor{keyword}{true};
+155     stoped=\textcolor{keyword}{false};
+156 \textcolor{preprocessor}{#ifdef OPENGL\_GUI}
+157 
+158     Gui::getInstance();
+159     Tab *pluginTab;
+160 
+161     pluginTab = \textcolor{keyword}{new} Tab(\textcolor{stringliteral}{"Tuio\_Client"});
+162     Gui::getInstance().setActiveTab(\textcolor{stringliteral}{"Tuio\_Client"});
+163 
+164 
+165 
+166 \textcolor{preprocessor}{#endif}
+167 \textcolor{keywordtype}{int} port = 3333;
+168     
+169 
+170     TuioDump dump;
+171     TuioClient client(port);
+172     client.addTuioListener(&dump);
+173     client.connect(\textcolor{keyword}{false});
+174     
+175 
+176 
+177     \textcolor{keywordflow}{while} (running)
+178     \{
+179 
+180     \}
+181     client.disconnect();
+182 
+183     stoped = \textcolor{keyword}{true};
+184     \textcolor{keywordflow}{return};
+185 
+186 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio___client_ae326548bc87892e62dbe5f0a5a8b27cc}\label{class_tuio___client_ae326548bc87892e62dbe5f0a5a8b27cc}} 
+\index{Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}!run@{run}}
+\index{run@{run}!Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Tuio\+\_\+\+Client\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Execute plugin. 
+
+Starts a new thread and executes the plugins main() funcction. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}{I\+Plugin}.
+
+
+
+Definition at line 211 of file Main.\+cpp.
+
+
+
+References I\+Plugin\+::\+Inc\+Wrapper().
+
+
+\begin{DoxyCode}
+212 \{
+213     pthread\_create(&thread\_id, NULL, &\hyperlink{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}{IPlugin::IncWrapper}, \textcolor{keyword}{this});
+214     running = \textcolor{keyword}{true};
+215     stoped = \textcolor{keyword}{false};
+216 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio___client_a56700c6b7cf9447fde0e3828e90cd55f}\label{class_tuio___client_a56700c6b7cf9447fde0e3828e90cd55f}} 
+\index{Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}!save\+Configuration@{save\+Configuration}}
+\index{save\+Configuration@{save\+Configuration}!Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}}
+\subsubsection{\texorpdfstring{save\+Configuration()}{saveConfiguration()}}
+{\footnotesize\ttfamily bool Tuio\+\_\+\+Client\+::save\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save configuration. 
+
+The configuration should be saved to file, public and private variables that should be configured at startup should be saved.
+
+By default save\+Configuration is called during \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Plugin\+Manager\+::\+Unload()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}{I\+Plugin}.
+
+
+
+Definition at line 193 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+194 \{
+195     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+196 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tuio___client_a2df126802294be8dc168c409af801779}\label{class_tuio___client_a2df126802294be8dc168c409af801779}} 
+\index{Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}!stop@{stop}}
+\index{stop@{stop}!Tuio\+\_\+\+Client@{Tuio\+\_\+\+Client}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Tuio\+\_\+\+Client\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop plugin. 
+
+Stops the plugin \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}{I\+Plugin}.
+
+
+
+Definition at line 218 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+219 \{
+220     running = \textcolor{keyword}{false};
+221 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Tuio\+\_\+\+Client/Main.\+cpp\end{DoxyCompactItemize}

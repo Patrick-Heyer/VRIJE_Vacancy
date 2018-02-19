@@ -1,0 +1,97 @@
+\hypertarget{classel_1_1_configuration}{}\section{el\+:\+:Configuration Class Reference}
+\label{classel_1_1_configuration}\index{el\+::\+Configuration@{el\+::\+Configuration}}
+
+
+Represents single configuration that has representing level, configuration type and a string based value.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+
+
+Inheritance diagram for el\+:\+:Configuration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classel_1_1_configuration__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for el\+:\+:Configuration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classel_1_1_configuration__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classel_1_1_configuration_1_1_predicate}{Predicate}
+\begin{DoxyCompactList}\small\item\em Used to find configuration from configuration (pointers) repository. Avoid using it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1_configuration_a71867a89e7d44cac62e0a436f01b484d}\label{classel_1_1_configuration_a71867a89e7d44cac62e0a436f01b484d}} 
+{\bfseries Configuration} (const \hyperlink{classel_1_1_configuration}{Configuration} \&c)
+\item 
+\mbox{\Hypertarget{classel_1_1_configuration_a80bc5b14f61906633cf695ea62e454a2}\label{classel_1_1_configuration_a80bc5b14f61906633cf695ea62e454a2}} 
+\hyperlink{classel_1_1_configuration}{Configuration} \& {\bfseries operator=} (const \hyperlink{classel_1_1_configuration}{Configuration} \&c)
+\item 
+\mbox{\Hypertarget{classel_1_1_configuration_a1a00abf955e028debaaf7556a647dbf5}\label{classel_1_1_configuration_a1a00abf955e028debaaf7556a647dbf5}} 
+\hyperlink{classel_1_1_configuration_a1a00abf955e028debaaf7556a647dbf5}{Configuration} (\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level} \hyperlink{classel_1_1_configuration_a4f7015eb299c0250dadc9eb15be76c31}{level}, \hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type} \hyperlink{classel_1_1_configuration_abd69269de9fa62e0052aeaca35814dc0}{configuration\+Type}, const std\+::string \&\hyperlink{classel_1_1_configuration_a17acf05de64478fa6f54b9ddbbc248e5}{value})
+\begin{DoxyCompactList}\small\item\em Full constructor used to sets value of configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1_configuration_a4f7015eb299c0250dadc9eb15be76c31}\label{classel_1_1_configuration_a4f7015eb299c0250dadc9eb15be76c31}} 
+\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level} \hyperlink{classel_1_1_configuration_a4f7015eb299c0250dadc9eb15be76c31}{level} (void) const
+\begin{DoxyCompactList}\small\item\em Gets level of current configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1_configuration_abd69269de9fa62e0052aeaca35814dc0}\label{classel_1_1_configuration_abd69269de9fa62e0052aeaca35814dc0}} 
+\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type} \hyperlink{classel_1_1_configuration_abd69269de9fa62e0052aeaca35814dc0}{configuration\+Type} (void) const
+\begin{DoxyCompactList}\small\item\em Gets configuration type of current configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1_configuration_a17acf05de64478fa6f54b9ddbbc248e5}\label{classel_1_1_configuration_a17acf05de64478fa6f54b9ddbbc248e5}} 
+const std\+::string \& \hyperlink{classel_1_1_configuration_a17acf05de64478fa6f54b9ddbbc248e5}{value} (void) const
+\begin{DoxyCompactList}\small\item\em Gets string based configuration value. \end{DoxyCompactList}\item 
+void \hyperlink{classel_1_1_configuration_a04755de11422d7570869433ea157b705}{set\+Value} (const std\+::string \&\hyperlink{classel_1_1_configuration_a17acf05de64478fa6f54b9ddbbc248e5}{value})
+\begin{DoxyCompactList}\small\item\em Set string based configuration value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classel_1_1_configuration_a2737ff238ee31a551bc451f966d15373}\label{classel_1_1_configuration_a2737ff238ee31a551bc451f966d15373}} 
+virtual void {\bfseries log} (el\+::base\+::type\+::ostream\+\_\+t \&os) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents single configuration that has representing level, configuration type and a string based value. 
+
+String based value means any value either its boolean, integer or string itself, it will be embedded inside quotes and will be parsed later.
+
+Consider some examples below\+:
+\begin{DoxyItemize}
+\item \hyperlink{classel_1_1_configuration}{el\+::\+Configuration} conf\+Enabled\+Info(\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4059b0251f66a18cb56f544728796875}{el\+::\+Level\+::\+Info}, \hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a00d23a76e43b46dae9ec7aa9dcbebb32}{el\+::\+Configuration\+Type\+::\+Enabled}, \char`\"{}true\char`\"{});
+\item \hyperlink{classel_1_1_configuration}{el\+::\+Configuration} conf\+Max\+Log\+File\+Size\+Info(\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4059b0251f66a18cb56f544728796875}{el\+::\+Level\+::\+Info}, \hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a4b35e615142d60db6383426f051e700b}{el\+::\+Configuration\+Type\+::\+Max\+Log\+File\+Size}, \char`\"{}2048\char`\"{});
+\item \hyperlink{classel_1_1_configuration}{el\+::\+Configuration} conf\+Filename\+Info(\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4059b0251f66a18cb56f544728796875}{el\+::\+Level\+::\+Info}, \hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a1351017ac6423911223bc19a8cb7c653}{el\+::\+Configuration\+Type\+::\+Filename}, \char`\"{}/var/log/my.\+log\char`\"{}); 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classel_1_1_configuration_a04755de11422d7570869433ea157b705}\label{classel_1_1_configuration_a04755de11422d7570869433ea157b705}} 
+\index{el\+::\+Configuration@{el\+::\+Configuration}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!el\+::\+Configuration@{el\+::\+Configuration}}
+\subsubsection{\texorpdfstring{set\+Value()}{setValue()}}
+{\footnotesize\ttfamily void el\+::\+Configuration\+::set\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set string based configuration value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to set. Values have to be std\+::string; For boolean values use \char`\"{}true\char`\"{}, \char`\"{}false\char`\"{}, for any integral values use them in quotes. They will be parsed when configuring \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/easylogging++.\+h\end{DoxyCompactItemize}

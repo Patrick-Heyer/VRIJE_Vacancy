@@ -1,0 +1,164 @@
+\hypertarget{class_g_l___window}{}\section{G\+L\+\_\+\+Window Class Reference}
+\label{class_g_l___window}\index{G\+L\+\_\+\+Window@{G\+L\+\_\+\+Window}}
+
+
+Inheritance diagram for G\+L\+\_\+\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_g_l___window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for G\+L\+\_\+\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_g_l___window__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_l___window_a5ee39d8653f8d1d93ace7c6e4590cd08}\label{class_g_l___window_a5ee39d8653f8d1d93ace7c6e4590cd08}} 
+{\bfseries G\+L\+\_\+\+Window} (int x, int y, int widht, int height, std\+::string name, \hyperlink{class_tab}{Tab} $\ast$parent)
+\item 
+void \hyperlink{class_g_l___window_a0065950273a11cddec75d1a4d2cf723e}{Draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the widget. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_l___window_a34eab971f586b7d383d05475195bc462}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_l___window_aa63475ea1ee96011d5507ad1cca1ea20}\label{class_g_l___window_aa63475ea1ee96011d5507ad1cca1ea20}} 
+void {\bfseries procces\+Input} ()
+\item 
+\mbox{\Hypertarget{class_g_l___window_a5ee39d8653f8d1d93ace7c6e4590cd08}\label{class_g_l___window_a5ee39d8653f8d1d93ace7c6e4590cd08}} 
+{\bfseries G\+L\+\_\+\+Window} (int x, int y, int widht, int height, std\+::string name, \hyperlink{class_tab}{Tab} $\ast$parent)
+\item 
+void \hyperlink{class_g_l___window_a0065950273a11cddec75d1a4d2cf723e}{Draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the widget. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_l___window_a34eab971f586b7d383d05475195bc462}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_l___window_aa63475ea1ee96011d5507ad1cca1ea20}\label{class_g_l___window_aa63475ea1ee96011d5507ad1cca1ea20}} 
+void {\bfseries procces\+Input} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_l___window_ac2537e874beca24704fddde0f4f89b8f}\label{class_g_l___window_ac2537e874beca24704fddde0f4f89b8f}} 
+\hyperlink{class_c_quaternion}{C\+Quaternion} {\bfseries quat}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 88 of file G\+L\+\_\+\+Window.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_l___window_a0065950273a11cddec75d1a4d2cf723e}\label{class_g_l___window_a0065950273a11cddec75d1a4d2cf723e}} 
+\index{G\+L\+\_\+\+Window@{G\+L\+\_\+\+Window}!Draw@{Draw}}
+\index{Draw@{Draw}!G\+L\+\_\+\+Window@{G\+L\+\_\+\+Window}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void G\+L\+\_\+\+Window\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws the widget. 
+
+Draws the widget called by \hyperlink{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}{Tab\+::\+Draw} 
+
+Implements \hyperlink{class_widget_ac4c2063cd671468ad05d84cfe963c032}{Widget}.
+
+
+
+Definition at line 146 of file G\+L\+\_\+\+Window.\+cpp.
+
+
+\begin{DoxyCode}
+147 \{
+148 
+149     resetPerspectiveProjection();
+150     glPushMatrix();
+151     gluLookAt(0, 0, 2,  0, 0, 0,   0, 1, 0);
+152 
+153     \textcolor{comment}{// Create a 4x4 matrix to be used to convert a quaternion to a matrix}
+154     \textcolor{keywordtype}{float} matrix[16];
+155 
+156     quat.CreateMatrix(matrix);
+157 
+158     \textcolor{comment}{// To apply our rotation, we multiply the new quaternion matrix by the current matrix.}
+159     glColor3f(1,0,0);
+160     glutWireSphere(.05,4,4);
+161     glColor3f(1,1,1);
+162     glMultMatrixf(matrix);
+163     glutWireCone(.05,.5,4,10);
+164     glTranslatef(0,0,.5);
+165     glColor3f(1,0,0);
+166     glutWireSphere(.01,4,4);
+167     glPopMatrix();
+168 
+169     setOrthographicProjection ( 1024, 768);
+170 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_l___window_a0065950273a11cddec75d1a4d2cf723e}\label{class_g_l___window_a0065950273a11cddec75d1a4d2cf723e}} 
+\index{G\+L\+\_\+\+Window@{G\+L\+\_\+\+Window}!Draw@{Draw}}
+\index{Draw@{Draw}!G\+L\+\_\+\+Window@{G\+L\+\_\+\+Window}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void G\+L\+\_\+\+Window\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws the widget. 
+
+Draws the widget called by \hyperlink{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}{Tab\+::\+Draw} 
+
+Implements \hyperlink{class_widget_ac4c2063cd671468ad05d84cfe963c032}{Widget}.
+
+\mbox{\Hypertarget{class_g_l___window_a34eab971f586b7d383d05475195bc462}\label{class_g_l___window_a34eab971f586b7d383d05475195bc462}} 
+\index{G\+L\+\_\+\+Window@{G\+L\+\_\+\+Window}!update@{update}}
+\index{update@{update}!G\+L\+\_\+\+Window@{G\+L\+\_\+\+Window}}
+\subsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void G\+L\+\_\+\+Window\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the widget. 
+
+Updates the widget called by Tab\+::update 
+
+Implements \hyperlink{class_widget_a726dc97add2c6eb82967144207280ace}{Widget}.
+
+
+
+Definition at line 172 of file G\+L\+\_\+\+Window.\+cpp.
+
+
+\begin{DoxyCode}
+173 \{
+174 
+175 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_l___window_a34eab971f586b7d383d05475195bc462}\label{class_g_l___window_a34eab971f586b7d383d05475195bc462}} 
+\index{G\+L\+\_\+\+Window@{G\+L\+\_\+\+Window}!update@{update}}
+\index{update@{update}!G\+L\+\_\+\+Window@{G\+L\+\_\+\+Window}}
+\subsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void G\+L\+\_\+\+Window\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the widget. 
+
+Updates the widget called by Tab\+::update 
+
+Implements \hyperlink{class_widget_a726dc97add2c6eb82967144207280ace}{Widget}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/G\+L\+\_\+\+Window.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/G\+L\+\_\+\+Window\+\_\+bk.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/G\+L\+\_\+\+Window.\+cpp\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/G\+L\+\_\+\+Window\+\_\+bk.\+cpp\end{DoxyCompactItemize}

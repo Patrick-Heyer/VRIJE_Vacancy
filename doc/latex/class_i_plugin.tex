@@ -1,0 +1,225 @@
+\hypertarget{class_i_plugin}{}\section{I\+Plugin Class Reference}
+\label{class_i_plugin}\index{I\+Plugin@{I\+Plugin}}
+
+
+{\ttfamily \#include $<$plugin.\+h$>$}
+
+
+
+Inheritance diagram for I\+Plugin\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{class_i_plugin__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}{Initialize\+\_\+\+Output} ()=0
+\begin{DoxyCompactList}\small\item\em Initialize Output variables for the plugin to publish. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}{Initialize\+\_\+\+Input} ()=0
+\begin{DoxyCompactList}\small\item\em Initialize Input variables for the plugin to publish. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}{Main} ()=0
+\begin{DoxyCompactList}\small\item\em Main funcction of the plugin. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}{load\+Configuration} ()=0
+\begin{DoxyCompactList}\small\item\em Load configuration. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}{save\+Configuration} ()=0
+\begin{DoxyCompactList}\small\item\em Save configuration. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}{run} ()=0
+\begin{DoxyCompactList}\small\item\em Execute plugin. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}{stop} ()=0
+\begin{DoxyCompactList}\small\item\em Stop plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void $\ast$ \hyperlink{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}{Inc\+Wrapper} (void $\ast$this\+Ptr)
+\begin{DoxyCompactList}\small\item\em Wrapps the Main function of the plugin object to A\+N\+SI C to be pased as a parameter to pthread\+\_\+create. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_plugin_a2b6bd7ba10e171049c50cfee4f7510b4}\label{class_i_plugin_a2b6bd7ba10e171049c50cfee4f7510b4}} 
+pthread\+\_\+t {\bfseries thread\+\_\+id}
+\item 
+\mbox{\Hypertarget{class_i_plugin_ae20c05c87269f8d66a50d6995dfb3f66}\label{class_i_plugin_ae20c05c87269f8d66a50d6995dfb3f66}} 
+bool {\bfseries running}
+\item 
+\mbox{\Hypertarget{class_i_plugin_a9a89c705a50372eb079ac8e6f7a9286a}\label{class_i_plugin_a9a89c705a50372eb079ac8e6f7a9286a}} 
+bool {\bfseries stoped}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract interface for plugins to create new plugins. 
+
+Definition at line 18 of file plugin.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}\label{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}} 
+\index{I\+Plugin@{I\+Plugin}!Inc\+Wrapper@{Inc\+Wrapper}}
+\index{Inc\+Wrapper@{Inc\+Wrapper}!I\+Plugin@{I\+Plugin}}
+\subsubsection{\texorpdfstring{Inc\+Wrapper()}{IncWrapper()}}
+{\footnotesize\ttfamily static void$\ast$ I\+Plugin\+::\+Inc\+Wrapper (\begin{DoxyParamCaption}\item[{void $\ast$}]{this\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Wrapps the Main function of the plugin object to A\+N\+SI C to be pased as a parameter to pthread\+\_\+create. 
+
+This process alows plugins to be running in a new thread each (don\textquotesingle{}t change this unless you know what you are doing)
+
+\begin{DoxyReturn}{Returns}
+static void 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file plugin.\+h.
+
+
+
+Referenced by Color\+\_\+\+Tracker\+::run(), File\+\_\+\+Writer\+::run(), Function\+\_\+\+Caller\+::run(), Camera\+\_\+\+Reader\+::run(), Joystick\+\_\+\+Writer\+::run(), Network\+\_\+\+Client\+::run(), Network\+\_\+\+Server\+::run(), Screen\+\_\+\+Reader\+::run(), and Tuio\+\_\+\+Client\+::run().
+
+
+\begin{DoxyCode}
+95     \{
+96       ((\hyperlink{class_i_plugin}{IPlugin}*) thisPtr)->Main();
+97       \textcolor{keywordflow}{return} NULL;
+98     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}\label{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}} 
+\index{I\+Plugin@{I\+Plugin}!Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}}
+\index{Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}!I\+Plugin@{I\+Plugin}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Input()}{Initialize\_Input()}}
+{\footnotesize\ttfamily virtual bool I\+Plugin\+::\+Initialize\+\_\+\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initialize Input variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_tuio___client_a66bd1d9dc23405e7589d899ef6c5d892}{Tuio\+\_\+\+Client}, \hyperlink{class_screen___reader_a40c7e767ec368074d63ba4d4e5e3e0bc}{Screen\+\_\+\+Reader}, \hyperlink{class_network___server_ad5129bb2f3bcf2480a33a42a36cd5352}{Network\+\_\+\+Server}, \hyperlink{class_network___client_a429b34311701bc58b617c7e0675e70fa}{Network\+\_\+\+Client}, \hyperlink{class_camera___reader_aa4870916d311618a5b6513f12c3e125b}{Camera\+\_\+\+Reader}, \hyperlink{class_joystick___writer_a4f7355cdbd819e5ce41575e152c98660}{Joystick\+\_\+\+Writer}, \hyperlink{class_function___caller_a9b879313b891d3e60b105f94e3fd71cf}{Function\+\_\+\+Caller}, \hyperlink{class_function___test_a4d937dda611ec1b3bbdd70cdad6d76d2}{Function\+\_\+\+Test}, \hyperlink{class_color___tracker_afc447223ab3c357e66530b08acd8daea}{Color\+\_\+\+Tracker}, and \hyperlink{class_file___writer_a13697d8b3249804553ef61a54fea5ce1}{File\+\_\+\+Writer}.
+
+\mbox{\Hypertarget{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}\label{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}} 
+\index{I\+Plugin@{I\+Plugin}!Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}}
+\index{Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}!I\+Plugin@{I\+Plugin}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Output()}{Initialize\_Output()}}
+{\footnotesize\ttfamily virtual bool I\+Plugin\+::\+Initialize\+\_\+\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initialize Output variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_tuio___client_a170015752bb0bb4c7815a08150a42620}{Tuio\+\_\+\+Client}, \hyperlink{class_screen___reader_ab6219f6991a1574fb20b5f96953da62e}{Screen\+\_\+\+Reader}, \hyperlink{class_network___server_a9ddcc321be18d2a6c28f51a3b94983ff}{Network\+\_\+\+Server}, \hyperlink{class_network___client_ae7279167c7343c8a8304f55a5f24c802}{Network\+\_\+\+Client}, \hyperlink{class_camera___reader_a752286c32bea93608d0d23d1d4b3f0ed}{Camera\+\_\+\+Reader}, \hyperlink{class_joystick___writer_a3b341bb82658ee52172b22d90a18628f}{Joystick\+\_\+\+Writer}, \hyperlink{class_function___caller_a6499f7bae56266b6372351da555f316f}{Function\+\_\+\+Caller}, \hyperlink{class_function___test_afffb9c39e5b1178774cc3a1191124409}{Function\+\_\+\+Test}, \hyperlink{class_color___tracker_a289707cab18e4af7f1353ee859da2fb5}{Color\+\_\+\+Tracker}, and \hyperlink{class_file___writer_a7450494cfffa8ba1635f9121dfd955de}{File\+\_\+\+Writer}.
+
+
+
+Referenced by Plugin\+Manager\+::\+Initialize(), and Plugin\+Manager\+::\+Initialize\+All().
+
+\mbox{\Hypertarget{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}\label{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}} 
+\index{I\+Plugin@{I\+Plugin}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!I\+Plugin@{I\+Plugin}}
+\subsubsection{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}
+{\footnotesize\ttfamily virtual bool I\+Plugin\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Load configuration. 
+
+The configuration can be loaded from file, or be hard coded into the plugin (not recomended), initialization of public and private variables should occur here
+
+By default load\+Configuration is called during \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Plugin\+Manager\+::\+Initialize()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_tuio___client_aef7de42628eef1f5c0fb3ff83b26de8b}{Tuio\+\_\+\+Client}, \hyperlink{class_screen___reader_aaae80932d8f6af903ca93846eb4de234}{Screen\+\_\+\+Reader}, \hyperlink{class_network___server_a60edfbf13d3812f66381dca40fbe0801}{Network\+\_\+\+Server}, \hyperlink{class_network___client_a02e30223901e61514ee59eccec70dddf}{Network\+\_\+\+Client}, \hyperlink{class_camera___reader_a63163ba2ecf2ff470ca7e6a31dcabfb6}{Camera\+\_\+\+Reader}, \hyperlink{class_joystick___writer_a8c8c94397bbbb2058685ad6e0f92b4b1}{Joystick\+\_\+\+Writer}, \hyperlink{class_function___caller_a6ce3a356b5eb30c51d39f2ce0ecb9128}{Function\+\_\+\+Caller}, \hyperlink{class_function___test_ab2f00495eb55e7edf061498dcf7aaa4f}{Function\+\_\+\+Test}, \hyperlink{class_color___tracker_a37bf24d89aac609cb6a773b86d4edcb6}{Color\+\_\+\+Tracker}, and \hyperlink{class_file___writer_a8f9010f501d8349bd9e8895405a8de8b}{File\+\_\+\+Writer}.
+
+\mbox{\Hypertarget{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}\label{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}} 
+\index{I\+Plugin@{I\+Plugin}!Main@{Main}}
+\index{Main@{Main}!I\+Plugin@{I\+Plugin}}
+\subsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily virtual void I\+Plugin\+::\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Main funcction of the plugin. 
+
+Started in a new thread by the Run() funcction is the most importatn funcction of the plugin. Infinite loop (generaly a while(running) function that runs undefenitly in a read/process/write cicle). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_tuio___client_a13aed5267c36dd0bc9b4dcf6939194d5}{Tuio\+\_\+\+Client}, \hyperlink{class_screen___reader_add5cdfdc432ed5e8baa6683213c6daba}{Screen\+\_\+\+Reader}, \hyperlink{class_network___server_aa9d6cd53b5c62355518ad0a32ba1444b}{Network\+\_\+\+Server}, \hyperlink{class_network___client_a711e61f7233983449a1f4a50a4009b87}{Network\+\_\+\+Client}, \hyperlink{class_camera___reader_af3fabc94e27e6ce1702d26829126b9dc}{Camera\+\_\+\+Reader}, \hyperlink{class_joystick___writer_aeb9c03f2389a5ed060b9c2a46fb84316}{Joystick\+\_\+\+Writer}, \hyperlink{class_function___caller_a4c39451baadbdc89f6f7e212638cb811}{Function\+\_\+\+Caller}, \hyperlink{class_function___test_a87d81cc4014216aa2523ef69c5b35dff}{Function\+\_\+\+Test}, \hyperlink{class_color___tracker_a6d533ef7ecaea3ea1b2ae149f9336cec}{Color\+\_\+\+Tracker}, and \hyperlink{class_file___writer_a0738556056b69f64bf524fee06a6e69f}{File\+\_\+\+Writer}.
+
+\mbox{\Hypertarget{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}\label{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}} 
+\index{I\+Plugin@{I\+Plugin}!run@{run}}
+\index{run@{run}!I\+Plugin@{I\+Plugin}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void I\+Plugin\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Execute plugin. 
+
+Starts a new thread and executes the plugins main() funcction. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_tuio___client_ae326548bc87892e62dbe5f0a5a8b27cc}{Tuio\+\_\+\+Client}, \hyperlink{class_screen___reader_a9c716b5a3b6f94e1cf89eee7823ecd60}{Screen\+\_\+\+Reader}, \hyperlink{class_network___server_ac8778efb5b94041cafa3e57d57e8d9a2}{Network\+\_\+\+Server}, \hyperlink{class_network___client_a8831a63a0892de0f975e61b3d68473c7}{Network\+\_\+\+Client}, \hyperlink{class_joystick___writer_aa1ab2778180c281887758883622b78bf}{Joystick\+\_\+\+Writer}, \hyperlink{class_camera___reader_a3192d04dc33c238d6f779a72ffc08a5e}{Camera\+\_\+\+Reader}, \hyperlink{class_function___caller_a508165a2fab0cb3f77d89135994f342d}{Function\+\_\+\+Caller}, \hyperlink{class_function___test_ae9c552f668d5f2dad706677908d9e623}{Function\+\_\+\+Test}, \hyperlink{class_color___tracker_a77d5ddbb266c0a13963fae15285ccc37}{Color\+\_\+\+Tracker}, and \hyperlink{class_file___writer_a3a7de57b86f801257806115b54136fd7}{File\+\_\+\+Writer}.
+
+\mbox{\Hypertarget{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}\label{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}} 
+\index{I\+Plugin@{I\+Plugin}!save\+Configuration@{save\+Configuration}}
+\index{save\+Configuration@{save\+Configuration}!I\+Plugin@{I\+Plugin}}
+\subsubsection{\texorpdfstring{save\+Configuration()}{saveConfiguration()}}
+{\footnotesize\ttfamily virtual bool I\+Plugin\+::save\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Save configuration. 
+
+The configuration should be saved to file, public and private variables that should be configured at startup should be saved.
+
+By default save\+Configuration is called during \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Plugin\+Manager\+::\+Unload()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_tuio___client_a56700c6b7cf9447fde0e3828e90cd55f}{Tuio\+\_\+\+Client}, \hyperlink{class_screen___reader_a6d211f9c63493fbc1b18fd780f61dcdc}{Screen\+\_\+\+Reader}, \hyperlink{class_network___server_a859ab976d5a6f1761f49e3e7abc6bb73}{Network\+\_\+\+Server}, \hyperlink{class_network___client_aeaa8dcaafdecc5a9f417dc07060d6261}{Network\+\_\+\+Client}, \hyperlink{class_camera___reader_a3e7d14b675846c5094311985a0c1e735}{Camera\+\_\+\+Reader}, \hyperlink{class_joystick___writer_a67a56e0ae63ad59657f4745dcac2f7a3}{Joystick\+\_\+\+Writer}, \hyperlink{class_function___caller_a639edde2994f2317a922c2a80083ce54}{Function\+\_\+\+Caller}, \hyperlink{class_function___test_a6d8832ce28b9b659c85db0e32183abc9}{Function\+\_\+\+Test}, \hyperlink{class_color___tracker_a6382a354d9fa79f76c9586a195ea8674}{Color\+\_\+\+Tracker}, and \hyperlink{class_file___writer_a6561b234c4ce33315aa5931463a1cb20}{File\+\_\+\+Writer}.
+
+\mbox{\Hypertarget{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}\label{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}} 
+\index{I\+Plugin@{I\+Plugin}!stop@{stop}}
+\index{stop@{stop}!I\+Plugin@{I\+Plugin}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily virtual void I\+Plugin\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Stop plugin. 
+
+Stops the plugin \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_tuio___client_a2df126802294be8dc168c409af801779}{Tuio\+\_\+\+Client}, \hyperlink{class_screen___reader_a40e260696012cdb8ab05d65511b7de6e}{Screen\+\_\+\+Reader}, \hyperlink{class_network___server_a9a4400df0ce8da4c24c8758201b68562}{Network\+\_\+\+Server}, \hyperlink{class_network___client_ad54dbc2ec20d9fbabcb5265401d072c2}{Network\+\_\+\+Client}, \hyperlink{class_joystick___writer_a3c606f3961eea4b6a371146479ca26da}{Joystick\+\_\+\+Writer}, \hyperlink{class_camera___reader_afac6f0a4e2c0df76cad8f1d0d20cdc59}{Camera\+\_\+\+Reader}, \hyperlink{class_file___writer_ad420a007be3af0efd8ea76bac66e2cb0}{File\+\_\+\+Writer}, \hyperlink{class_function___caller_af099d310156da34103de5486995b00e2}{Function\+\_\+\+Caller}, \hyperlink{class_function___test_ac4a090ec1f44393fc7a8e851cb76fb29}{Function\+\_\+\+Test}, and \hyperlink{class_color___tracker_acc726eb03c58c22460c4f0440cfbc4cc}{Color\+\_\+\+Tracker}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Plugin\+\_\+\+A\+P\+I/\hyperlink{plugin_8h}{plugin.\+h}\end{DoxyCompactItemize}

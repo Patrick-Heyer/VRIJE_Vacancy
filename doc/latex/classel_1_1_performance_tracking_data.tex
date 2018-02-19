@@ -1,0 +1,66 @@
+\hypertarget{classel_1_1_performance_tracking_data}{}\section{el\+:\+:Performance\+Tracking\+Data Class Reference}
+\label{classel_1_1_performance_tracking_data}\index{el\+::\+Performance\+Tracking\+Data@{el\+::\+Performance\+Tracking\+Data}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a1b45d5b1d5e76d0687aaffcf08302f17}\label{classel_1_1_performance_tracking_data_a1b45d5b1d5e76d0687aaffcf08302f17}} 
+enum {\bfseries Data\+Type} \+: base\+::type\+::\+Enum\+Type \{ {\bfseries Checkpoint} = 1, 
+{\bfseries Complete} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_afea4cb5328e6fdb27fcf8fc14acbdb40}\label{classel_1_1_performance_tracking_data_afea4cb5328e6fdb27fcf8fc14acbdb40}} 
+{\bfseries Performance\+Tracking\+Data} (Data\+Type data\+Type)
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a17ca36459c9d2635e29ed965bcd160ec}\label{classel_1_1_performance_tracking_data_a17ca36459c9d2635e29ed965bcd160ec}} 
+const std\+::string $\ast$ {\bfseries block\+Name} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_abe0b64a4683b442f98036630d598a26e}\label{classel_1_1_performance_tracking_data_abe0b64a4683b442f98036630d598a26e}} 
+const struct timeval $\ast$ {\bfseries start\+Time} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a581da3c9830fedeb46e6b7bddf8bb234}\label{classel_1_1_performance_tracking_data_a581da3c9830fedeb46e6b7bddf8bb234}} 
+const struct timeval $\ast$ {\bfseries end\+Time} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a82ffc761604bf10a9c3adf15f30531b1}\label{classel_1_1_performance_tracking_data_a82ffc761604bf10a9c3adf15f30531b1}} 
+const struct timeval $\ast$ {\bfseries last\+Checkpoint\+Time} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_aa57aa4176abfbbc7a064a234cffd1d53}\label{classel_1_1_performance_tracking_data_aa57aa4176abfbbc7a064a234cffd1d53}} 
+const \hyperlink{classel_1_1base_1_1_performance_tracker}{base\+::\+Performance\+Tracker} $\ast$ {\bfseries performance\+Tracker} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a078a2ee9c07e7d2aa14edacd19f517b7}\label{classel_1_1_performance_tracking_data_a078a2ee9c07e7d2aa14edacd19f517b7}} 
+Performance\+Tracking\+Data\+::\+Data\+Type {\bfseries data\+Type} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_aa273c263a7475f52ffd485235cd0ce7c}\label{classel_1_1_performance_tracking_data_aa273c263a7475f52ffd485235cd0ce7c}} 
+bool {\bfseries first\+Checkpoint} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_ac0d48fe6a4fc03e91db90262e6526e3a}\label{classel_1_1_performance_tracking_data_ac0d48fe6a4fc03e91db90262e6526e3a}} 
+std\+::string {\bfseries checkpoint\+Id} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a94fecdf5a5340a026465c8de2ff174d6}\label{classel_1_1_performance_tracking_data_a94fecdf5a5340a026465c8de2ff174d6}} 
+const char $\ast$ {\bfseries file} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a6ac0bca1a595a60f70a2af3aaf668bf0}\label{classel_1_1_performance_tracking_data_a6ac0bca1a595a60f70a2af3aaf668bf0}} 
+unsigned long int {\bfseries line} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a4e0c9b070a2f1200eb1bb6f39567dafb}\label{classel_1_1_performance_tracking_data_a4e0c9b070a2f1200eb1bb6f39567dafb}} 
+const char $\ast$ {\bfseries func} (void) const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_ae347f949eb94e2bbc3ca634ce548fdaa}\label{classel_1_1_performance_tracking_data_ae347f949eb94e2bbc3ca634ce548fdaa}} 
+const base\+::type\+::string\+\_\+t $\ast$ {\bfseries formatted\+Time\+Taken} () const
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a05c8ae513931c7563521b2973409ff54}\label{classel_1_1_performance_tracking_data_a05c8ae513931c7563521b2973409ff54}} 
+const std\+::string \& {\bfseries logger\+Id} (void) const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classel_1_1_performance_tracking_data_a6a4d7851e1984800be3c230f06a79528}\label{classel_1_1_performance_tracking_data_a6a4d7851e1984800be3c230f06a79528}} 
+class {\bfseries el\+::base\+::\+Performance\+Tracker}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/easylogging++.\+h\end{DoxyCompactItemize}

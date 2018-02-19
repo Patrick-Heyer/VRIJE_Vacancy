@@ -1,0 +1,3 @@
+../lib/libCamera_Reader.so 
+../lib/libColor_Tracker.so 
+../lib/libJoystick_Writer.so 

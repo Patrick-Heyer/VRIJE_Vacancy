@@ -1,0 +1,107 @@
+\hypertarget{class_widget}{}\section{Widget Class Reference}
+\label{class_widget}\index{Widget@{Widget}}
+
+
+Inheritance diagram for Widget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_widget__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_widget_ac4c2063cd671468ad05d84cfe963c032}{Draw} ()=0
+\begin{DoxyCompactList}\small\item\em Draws the widget. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_widget_a726dc97add2c6eb82967144207280ace}{update} ()=0
+\begin{DoxyCompactList}\small\item\em Updates the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_widget_a533b16d60fa0fc9c2ca7785e4255eac0}\label{class_widget_a533b16d60fa0fc9c2ca7785e4255eac0}} 
+virtual void {\bfseries procces\+Input} ()=0
+\item 
+\mbox{\Hypertarget{class_widget_a2c5d9db1b08ad4eeab706e651f6ac762}\label{class_widget_a2c5d9db1b08ad4eeab706e651f6ac762}} 
+\hyperlink{class_tab}{Tab} $\ast$ {\bfseries get\+\_\+parent} ()
+\item 
+\mbox{\Hypertarget{class_widget_a8d8220d5a7437c99dd4023d82558e4f2}\label{class_widget_a8d8220d5a7437c99dd4023d82558e4f2}} 
+void {\bfseries Set\+Name} (std\+::string value)
+\item 
+\mbox{\Hypertarget{class_widget_ac6bb14cfdf16e4471f57dfb32f9769d8}\label{class_widget_ac6bb14cfdf16e4471f57dfb32f9769d8}} 
+void {\bfseries Set\+Size} (int value\mbox{[}2\mbox{]})
+\item 
+\mbox{\Hypertarget{class_widget_a996777d0a2509c53de757188439fecb4}\label{class_widget_a996777d0a2509c53de757188439fecb4}} 
+void {\bfseries Set\+Size} (int width, int height)
+\item 
+\mbox{\Hypertarget{class_widget_a5ec079e6080dc5f4c3d3b046faa84fc3}\label{class_widget_a5ec079e6080dc5f4c3d3b046faa84fc3}} 
+void {\bfseries Set\+Position} (int value\mbox{[}2\mbox{]})
+\item 
+\mbox{\Hypertarget{class_widget_a4180e120cb6a24ceef7ae23e2086f36f}\label{class_widget_a4180e120cb6a24ceef7ae23e2086f36f}} 
+void {\bfseries Set\+Position} (int x, int y)
+\item 
+\mbox{\Hypertarget{class_widget_ab12ac47d032228866c00f5ac0a6c75d8}\label{class_widget_ab12ac47d032228866c00f5ac0a6c75d8}} 
+void {\bfseries Set\+Enabled} (bool value)
+\item 
+\mbox{\Hypertarget{class_widget_a5a99f29f57e081e77f21b77a85259e41}\label{class_widget_a5a99f29f57e081e77f21b77a85259e41}} 
+void {\bfseries Set\+Active} (bool value)
+\item 
+\mbox{\Hypertarget{class_widget_a78c440f86f566176222e94c6fd0fa417}\label{class_widget_a78c440f86f566176222e94c6fd0fa417}} 
+std\+::string {\bfseries Get\+Name} ()
+\item 
+\mbox{\Hypertarget{class_widget_a23c8bd8c98034ea73c5c87713e8006e7}\label{class_widget_a23c8bd8c98034ea73c5c87713e8006e7}} 
+int {\bfseries Get\+\_\+x} ()
+\item 
+\mbox{\Hypertarget{class_widget_af5f0c02d954127078a33669d44050cef}\label{class_widget_af5f0c02d954127078a33669d44050cef}} 
+int {\bfseries Get\+\_\+y} ()
+\item 
+\mbox{\Hypertarget{class_widget_a23525d66c09f55f86307c2421b25ff73}\label{class_widget_a23525d66c09f55f86307c2421b25ff73}} 
+int {\bfseries Get\+\_\+widht} ()
+\item 
+\mbox{\Hypertarget{class_widget_a46b187c346da22a349952b1577240dc3}\label{class_widget_a46b187c346da22a349952b1577240dc3}} 
+int {\bfseries Get\+\_\+height} ()
+\item 
+\mbox{\Hypertarget{class_widget_a6d58e267ab3c59a2c43f4426c6b63002}\label{class_widget_a6d58e267ab3c59a2c43f4426c6b63002}} 
+bool {\bfseries Get\+\_\+\+Active} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file widget.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_widget_ac4c2063cd671468ad05d84cfe963c032}\label{class_widget_ac4c2063cd671468ad05d84cfe963c032}} 
+\index{Widget@{Widget}!Draw@{Draw}}
+\index{Draw@{Draw}!Widget@{Widget}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily virtual void Widget\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Draws the widget. 
+
+Draws the widget called by \hyperlink{class_tab_ae9db0c3ae8b0b75f7c5b3493b0267482}{Tab\+::\+Draw} 
+
+Implemented in \hyperlink{class_g_l___window_a0065950273a11cddec75d1a4d2cf723e}{G\+L\+\_\+\+Window}, \hyperlink{class_g_l___window_a0065950273a11cddec75d1a4d2cf723e}{G\+L\+\_\+\+Window}, \hyperlink{class_console_a083e9f4f93ae7261dba07c8559db4443}{Console}, \hyperlink{class_video_ae6377f888f7d485fddde3df9abaa4eda}{Video}, \hyperlink{class_button_a6aaa2b781c933a296f41a8eca890eb1f}{Button}, \hyperlink{class_text_box_ad0d6ca66198e14fec70ff2f891034f0c}{Text\+Box}, and \hyperlink{class_ni___depth_a6f6a022f4fbae3f3e157669929ec0d38}{Ni\+\_\+\+Depth}.
+
+\mbox{\Hypertarget{class_widget_a726dc97add2c6eb82967144207280ace}\label{class_widget_a726dc97add2c6eb82967144207280ace}} 
+\index{Widget@{Widget}!update@{update}}
+\index{update@{update}!Widget@{Widget}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Widget\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Updates the widget. 
+
+Updates the widget called by Tab\+::update 
+
+Implemented in \hyperlink{class_g_l___window_a34eab971f586b7d383d05475195bc462}{G\+L\+\_\+\+Window}, \hyperlink{class_g_l___window_a34eab971f586b7d383d05475195bc462}{G\+L\+\_\+\+Window}, \hyperlink{class_console_af1d3a54bd8649b46574ad35998563fea}{Console}, \hyperlink{class_video_a91036fd835d742420767e9a7af9e62fb}{Video}, \hyperlink{class_button_ad8e030c1c8846d43f3126047d4a3667f}{Button}, \hyperlink{class_text_box_afa0bba711f542abe6c4d304fe2773cd9}{Text\+Box}, and \hyperlink{class_ni___depth_a6cf160e8edd85c236f61b5a45aa743dc}{Ni\+\_\+\+Depth}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/widget.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Gui/widget.\+cpp\end{DoxyCompactItemize}

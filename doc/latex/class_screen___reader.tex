@@ -1,0 +1,286 @@
+\hypertarget{class_screen___reader}{}\section{Screen\+\_\+\+Reader Class Reference}
+\label{class_screen___reader}\index{Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}}
+
+
+\hyperlink{class_screen___reader}{Screen\+\_\+\+Reader} plugin.  
+
+
+
+
+Inheritance diagram for Screen\+\_\+\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_screen___reader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Screen\+\_\+\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_screen___reader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_screen___reader_add5cdfdc432ed5e8baa6683213c6daba}{Main} ()
+\begin{DoxyCompactList}\small\item\em Main funcction of the plugin. \end{DoxyCompactList}\item 
+bool \hyperlink{class_screen___reader_aaae80932d8f6af903ca93846eb4de234}{load\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Load configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_screen___reader_a6d211f9c63493fbc1b18fd780f61dcdc}{save\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Save configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_screen___reader_ab6219f6991a1574fb20b5f96953da62e}{Initialize\+\_\+\+Output} ()
+\begin{DoxyCompactList}\small\item\em Initialize Output variables for the plugin to publish. \end{DoxyCompactList}\item 
+bool \hyperlink{class_screen___reader_a40c7e767ec368074d63ba4d4e5e3e0bc}{Initialize\+\_\+\+Input} ()
+\begin{DoxyCompactList}\small\item\em Initialize Input variables for the plugin to publish. \end{DoxyCompactList}\item 
+void \hyperlink{class_screen___reader_a40e260696012cdb8ab05d65511b7de6e}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop plugin. \end{DoxyCompactList}\item 
+void \hyperlink{class_screen___reader_a9c716b5a3b6f94e1cf89eee7823ecd60}{run} ()
+\begin{DoxyCompactList}\small\item\em Execute plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_screen___reader}{Screen\+\_\+\+Reader} plugin. 
+
+This plugin is a legacy wrapper that alows us to use Hocoma\textquotesingle{}s games with this architecture it writes output to a shared memory segment defined by hocoma that can not be changed \begin{DoxyAuthor}{Author}
+Patrick Heyer, \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+jul 13, 2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 38 of file Main.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_screen___reader_a40c7e767ec368074d63ba4d4e5e3e0bc}\label{class_screen___reader_a40c7e767ec368074d63ba4d4e5e3e0bc}} 
+\index{Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}!Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}}
+\index{Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}!Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Input()}{Initialize\_Input()}}
+{\footnotesize\ttfamily bool Screen\+\_\+\+Reader\+::\+Initialize\+\_\+\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Input variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}{I\+Plugin}.
+
+
+
+Definition at line 149 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+150 \{
+151     Plugin\_ERROR = Shared\_Memory::getInstance().Register\_String\_Input(\textcolor{stringliteral}{"Plugin\_ERROR"});
+152     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+153 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_screen___reader_ab6219f6991a1574fb20b5f96953da62e}\label{class_screen___reader_ab6219f6991a1574fb20b5f96953da62e}} 
+\index{Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}!Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}}
+\index{Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}!Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Output()}{Initialize\_Output()}}
+{\footnotesize\ttfamily bool Screen\+\_\+\+Reader\+::\+Initialize\+\_\+\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Output variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}{I\+Plugin}.
+
+
+
+Definition at line 142 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+143 \{   
+144     
+145     Shared\_Memory::getInstance().Register\_Output(\textcolor{stringliteral}{"Video\_From\_Screen"}, &frame);
+146     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+147 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_screen___reader_aaae80932d8f6af903ca93846eb4de234}\label{class_screen___reader_aaae80932d8f6af903ca93846eb4de234}} 
+\index{Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}
+{\footnotesize\ttfamily bool Screen\+\_\+\+Reader\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load configuration. 
+
+The configuration can be loaded from file, or be hard coded into the plugin (not recomended), initialization of public and private variables should occur here
+
+By default load\+Configuration is called during \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Plugin\+Manager\+::\+Initialize()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}{I\+Plugin}.
+
+
+
+Definition at line 132 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+133 \{
+134     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+135 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_screen___reader_add5cdfdc432ed5e8baa6683213c6daba}\label{class_screen___reader_add5cdfdc432ed5e8baa6683213c6daba}} 
+\index{Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}!Main@{Main}}
+\index{Main@{Main}!Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily void Screen\+\_\+\+Reader\+::\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main funcction of the plugin. 
+
+Started in a new thread by the Run() funcction is the most importatn funcction of the plugin. Infinite loop (generaly a while(running) function that runs undefenitly in a read/process/write cicle). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}{I\+Plugin}.
+
+
+
+Definition at line 116 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+117 \{
+118     Mat img;
+119     \textcolor{keywordflow}{while} (running)
+120     \{
+121         \hyperlink{struct_screen_shot}{ScreenShot} screen(0,0,1366,768);               
+122         screen(img);        
+123        \textcolor{comment}{// imshow("Screen", img);}
+124         usleep(1000);
+125         
+126     \}
+127     
+128     stoped = \textcolor{keyword}{true};
+129     \textcolor{keywordflow}{return};
+130 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_screen___reader_a9c716b5a3b6f94e1cf89eee7823ecd60}\label{class_screen___reader_a9c716b5a3b6f94e1cf89eee7823ecd60}} 
+\index{Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}!run@{run}}
+\index{run@{run}!Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Screen\+\_\+\+Reader\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Execute plugin. 
+
+Starts a new thread and executes the plugins main() funcction. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}{I\+Plugin}.
+
+
+
+Definition at line 155 of file Main.\+cpp.
+
+
+
+References I\+Plugin\+::\+Inc\+Wrapper().
+
+
+\begin{DoxyCode}
+156 \{
+157     pthread\_create(&thread\_id, NULL, &\hyperlink{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}{IPlugin::IncWrapper}, \textcolor{keyword}{this});
+158     running = \textcolor{keyword}{true};
+159     stoped = \textcolor{keyword}{false};
+160 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_screen___reader_a6d211f9c63493fbc1b18fd780f61dcdc}\label{class_screen___reader_a6d211f9c63493fbc1b18fd780f61dcdc}} 
+\index{Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}!save\+Configuration@{save\+Configuration}}
+\index{save\+Configuration@{save\+Configuration}!Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{save\+Configuration()}{saveConfiguration()}}
+{\footnotesize\ttfamily bool Screen\+\_\+\+Reader\+::save\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save configuration. 
+
+The configuration should be saved to file, public and private variables that should be configured at startup should be saved.
+
+By default save\+Configuration is called during \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Plugin\+Manager\+::\+Unload()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}{I\+Plugin}.
+
+
+
+Definition at line 137 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+138 \{
+139     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+140 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_screen___reader_a40e260696012cdb8ab05d65511b7de6e}\label{class_screen___reader_a40e260696012cdb8ab05d65511b7de6e}} 
+\index{Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}!stop@{stop}}
+\index{stop@{stop}!Screen\+\_\+\+Reader@{Screen\+\_\+\+Reader}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Screen\+\_\+\+Reader\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop plugin. 
+
+Stops the plugin \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}{I\+Plugin}.
+
+
+
+Definition at line 162 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+163 \{
+164     running = \textcolor{keyword}{false};
+165 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Screen\+\_\+\+Reader/Main.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{class_config_file}{}\section{Config\+File Class Reference}
+\label{class_config_file}\index{Config\+File@{Config\+File}}
+
+
+Collaboration diagram for Config\+File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_config_file__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_config_file_1_1file__not__found}{file\+\_\+not\+\_\+found}
+\item 
+struct \hyperlink{struct_config_file_1_1key__not__found}{key\+\_\+not\+\_\+found}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config_file_a2690c3c6b72869b65d168791b28264dc}\label{class_config_file_a2690c3c6b72869b65d168791b28264dc}} 
+{\bfseries Config\+File} (string filename, string delimiter=\char`\"{}=\char`\"{}, string comment=\char`\"{}\#\char`\"{}, string sentry=\char`\"{}End\+Config\+File\char`\"{})
+\item 
+\mbox{\Hypertarget{class_config_file_af6ac80a51f87386592c346c02e7e4e50}\label{class_config_file_af6ac80a51f87386592c346c02e7e4e50}} 
+{\footnotesize template$<$class T $>$ }\\T {\bfseries read} (const string \&key) const
+\item 
+\mbox{\Hypertarget{class_config_file_a44eba9d0ac0ec6a05bf35705a2f9dfe4}\label{class_config_file_a44eba9d0ac0ec6a05bf35705a2f9dfe4}} 
+{\footnotesize template$<$class T $>$ }\\T {\bfseries read} (const string \&key, const T \&value) const
+\item 
+\mbox{\Hypertarget{class_config_file_a13d3da6885ae145204afff039d190a75}\label{class_config_file_a13d3da6885ae145204afff039d190a75}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries read\+Into} (T \&var, const string \&key) const
+\item 
+\mbox{\Hypertarget{class_config_file_a43b40ec4b9933a2bb57655f21763d4d4}\label{class_config_file_a43b40ec4b9933a2bb57655f21763d4d4}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries read\+Into} (T \&var, const string \&key, const T \&value) const
+\item 
+\mbox{\Hypertarget{class_config_file_ad82a9c27d698a5e805cf5f6f0ad1bfd5}\label{class_config_file_ad82a9c27d698a5e805cf5f6f0ad1bfd5}} 
+{\footnotesize template$<$class T $>$ }\\void {\bfseries add} (string key, const T \&value)
+\item 
+\mbox{\Hypertarget{class_config_file_afca295f72101b138ad2702a11c342f37}\label{class_config_file_afca295f72101b138ad2702a11c342f37}} 
+void {\bfseries remove} (const string \&key)
+\item 
+\mbox{\Hypertarget{class_config_file_a9cb492eb48dad9f2edd14b3799e5e10e}\label{class_config_file_a9cb492eb48dad9f2edd14b3799e5e10e}} 
+bool {\bfseries key\+Exists} (const string \&key) const
+\item 
+\mbox{\Hypertarget{class_config_file_ad5c780c8af0dc1c7cc701d1bbfe39dc2}\label{class_config_file_ad5c780c8af0dc1c7cc701d1bbfe39dc2}} 
+string {\bfseries get\+Delimiter} () const
+\item 
+\mbox{\Hypertarget{class_config_file_a37b222022f77e1837b773a2e8ebed519}\label{class_config_file_a37b222022f77e1837b773a2e8ebed519}} 
+string {\bfseries get\+Comment} () const
+\item 
+\mbox{\Hypertarget{class_config_file_a41cd2b14758fd3c647b4591cd7ded327}\label{class_config_file_a41cd2b14758fd3c647b4591cd7ded327}} 
+string {\bfseries get\+Sentry} () const
+\item 
+\mbox{\Hypertarget{class_config_file_af28390aba7d8f399ac734c074e659b99}\label{class_config_file_af28390aba7d8f399ac734c074e659b99}} 
+string {\bfseries set\+Delimiter} (const string \&s)
+\item 
+\mbox{\Hypertarget{class_config_file_a2e06b3000fb45426c975b334b2cee148}\label{class_config_file_a2e06b3000fb45426c975b334b2cee148}} 
+string {\bfseries set\+Comment} (const string \&s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config_file_a91de4778982f558673be7465f33750f5}\label{class_config_file_a91de4778982f558673be7465f33750f5}} 
+typedef std\+::map$<$ string, string $>$\+::iterator {\bfseries mapi}
+\item 
+\mbox{\Hypertarget{class_config_file_af606aa032e366450b81792da67c984fc}\label{class_config_file_af606aa032e366450b81792da67c984fc}} 
+typedef std\+::map$<$ string, string $>$\+::const\+\_\+iterator {\bfseries mapci}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config_file_a7d2b8acc0f7c2ea7892ef2e77d925ba9}\label{class_config_file_a7d2b8acc0f7c2ea7892ef2e77d925ba9}} 
+{\footnotesize template$<$$>$ }\\string {\bfseries string\+\_\+as\+\_\+T} (const string \&s)
+\item 
+\mbox{\Hypertarget{class_config_file_adda9a4a7de5eef0151e45b5874ddf50d}\label{class_config_file_adda9a4a7de5eef0151e45b5874ddf50d}} 
+{\footnotesize template$<$$>$ }\\bool {\bfseries string\+\_\+as\+\_\+T} (const string \&s)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config_file_a9855bff7ed5af9aa408ac06fc7ab4c09}\label{class_config_file_a9855bff7ed5af9aa408ac06fc7ab4c09}} 
+{\footnotesize template$<$class T $>$ }\\static string {\bfseries T\+\_\+as\+\_\+string} (const T \&t)
+\item 
+\mbox{\Hypertarget{class_config_file_a59c6ab56cdfa23a29a38bf3eea1ededf}\label{class_config_file_a59c6ab56cdfa23a29a38bf3eea1ededf}} 
+{\footnotesize template$<$class T $>$ }\\static T {\bfseries string\+\_\+as\+\_\+T} (const string \&s)
+\item 
+\mbox{\Hypertarget{class_config_file_a6b445b393fcf42386a804fc4077fac10}\label{class_config_file_a6b445b393fcf42386a804fc4077fac10}} 
+static void {\bfseries trim} (string \&s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config_file_ad63f3e259f665192b64fb3e83c701425}\label{class_config_file_ad63f3e259f665192b64fb3e83c701425}} 
+string {\bfseries my\+Delimiter}
+\item 
+\mbox{\Hypertarget{class_config_file_a2c60a141e8ad012b86a0642ec8ec638d}\label{class_config_file_a2c60a141e8ad012b86a0642ec8ec638d}} 
+string {\bfseries my\+Comment}
+\item 
+\mbox{\Hypertarget{class_config_file_af066ec1942c50848a055350029ebbca5}\label{class_config_file_af066ec1942c50848a055350029ebbca5}} 
+string {\bfseries my\+Sentry}
+\item 
+\mbox{\Hypertarget{class_config_file_a91b9b9e241d42bd3b1bb8b3e6355761f}\label{class_config_file_a91b9b9e241d42bd3b1bb8b3e6355761f}} 
+std\+::map$<$ string, string $>$ {\bfseries my\+Contents}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config_file_a8ccacbc37db1992a5515e2c72fc83ce6}\label{class_config_file_a8ccacbc37db1992a5515e2c72fc83ce6}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \hyperlink{class_config_file}{Config\+File} \&cf)
+\item 
+\mbox{\Hypertarget{class_config_file_a25042475439039e70f90febe7d0e63ec}\label{class_config_file_a25042475439039e70f90febe7d0e63ec}} 
+std\+::istream \& {\bfseries operator$>$$>$} (std\+::istream \&is, \hyperlink{class_config_file}{Config\+File} \&cf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 54 of file Config\+File.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/include/Config\+File.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/include/Config\+File.\+cpp\end{DoxyCompactItemize}

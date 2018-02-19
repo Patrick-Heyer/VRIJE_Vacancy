@@ -1,0 +1,12 @@
+<map id="IPlugin" name="IPlugin">
+<area shape="rect" id="node2" href="$class_camera___reader.html" title="Camera_Reader plugin. " alt="" coords="116,5,233,32"/>
+<area shape="rect" id="node3" href="$class_color___tracker.html" title="Color_Tracker plugin. " alt="" coords="123,56,227,83"/>
+<area shape="rect" id="node4" href="$class_file___writer.html" title="File_Writer plugin. " alt="" coords="132,107,217,133"/>
+<area shape="rect" id="node5" href="$class_function___caller.html" title="Function_Caller plugin. " alt="" coords="118,157,231,184"/>
+<area shape="rect" id="node6" href="$class_function___test.html" title="Function_Test plugin. " alt="" coords="122,208,227,235"/>
+<area shape="rect" id="node7" href="$class_joystick___writer.html" title="Joystick_Writer plugin. " alt="" coords="118,259,231,285"/>
+<area shape="rect" id="node8" href="$class_network___client.html" title="Network_Client plugin. " alt="" coords="119,309,231,336"/>
+<area shape="rect" id="node9" href="$class_network___server.html" title="Network_Server plugin. " alt="" coords="117,360,233,387"/>
+<area shape="rect" id="node10" href="$class_screen___reader.html" title="Screen_Reader plugin. " alt="" coords="119,411,231,437"/>
+<area shape="rect" id="node11" href="$class_tuio___client.html" title="Tuio_Client plugin. " alt="" coords="131,461,219,488"/>
+</map>

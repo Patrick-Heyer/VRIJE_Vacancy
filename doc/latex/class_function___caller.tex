@@ -1,0 +1,298 @@
+\hypertarget{class_function___caller}{}\section{Function\+\_\+\+Caller Class Reference}
+\label{class_function___caller}\index{Function\+\_\+\+Caller@{Function\+\_\+\+Caller}}
+
+
+\hyperlink{class_function___caller}{Function\+\_\+\+Caller} plugin.  
+
+
+
+
+{\ttfamily \#include $<$Function\+\_\+\+Caller.\+h$>$}
+
+
+
+Inheritance diagram for Function\+\_\+\+Caller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_function___caller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Function\+\_\+\+Caller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_function___caller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_function___caller_a4c39451baadbdc89f6f7e212638cb811}{Main} ()
+\begin{DoxyCompactList}\small\item\em Main funcction of the plugin. \end{DoxyCompactList}\item 
+bool \hyperlink{class_function___caller_a6ce3a356b5eb30c51d39f2ce0ecb9128}{load\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Load configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_function___caller_a639edde2994f2317a922c2a80083ce54}{save\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Save configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_function___caller_a6499f7bae56266b6372351da555f316f}{Initialize\+\_\+\+Output} ()
+\begin{DoxyCompactList}\small\item\em Initialize Output variables for the plugin to publish. \end{DoxyCompactList}\item 
+bool \hyperlink{class_function___caller_a9b879313b891d3e60b105f94e3fd71cf}{Initialize\+\_\+\+Input} ()
+\begin{DoxyCompactList}\small\item\em Initialize Input variables for the plugin to publish. \end{DoxyCompactList}\item 
+void \hyperlink{class_function___caller_af099d310156da34103de5486995b00e2}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop plugin. \end{DoxyCompactList}\item 
+void \hyperlink{class_function___caller_a508165a2fab0cb3f77d89135994f342d}{run} ()
+\begin{DoxyCompactList}\small\item\em Execute plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_function___caller}{Function\+\_\+\+Caller} plugin. 
+
+This plugin is a test to add function calls to the \hyperlink{class_shared___memory}{Shared\+\_\+\+Memory}, the functions have 2 std\+::vectors string as parameters. Each function is responsible for parsing the imput to map it to shared variables \begin{DoxyAuthor}{Author}
+Patrick Heyer, \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+jul 13, 2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 14 of file Function\+\_\+\+Caller.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_function___caller_a9b879313b891d3e60b105f94e3fd71cf}\label{class_function___caller_a9b879313b891d3e60b105f94e3fd71cf}} 
+\index{Function\+\_\+\+Caller@{Function\+\_\+\+Caller}!Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}}
+\index{Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}!Function\+\_\+\+Caller@{Function\+\_\+\+Caller}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Input()}{Initialize\_Input()}}
+{\footnotesize\ttfamily bool Function\+\_\+\+Caller\+::\+Initialize\+\_\+\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Input variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}{I\+Plugin}.
+
+
+
+Definition at line 91 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+92 \{
+93     empty\_call = Shared\_Memory::getInstance().Register\_Func\_Input(\textcolor{stringliteral}{"published\_empty\_function"});
+94     input\_call = Shared\_Memory::getInstance().Register\_Func\_Input(\textcolor{stringliteral}{"published\_input\_function"});
+95     output\_call = Shared\_Memory::getInstance().Register\_Func\_Input(\textcolor{stringliteral}{"published\_output\_function"});
+96     IO\_call = Shared\_Memory::getInstance().Register\_Func\_Input(\textcolor{stringliteral}{"published\_IO\_function"});
+97     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+98 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_function___caller_a6499f7bae56266b6372351da555f316f}\label{class_function___caller_a6499f7bae56266b6372351da555f316f}} 
+\index{Function\+\_\+\+Caller@{Function\+\_\+\+Caller}!Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}}
+\index{Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}!Function\+\_\+\+Caller@{Function\+\_\+\+Caller}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Output()}{Initialize\_Output()}}
+{\footnotesize\ttfamily bool Function\+\_\+\+Caller\+::\+Initialize\+\_\+\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Output variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}{I\+Plugin}.
+
+
+
+Definition at line 85 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+86 \{
+87 
+88     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+89 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_function___caller_a6ce3a356b5eb30c51d39f2ce0ecb9128}\label{class_function___caller_a6ce3a356b5eb30c51d39f2ce0ecb9128}} 
+\index{Function\+\_\+\+Caller@{Function\+\_\+\+Caller}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!Function\+\_\+\+Caller@{Function\+\_\+\+Caller}}
+\subsubsection{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}
+{\footnotesize\ttfamily bool Function\+\_\+\+Caller\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load configuration. 
+
+The configuration can be loaded from file, or be hard coded into the plugin (not recomended), initialization of public and private variables should occur here
+
+By default load\+Configuration is called during \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Plugin\+Manager\+::\+Initialize()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}{I\+Plugin}.
+
+
+
+Definition at line 75 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+76 \{
+77     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+78 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_function___caller_a4c39451baadbdc89f6f7e212638cb811}\label{class_function___caller_a4c39451baadbdc89f6f7e212638cb811}} 
+\index{Function\+\_\+\+Caller@{Function\+\_\+\+Caller}!Main@{Main}}
+\index{Main@{Main}!Function\+\_\+\+Caller@{Function\+\_\+\+Caller}}
+\subsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily void Function\+\_\+\+Caller\+::\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main funcction of the plugin. 
+
+Started in a new thread by the Run() funcction is the most importatn funcction of the plugin. Infinite loop (generaly a while(running) function that runs undefenitly in a read/process/write cicle). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}{I\+Plugin}.
+
+
+
+Definition at line 53 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+54 \{
+55     std::vector<std::string> i\_empty;
+56     std::vector<std::string> o\_empty;
+57     std::vector<std::string> i\_input= \{\textcolor{stringliteral}{"INPUT\_1"}, \textcolor{stringliteral}{"INPUT\_2"}, \textcolor{stringliteral}{"INPUT\_3"}, \textcolor{stringliteral}{"INPUT\_4"}\};
+58     std::vector<std::string> o\_input= \{\textcolor{stringliteral}{"OUTPUT\_1"}, \textcolor{stringliteral}{"OUTPUT\_2"}, \textcolor{stringliteral}{"OUTPUT\_3"}, \textcolor{stringliteral}{"OUTPUT\_4"}\};
+59     
+60     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} o=0; o<10000; o++)
+61     \{
+62         usleep(500);
+63     \}
+64     
+65     empty\_call(i\_empty,o\_empty);
+66     input\_call(i\_input,o\_empty);
+67     output\_call(i\_empty,o\_input);
+68     IO\_call(i\_input,o\_input);
+69 
+70     stoped=\textcolor{keyword}{true};
+71     \textcolor{keywordflow}{return};
+72 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_function___caller_a508165a2fab0cb3f77d89135994f342d}\label{class_function___caller_a508165a2fab0cb3f77d89135994f342d}} 
+\index{Function\+\_\+\+Caller@{Function\+\_\+\+Caller}!run@{run}}
+\index{run@{run}!Function\+\_\+\+Caller@{Function\+\_\+\+Caller}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Function\+\_\+\+Caller\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Execute plugin. 
+
+Starts a new thread and executes the plugins main() funcction. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}{I\+Plugin}.
+
+
+
+Definition at line 99 of file Main.\+cpp.
+
+
+
+References I\+Plugin\+::\+Inc\+Wrapper().
+
+
+\begin{DoxyCode}
+100 \{
+101     pthread\_create(&thread\_id, NULL, &\hyperlink{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}{IPlugin::IncWrapper}, \textcolor{keyword}{this});
+102     running = \textcolor{keyword}{true};
+103     stoped = \textcolor{keyword}{false};
+104 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_function___caller_a639edde2994f2317a922c2a80083ce54}\label{class_function___caller_a639edde2994f2317a922c2a80083ce54}} 
+\index{Function\+\_\+\+Caller@{Function\+\_\+\+Caller}!save\+Configuration@{save\+Configuration}}
+\index{save\+Configuration@{save\+Configuration}!Function\+\_\+\+Caller@{Function\+\_\+\+Caller}}
+\subsubsection{\texorpdfstring{save\+Configuration()}{saveConfiguration()}}
+{\footnotesize\ttfamily bool Function\+\_\+\+Caller\+::save\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save configuration. 
+
+The configuration should be saved to file, public and private variables that should be configured at startup should be saved.
+
+By default save\+Configuration is called during \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Plugin\+Manager\+::\+Unload()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}{I\+Plugin}.
+
+
+
+Definition at line 80 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+81 \{
+82     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+83 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_function___caller_af099d310156da34103de5486995b00e2}\label{class_function___caller_af099d310156da34103de5486995b00e2}} 
+\index{Function\+\_\+\+Caller@{Function\+\_\+\+Caller}!stop@{stop}}
+\index{stop@{stop}!Function\+\_\+\+Caller@{Function\+\_\+\+Caller}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Function\+\_\+\+Caller\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop plugin. 
+
+Stops the plugin \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}{I\+Plugin}.
+
+
+
+Definition at line 106 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+107 \{
+108     running = \textcolor{keyword}{false};
+109 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Function\+\_\+\+Caller/Function\+\_\+\+Caller.\+h\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Function\+\_\+\+Caller/Main.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,310 @@
+\hypertarget{class_network___server}{}\section{Network\+\_\+\+Server Class Reference}
+\label{class_network___server}\index{Network\+\_\+\+Server@{Network\+\_\+\+Server}}
+
+
+\hyperlink{class_network___server}{Network\+\_\+\+Server} plugin.  
+
+
+
+
+Inheritance diagram for Network\+\_\+\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_network___server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Network\+\_\+\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_network___server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_network___server_aa9d6cd53b5c62355518ad0a32ba1444b}{Main} ()
+\begin{DoxyCompactList}\small\item\em Main funcction of the plugin. \end{DoxyCompactList}\item 
+bool \hyperlink{class_network___server_a60edfbf13d3812f66381dca40fbe0801}{load\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Load configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_network___server_a859ab976d5a6f1761f49e3e7abc6bb73}{save\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em Save configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_network___server_a9ddcc321be18d2a6c28f51a3b94983ff}{Initialize\+\_\+\+Output} ()
+\begin{DoxyCompactList}\small\item\em Initialize Output variables for the plugin to publish. \end{DoxyCompactList}\item 
+bool \hyperlink{class_network___server_ad5129bb2f3bcf2480a33a42a36cd5352}{Initialize\+\_\+\+Input} ()
+\begin{DoxyCompactList}\small\item\em Initialize Input variables for the plugin to publish. \end{DoxyCompactList}\item 
+void \hyperlink{class_network___server_ac8778efb5b94041cafa3e57d57e8d9a2}{run} ()
+\begin{DoxyCompactList}\small\item\em Execute plugin. \end{DoxyCompactList}\item 
+void \hyperlink{class_network___server_a9a4400df0ce8da4c24c8758201b68562}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_network___server}{Network\+\_\+\+Server} plugin. 
+
+This plugin is a network server that accepts client conections to comunicate with other programs (running on the same computer or over the network) \begin{DoxyAuthor}{Author}
+Patrick Heyer, \href{mailto:patrickhey@prodigy.net.mx}{\tt patrickhey@prodigy.\+net.\+mx}, Juan Herrera \href{mailto:juan_antonio_@hotmail.com}{\tt juan\+\_\+antonio\+\_\+@hotmail.\+com}, Manuel Oropeza \href{mailto:zodiacanimations@msn.com}{\tt zodiacanimations@msn.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+jul 04, 2012 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 35 of file Main.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network___server_ad5129bb2f3bcf2480a33a42a36cd5352}\label{class_network___server_ad5129bb2f3bcf2480a33a42a36cd5352}} 
+\index{Network\+\_\+\+Server@{Network\+\_\+\+Server}!Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}}
+\index{Initialize\+\_\+\+Input@{Initialize\+\_\+\+Input}!Network\+\_\+\+Server@{Network\+\_\+\+Server}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Input()}{Initialize\_Input()}}
+{\footnotesize\ttfamily bool Network\+\_\+\+Server\+::\+Initialize\+\_\+\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Input variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_aa7c66743ad956d8ada57becee559af4d}{I\+Plugin}.
+
+
+
+Definition at line 132 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+133 \{
+134     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+135 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_network___server_a9ddcc321be18d2a6c28f51a3b94983ff}\label{class_network___server_a9ddcc321be18d2a6c28f51a3b94983ff}} 
+\index{Network\+\_\+\+Server@{Network\+\_\+\+Server}!Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}}
+\index{Initialize\+\_\+\+Output@{Initialize\+\_\+\+Output}!Network\+\_\+\+Server@{Network\+\_\+\+Server}}
+\subsubsection{\texorpdfstring{Initialize\+\_\+\+Output()}{Initialize\_Output()}}
+{\footnotesize\ttfamily bool Network\+\_\+\+Server\+::\+Initialize\+\_\+\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize Output variables for the plugin to publish. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a0b772513fc8c4ed01240e19c4bb84068}{I\+Plugin}.
+
+
+
+Definition at line 126 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+127 \{
+128     Shared\_Memory::getInstance().Register\_Output(\textcolor{stringliteral}{"Server\_Phrase"}, &phrase);
+129     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+130 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_network___server_a60edfbf13d3812f66381dca40fbe0801}\label{class_network___server_a60edfbf13d3812f66381dca40fbe0801}} 
+\index{Network\+\_\+\+Server@{Network\+\_\+\+Server}!load\+Configuration@{load\+Configuration}}
+\index{load\+Configuration@{load\+Configuration}!Network\+\_\+\+Server@{Network\+\_\+\+Server}}
+\subsubsection{\texorpdfstring{load\+Configuration()}{loadConfiguration()}}
+{\footnotesize\ttfamily bool Network\+\_\+\+Server\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load configuration. 
+
+The configuration can be loaded from file, or be hard coded into the plugin (not recomended), initialization of public and private variables should occur here
+
+By default load\+Configuration is called during \hyperlink{class_plugin_manager_a956e653b7db36da9d034b4a93c8308d5}{Plugin\+Manager\+::\+Initialize()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a418cff309436d3a15d9a4ce7369db6dd}{I\+Plugin}.
+
+
+
+Definition at line 116 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+117 \{
+118     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+119 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_network___server_aa9d6cd53b5c62355518ad0a32ba1444b}\label{class_network___server_aa9d6cd53b5c62355518ad0a32ba1444b}} 
+\index{Network\+\_\+\+Server@{Network\+\_\+\+Server}!Main@{Main}}
+\index{Main@{Main}!Network\+\_\+\+Server@{Network\+\_\+\+Server}}
+\subsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily void Network\+\_\+\+Server\+::\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main funcction of the plugin. 
+
+Started in a new thread by the Run() funcction is the most importatn funcction of the plugin. Infinite loop (generaly a while(running) function that runs undefenitly in a read/process/write cicle). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_ab5fdb3b0f7afdcee04324dca01766749}{I\+Plugin}.
+
+
+
+Definition at line 73 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+74 \{
+75     NetThread *net = \textcolor{keyword}{new} NetThread();
+76     phrase=\textcolor{stringliteral}{" "};
+77     net->SetOutputStream(stdout);
+78     net->OpenReadPort(2070);
+79     net->start();
+80     net->Accept();
+81 
+82     std::string respuesta;
+83     
+84     \textcolor{keywordflow}{while}(running)
+85     \{
+86         net->Read();
+87         \textcolor{keywordflow}{if}(net->GetStatus()>0)
+88         \{
+89             phrase = net->GetIncoming();
+90             std::cout << \textcolor{stringliteral}{"client says "} << phrase << std::endl;
+91             \textcolor{keywordflow}{if}(phrase==\textcolor{stringliteral}{"Connecting"})
+92             \{
+93                 net->messages.clear();
+94                 net->Write(\textcolor{stringliteral}{"Connected"});
+95             \}
+96             \textcolor{keywordflow}{if}(phrase==\textcolor{stringliteral}{"next\_target"})
+97             \{
+98                 net->messages.clear();
+99                 net->Write(\textcolor{stringliteral}{"Target\_Bed\_Upstairs"});
+100                 std::cout << \textcolor{stringliteral}{"enviado a Target\_Bed\_Upstairs"} << std::endl;
+101             \}
+102         \}
+103         \textcolor{keywordflow}{else}
+104         \{
+105             phrase=\textcolor{stringliteral}{" "};
+106             
+107         \}
+108         usleep(500);
+109         
+110     \}
+111     stoped=\textcolor{keyword}{true};
+112 
+113 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_network___server_ac8778efb5b94041cafa3e57d57e8d9a2}\label{class_network___server_ac8778efb5b94041cafa3e57d57e8d9a2}} 
+\index{Network\+\_\+\+Server@{Network\+\_\+\+Server}!run@{run}}
+\index{run@{run}!Network\+\_\+\+Server@{Network\+\_\+\+Server}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Network\+\_\+\+Server\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Execute plugin. 
+
+Starts a new thread and executes the plugins main() funcction. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a46b4ace767e77f9db9c9585e99c09039}{I\+Plugin}.
+
+
+
+Definition at line 137 of file Main.\+cpp.
+
+
+
+References I\+Plugin\+::\+Inc\+Wrapper().
+
+
+\begin{DoxyCode}
+138 \{
+139     pthread\_create(&thread\_id, NULL, &\hyperlink{class_i_plugin_a62d22be2fdf66eb7f5c2f797f5f3d7f3}{IPlugin::IncWrapper}, \textcolor{keyword}{this});
+140     running = \textcolor{keyword}{true};
+141     stoped = \textcolor{keyword}{false};
+142 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_network___server_a859ab976d5a6f1761f49e3e7abc6bb73}\label{class_network___server_a859ab976d5a6f1761f49e3e7abc6bb73}} 
+\index{Network\+\_\+\+Server@{Network\+\_\+\+Server}!save\+Configuration@{save\+Configuration}}
+\index{save\+Configuration@{save\+Configuration}!Network\+\_\+\+Server@{Network\+\_\+\+Server}}
+\subsubsection{\texorpdfstring{save\+Configuration()}{saveConfiguration()}}
+{\footnotesize\ttfamily bool Network\+\_\+\+Server\+::save\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save configuration. 
+
+The configuration should be saved to file, public and private variables that should be configured at startup should be saved.
+
+By default save\+Configuration is called during \hyperlink{class_plugin_manager_ab651a05d6fcb92562807e9f5ecc30855}{Plugin\+Manager\+::\+Unload()} by the plugin manager.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a79b5c42b1c7b08257a6110b2091039bc}{I\+Plugin}.
+
+
+
+Definition at line 121 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+122 \{
+123     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+124 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_network___server_a9a4400df0ce8da4c24c8758201b68562}\label{class_network___server_a9a4400df0ce8da4c24c8758201b68562}} 
+\index{Network\+\_\+\+Server@{Network\+\_\+\+Server}!stop@{stop}}
+\index{stop@{stop}!Network\+\_\+\+Server@{Network\+\_\+\+Server}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Network\+\_\+\+Server\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop plugin. 
+
+Stops the plugin \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_plugin_a86e523c283aec5c9fb21249a76e916ac}{I\+Plugin}.
+
+
+
+Definition at line 144 of file Main.\+cpp.
+
+
+\begin{DoxyCode}
+145 \{
+146     running = \textcolor{keyword}{false};
+147 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Network\+\_\+\+Server/Main.\+cpp\end{DoxyCompactItemize}

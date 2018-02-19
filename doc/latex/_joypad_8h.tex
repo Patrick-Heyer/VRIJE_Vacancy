@@ -1,0 +1,178 @@
+\hypertarget{_joypad_8h}{}\section{/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Joystick\+\_\+\+Reader/\+Joypad.h File Reference}
+\label{_joypad_8h}\index{/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Joystick\+\_\+\+Reader/\+Joypad.\+h@{/home/patrick/projects/\+Gesture\+\_\+\+Therapy\+\_\+\+Linux/src/\+Joystick\+\_\+\+Reader/\+Joypad.\+h}}
+
+
+This file provides a generic cross platform joypad interface for Win32 \& Linux. Generally the linux implimentation is not as cool as using DirectX, you only really get hold of the values. Using force feedback is beyond Linux at the moment. Oh well...  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Joypad.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{_joypad_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_joypad_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_x_input_joypad}{X\+Input\+Joypad}
+\item 
+class \hyperlink{class_c_joypad}{C\+Joypad}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}\label{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}} 
+typedef long \hyperlink{_joypad_8h_a2a3e0cda5f1249bef6db47c5eb8e3813}{L\+O\+NG}
+\begin{DoxyCompactList}\small\item\em make sure D\+W\+O\+RD and L\+O\+NG and defined in linux land \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_joypad_8h_ad342ac907eb044443153a22f964bf0af}\label{_joypad_8h_ad342ac907eb044443153a22f964bf0af}} 
+typedef unsigned long {\bfseries D\+W\+O\+RD}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_joypad_8h_afa3d6b1e053da0648e2fdf9a519c3e43}\label{_joypad_8h_afa3d6b1e053da0648e2fdf9a519c3e43}} 
+unsigned int \hyperlink{_joypad_8h_afa3d6b1e053da0648e2fdf9a519c3e43}{Num\+Joypads} ()
+\begin{DoxyCompactList}\small\item\em This function returns the number of working joypads attached to the computer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_joypad_8h_ae9a61e670cc624c9b5e1d365c157cd53}\label{_joypad_8h_ae9a61e670cc624c9b5e1d365c157cd53}} 
+\hyperlink{struct_x_input_joypad}{X\+Input\+Joypad} $\ast$ \hyperlink{_joypad_8h_ae9a61e670cc624c9b5e1d365c157cd53}{Get\+Joypad} (const unsigned int=0)
+\begin{DoxyCompactList}\small\item\em This function returns a pointer to the requested Joypad or N\+U\+LL if no joypad is available. \end{DoxyCompactList}\item 
+void \hyperlink{_joypad_8h_abdb51d74a8798e93a46d3149db9d387b}{Free\+Input} ()
+\begin{DoxyCompactList}\small\item\em This function is called to destroy the input at the end of the game. \end{DoxyCompactList}\item 
+bool \hyperlink{_joypad_8h_ab38988ebf6ab3808447c491d4f5874e0}{Init\+Input} ()
+\begin{DoxyCompactList}\small\item\em This function can be used to initialise the joypad lib. \end{DoxyCompactList}\item 
+bool \hyperlink{_joypad_8h_a4d5dc1be49e0a6ddee2df5035bc2b56f}{Update\+Input\+State} ()
+\begin{DoxyCompactList}\small\item\em You should call this to update the state of the joypad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides a generic cross platform joypad interface for Win32 \& Linux. Generally the linux implimentation is not as cool as using DirectX, you only really get hold of the values. Using force feedback is beyond Linux at the moment. Oh well... 
+
+\begin{DoxyAuthor}{Author}
+Rob Bateman 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12-\/jan-\/2004 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_joypad_8h_abdb51d74a8798e93a46d3149db9d387b}\label{_joypad_8h_abdb51d74a8798e93a46d3149db9d387b}} 
+\index{Joypad.\+h@{Joypad.\+h}!Free\+Input@{Free\+Input}}
+\index{Free\+Input@{Free\+Input}!Joypad.\+h@{Joypad.\+h}}
+\subsubsection{\texorpdfstring{Free\+Input()}{FreeInput()}}
+{\footnotesize\ttfamily void Free\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is called to destroy the input at the end of the game. 
+
+Cleans up Direct Input.
+
+This function is called to destroy the input at the end of the game. 
+
+Definition at line 405 of file Joypad.\+cpp.
+
+
+
+Referenced by C\+Joypad\+::\+P\+O\+V().
+
+
+\begin{DoxyCode}
+406 \{
+407     std::vector< XInputJoypad* >::iterator it = g\_aJoypads.begin();
+408     \textcolor{keywordflow}{for}( ; it != g\_aJoypads.end(); ++it )
+409     \{
+410         \textcolor{keyword}{delete} (*it);
+411     \}
+412     g\_aJoypads.resize(0);
+413 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_joypad_8h_ab38988ebf6ab3808447c491d4f5874e0}\label{_joypad_8h_ab38988ebf6ab3808447c491d4f5874e0}} 
+\index{Joypad.\+h@{Joypad.\+h}!Init\+Input@{Init\+Input}}
+\index{Init\+Input@{Init\+Input}!Joypad.\+h@{Joypad.\+h}}
+\subsubsection{\texorpdfstring{Init\+Input()}{InitInput()}}
+{\footnotesize\ttfamily bool Init\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function can be used to initialise the joypad lib. 
+
+Initialize the Direct\+Input variables.
+
+\begin{DoxyReturn}{Returns}
+true if OK, false if it fails
+\end{DoxyReturn}
+This function can be used to initialise the joypad lib.
+
+\begin{DoxyReturn}{Returns}
+true if OK 
+\end{DoxyReturn}
+
+
+Definition at line 383 of file Joypad.\+cpp.
+
+
+
+Referenced by C\+Joypad\+::\+P\+O\+V().
+
+
+\begin{DoxyCode}
+384 \{
+385     \textcolor{keywordtype}{bool} ret=\textcolor{keyword}{false};
+386     \textcolor{keywordtype}{int} fd;
+387     \textcolor{keywordflow}{if} ( (fd = open(\textcolor{stringliteral}{"/dev/input/js0"}, O\_RDONLY)) > 0 ) 
+388     \{
+389         \hyperlink{class_c_joypad}{CJoypad}* ptr = \textcolor{keyword}{new} \hyperlink{class_c_joypad}{CJoypad};
+390         ioctl(fd, JSIOCGVERSION, &ptr->version);
+391         ioctl(fd, JSIOCGAXES, &ptr->m\_iAxes);
+392         ioctl(fd, JSIOCGBUTTONS, &ptr->m\_nButtons);
+393         ioctl(fd, JSIOCGNAME(NAME\_LENGTH), ptr->name);
+394         fcntl(fd, F\_SETFL, O\_NONBLOCK);
+395         ptr->fd = fd;
+396         g\_aJoypads.push\_back(ptr);
+397         ret=\textcolor{keyword}{true};
+398     \}
+399     \textcolor{keywordflow}{return} ret;
+400 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_joypad_8h_a4d5dc1be49e0a6ddee2df5035bc2b56f}\label{_joypad_8h_a4d5dc1be49e0a6ddee2df5035bc2b56f}} 
+\index{Joypad.\+h@{Joypad.\+h}!Update\+Input\+State@{Update\+Input\+State}}
+\index{Update\+Input\+State@{Update\+Input\+State}!Joypad.\+h@{Joypad.\+h}}
+\subsubsection{\texorpdfstring{Update\+Input\+State()}{UpdateInputState()}}
+{\footnotesize\ttfamily bool Update\+Input\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+You should call this to update the state of the joypad. 
+
+\begin{DoxyReturn}{Returns}
+true if OK. 
+\end{DoxyReturn}
+
+
+Definition at line 370 of file Joypad.\+cpp.
+
+
+
+Referenced by C\+Joypad\+::\+P\+O\+V().
+
+
+\begin{DoxyCode}
+371 \{
+372     std::vector< XInputJoypad* >::iterator it = g\_aJoypads.begin();
+373     \textcolor{keywordflow}{for}( ; it != g\_aJoypads.end(); ++it )
+374     \{
+375         (*it)->Update();
+376     \}
+377 \}
+\end{DoxyCode}
